@@ -1,0 +1,446 @@
+[
+  {
+    "id": 1,
+    "question": "Điều kiện để dừng việc rửa rau trong thuật toán là gì?",
+    "answers": ["A. Vớt rau ra rổ.", "B. Đổ hết nước trong chậu đi.", "C. Rau sạch.", "D. Rau ở trong chậu."],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "Trong chương trình (hình ảnh kèm theo tài liệu), các biến của chương trình là:",
+    "answers": ["A. a, b.", "B. a, S.", "C. b, S.", "D. a, b, S."],
+    "correct": 3
+  },
+  {
+    "id": 3,
+    "question": "Để lưu tệp chương trình, em nhấn chọn biểu tượng nào trên giao diện Scratch?",
+    "answers": ["A. Biểu tượng A", "B. Biểu tượng B (File/Save)", "C. Biểu tượng C", "D. Biểu tượng D"],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Phát biểu nào sau đây là không hợp lí về cấu trúc tuần tự?",
+    "answers": [
+      "A. Gấp hạc là hoạt động được thực hiện tuần tự.",
+      "B. Trong cấu trúc tuần tự, các việc được thực hiện theo thứ tự bất kì.",
+      "C. Các tin nhắn trong Zalo được hiển thị tuần tự theo thứ tự thời gian.",
+      "D. Trong cấu trúc tuần tự, các lệnh được thực hiện lần lượt theo thứ tự."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Phát biểu nào sau đây là không hợp lí về Scratch?",
+    "answers": [
+      "A. Mỗi nhóm lệnh trong Scratch đều có màu riêng.",
+      "B. Lệnh di chuyển nằm trong nhóm lệnh chuyển động.",
+      "C. Phần mềm Scratch cung cấp nhiều phông nền.",
+      "D. Một nhân vật trong Scratch chỉ có một trang phục."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "question": "Để viết chương trình cho máy tính, người lập trình sử dụng loại ngôn ngữ nào?",
+    "answers": ["A. Ngôn ngữ nhị phân (0 và 1).", "B. Ngôn ngữ lập trình.", "C. Ngôn ngữ tự nhiên.", "D. Ngôn ngữ chuyên ngành."],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "Cấu trúc tuần tự là:",
+    "answers": [
+      "A. Cấu trúc xác định thứ tự dữ liệu lưu trữ.",
+      "B. Cấu trúc xác định thứ tự các bước được thực hiện.",
+      "C. Cấu trúc lựa chọn bước thực hiện tiếp theo.",
+      "D. Cấu trúc xác định số lần lặp lại một số bước."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "Em có thể tạo chương trình có cấu trúc tuần tự bằng phần mềm nào?",
+    "answers": ["A. Microsoft PowerPoint.", "B. Scratch.", "C. Kiran’s Typing Tutor.", "D. MathType."],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "question": "Biểu tượng của phần mềm Scratch là:",
+    "answers": ["A. Biểu tượng A", "B. Biểu tượng B", "C. Biểu tượng C", "D. Biểu tượng D (Hình chú mèo)"],
+    "correct": 3
+  },
+  {
+    "id": 10,
+    "question": "“Nếu trời không mưa thì em đi đá bóng” chứa cấu trúc nào?",
+    "answers": ["A. Cấu trúc tuần tự.", "B. Cấu trúc rẽ nhánh dạng thiếu.", "C. Cấu trúc rẽ nhánh dạng đủ.", "D. Cấu trúc lặp."],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Trong Scratch, để biểu diễn cấu trúc rẽ nhánh dạng đủ, em sử dụng lệnh nào?",
+    "answers": ["A. Lệnh A", "B. Lệnh B", "C. Lệnh C", "D. Lệnh D (if...then...else)"],
+    "correct": 3
+  },
+  {
+    "id": 12,
+    "question": "“Nếu trời mưa thì mang áo mưa, nếu trời nắng thì mang áo chống nắng” chứa cấu trúc:",
+    "answers": ["A. Tuần tự.", "B. Rẽ nhánh dạng thiếu.", "C. Rẽ nhánh dạng đủ.", "D. Cấu trúc lặp."],
+    "correct": 2
+  },
+  {
+    "id": 13,
+    "question": "Sơ đồ khối biểu diễn cấu trúc gì (Câu 4 - phần Rẽ nhánh)?",
+    "answers": ["A. Cấu trúc rẽ nhánh dạng thiếu.", "B. Cấu trúc lặp.", "C. Cấu trúc rẽ nhánh dạng đủ.", "D. Cấu trúc tuần tự."],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Sơ đồ khối (Câu 5 - phần Rẽ nhánh) biểu diễn cấu trúc gì?",
+    "answers": ["A. Cấu trúc rẽ nhánh dạng thiếu.", "B. Cấu trúc lặp.", "C. Cấu trúc rẽ nhánh dạng đủ.", "D. Cấu trúc tuần tự."],
+    "correct": 0
+  },
+  {
+    "id": 15,
+    "question": "Cấu trúc rẽ nhánh có mấy loại?",
+    "answers": ["A. 1.", "B. 2.", "C. 3.", "D. 4."],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "Ý nghĩa của câu lệnh cấu trúc rẽ nhánh dạng đầy đủ là:",
+    "answers": [
+      "A. Nếu câu lệnh đúng thực hiện ĐK 1, sai thực hiện ĐK 2.",
+      "B. Nếu điều kiện đúng thực hiện câu lệnh 1, sai thực hiện câu lệnh 2.",
+      "C. Nếu điều kiện đúng thực hiện ĐK 1, sai thực hiện ĐK 2.",
+      "D. Nếu câu lệnh đúng thực hiện câu lệnh 1, sai thực hiện câu lệnh 2."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "Hành động rẽ trái hoặc phải của xe được mô tả bằng cấu trúc gì?",
+    "answers": ["A. Cấu trúc lặp có điều kiện.", "B. Cấu trúc tuần tự.", "C. Cấu trúc rẽ nhánh.", "D. Cấu trúc quay lui."],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "Cấu trúc rẽ nhánh dạng thiếu có dạng như thế nào?",
+    "answers": [
+      "A. Nếu <điều kiện> thì <công việc 1> nếu không thì <công việc 2>.",
+      "B. Nếu <công việc 1> thì <công việc 2>.",
+      "C. Nếu <công việc> thì <điều kiện>.",
+      "D. Nếu <điều kiện> thì <công việc>."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "question": "Cấu trúc rẽ nhánh dạng đủ có dạng như thế nào?",
+    "answers": [
+      "A. Nếu <điều kiện> thì <công việc 1> nếu không thì <công việc 2>.",
+      "B. Nếu <công việc 1> thì <công việc 2>.",
+      "C. Nếu <công việc> thì <điều kiện>.",
+      "D. Nếu <điều kiện> thì <công việc>."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 20,
+    "question": "Thuật toán lặp (hình ảnh Câu 1 - phần Lặp) thuộc cấu trúc:",
+    "answers": ["A. Rẽ nhánh dạng thiếu.", "B. Rẽ nhánh dạng đủ.", "C. Cấu trúc lặp.", "D. Cấu trúc tuần tự."],
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "question": "Cấu trúc lặp nào không được cho trước trong các nhóm lệnh của Scratch?",
+    "answers": [
+      "A. Lặp một khối lệnh so với lần định trước.",
+      "B. Lặp với điều kiện được kiểm tra trước khi thực hiện khối lệnh.",
+      "C. Lặp một khối lệnh vô hạn lần.",
+      "D. Lặp với điều kiện được kiểm tra sau khi thực hiện khối lệnh."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "question": "Hoạt động nào sau đây lặp với số lần lặp biết trước?",
+    "answers": ["A. Giặt tới khi sạch.", "B. Học bài tới khi thuộc.", "C. Gọi điện tới khi có người nghe.", "D. Ngày đánh răng 2 lần."],
+    "correct": 3
+  },
+  {
+    "id": 23,
+    "question": "Các lệnh điều khiển cấu trúc lặp thuộc nhóm lệnh nào của Scratch?",
+    "answers": ["A. Nhóm Chuyển động.", "B. Nhóm Điều khiển.", "C. Nhóm Sự kiện.", "D. Nhóm Hiển thị."],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "Đoạn chương trình (Câu 5 - phần Lặp) có cấu trúc gì?",
+    "answers": [
+      "A. Lặp với số lần không biết trước.",
+      "B. Lặp với số lần biết trước.",
+      "C. Lặp liên tục.",
+      "D. Lặp có điều kiện."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "Cấu trúc lặp là cấu trúc dùng để:",
+    "answers": [
+      "A. Kiểm tra điều kiện đúng/sai để dừng thuật toán.",
+      "B. Thực hiện từ bước đầu đến cuối theo thứ tự.",
+      "C. Mô tả các bước của thuật toán được thực hiện lặp lại nhiều lần.",
+      "D. Xác định số lần lặp lại một số bước của thuật toán."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 26,
+    "question": "Việc lặp lại các câu hỏi trong cấu trúc lặp được thực hiện khi:",
+    "answers": ["A. Người chơi đoán đúng.", "B. Khi còn thời gian.", "C. Người chơi đoán sai.", "D. Đáp án khác."],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "question": "Trong các chương trình sau, chương trình có cấu trúc lặp là:",
+    "answers": ["A. YouTube Kids.", "B. Microsoft Word.", "C. Scratch.", "D. Google Meet."],
+    "correct": 2
+  },
+  {
+    "id": 28,
+    "question": "Scratch có mấy lệnh điều khiển cấu trúc lặp?",
+    "answers": ["A. 1.", "B. 2.", "C. 3.", "D. 4."],
+    "correct": 2
+  },
+  {
+    "id": 29,
+    "question": "Điểm giống nhau giữa cấu trúc rẽ nhánh và cấu trúc lặp là:",
+    "answers": [
+      "A. Các bước được thực hiện lặp lại nhiều lần.",
+      "B. Đều có bước quan trọng nhất là kiểm tra điều kiện.",
+      "C. Thực hiện lần lượt từ đầu đến kết thúc.",
+      "D. Cả ba đáp án trên đều sai."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "question": "Nếu biến a=3, b=4. Lệnh [say a*b] sẽ đưa thông báo nào?",
+    "answers": ["A. Diện tích hình chữ nhật là 3.", "B. Diện tích hình chữ nhật là 12.", "C. Diện tích hình chữ nhật là 4.", "D. Diện tích hình chữ nhật là 7."],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "question": "Trong Scratch, biểu tượng so sánh nhỏ hơn tương ứng với:",
+    "answers": ["A. Biểu tượng A", "B. Biểu tượng B", "C. Biểu tượng C (<)", "D. Biểu tượng D"],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "question": "Trong Scratch, các lệnh tạo biểu thức toán học nằm trong nhóm lệnh nào?",
+    "answers": ["A. Nhóm Các biến số.", "B. Nhóm Chuyển động.", "C. Nhóm Các phép toán.", "D. Nhóm Sự kiện."],
+    "correct": 2
+  },
+  {
+    "id": 33,
+    "question": "Biểu thức toán trong Scratch không bao gồm thành phần nào?",
+    "answers": ["A. Dấu ngoặc.", "B. Biến.", "C. Phép toán.", "D. Các số."],
+    "correct": 0
+  },
+  {
+    "id": 34,
+    "question": "Biểu thức biểu diễn phép toán số học trong Scratch là:",
+    "answers": ["A. Biểu thức A", "B. Biểu thức B", "C. Biểu thức C (phép nhân *)", "D. Biểu thức D"],
+    "correct": 2
+  },
+  {
+    "id": 35,
+    "question": "Thứ tự thực hiện nhiều phép toán trong Scratch là:",
+    "answers": [
+      "A. Theo thứ tự từ trái qua phải, từ trong ra ngoài.",
+      "B. Theo thứ tự từ ngoài vào trong.",
+      "C. Theo thứ tự từ phải qua trái.",
+      "D. Theo thứ tự từ phải qua trái, trong ra ngoài."
+    ],
+    "correct": 0
+  },
+  {
+    "id": 36,
+    "question": "Biểu thức tính diện tích hình chữ nhật (dài*rộng) trong Scratch là:",
+    "answers": ["A. Biểu thức A", "B. Biểu thức B", "C. Biểu thức C", "D. Biểu thức D (chiều dài * chiều rộng)"],
+    "correct": 3
+  },
+  {
+    "id": 37,
+    "question": "Cho biểu thức a + b. Khi a = 4, b = 2, kết quả là:",
+    "answers": ["A. 2.", "B. 6.", "C. 8.", "D. 16."],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "question": "Phép toán nào sau đây có kết quả là sai?",
+    "answers": ["A. Phép toán A", "B. Phép toán B (100 < 50)", "C. Phép toán C", "D. Phép toán D"],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "question": "Phép tính [44 * 3] tương ứng với phép toán nào?",
+    "answers": ["A. 44 : 3.", "B. 44 x 3.", "C. 44 – 3.", "D. 44 + 3."],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "question": "Nếu câu trả lời của Mai là 25 (trong đoạn lệnh Câu 1 - phần Vận dụng), nhân vật nói gì?",
+    "answers": ["A. Bạn làm tốt lắm!", "B. Không sao. Cùng thử lại nào!", "C. Bạn đã dành được bao nhiêu điểm?", "D. Chúng ta cùng thử lại nào!"],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "question": "Câu trả lời chính xác nhất cho câu hỏi trong đoạn lệnh (Câu 2 - phần Vận dụng) là:",
+    "answers": ["A. Sang phải, 80.", "B. Sang trái, -80.", "C. Sang phải, -132.", "D. Sang trái, 132."],
+    "correct": 0
+  },
+  {
+    "id": 42,
+    "question": "Khi nhập 30 từ bàn phím, nhân vật (Câu 3 - phần Vận dụng) di chuyển theo hướng nào?",
+    "answers": ["A. Di chuyển sang phải.", "B. Di chuyển sang trái.", "C. Di chuyển lên trên.", "D. Di chuyển xuống dưới."],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Nam có 7 điểm, theo đoạn lệnh (Câu 4 - phần Vận dụng), xếp loại của Nam là:",
+    "answers": ["A. Khá.", "B. Trung Bình.", "C. Tốt.", "D. Không thuộc nhóm nào."],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "question": "Khi bấm lá cờ xanh, nhân vật (Câu 5 - phần Vận dụng) hiển thị gì?",
+    "answers": ["A. Chữ “mèo”.", "B. Chữ “m”.", "C. Chữ “o”.", "D. Không hiển thị gì."],
+    "correct": 2
+  },
+  {
+    "id": 45,
+    "question": "Cửa sổ nào dùng để thực hiện việc lập trình (viết code)?",
+    "answers": ["A. Cửa sổ A (Khu vực kịch bản)", "B. Cửa sổ B", "C. Cửa sổ C", "D. Cửa sổ D"],
+    "correct": 0
+  },
+  {
+    "id": 46,
+    "question": "Để truy cập Scratch bản trực tuyến, em vào địa chỉ nào?",
+    "answers": ["A. Scratch.com.vn.", "B. Scratch.edu.vn.", "C. Scratch.mit.edu.", "D. Scratch.edu."],
+    "correct": 2
+  },
+  {
+    "id": 47,
+    "question": "Trong Scratch, hướng di chuyển mặc định của đối tượng là hướng nào?",
+    "answers": ["A. Lên trên.", "B. Xuống dưới.", "C. Sang trái.", "D. Sang phải."],
+    "correct": 3
+  },
+  {
+    "id": 48,
+    "question": "Mục đích của việc chạy thử chương trình là:",
+    "answers": [
+      "A. Để sửa lỗi trong chương trình.",
+      "B. Để xác định kết quả trong chương trình.",
+      "C. Để phát hiện thuật toán trong chương trình.",
+      "D. Để phát hiện lỗi trong chương trình."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 49,
+    "question": "Lệnh [play sound... until done] thuộc nhóm lệnh nào?",
+    "answers": ["A. Sự kiện.", "B. Chuyển động.", "C. Âm thanh.", "D. Hiển thị."],
+    "correct": 2
+  },
+  {
+    "id": 50,
+    "question": "Phát biểu nào sau đây là không hợp lí khi nói về kịch bản chương trình?",
+    "answers": [
+      "A. Kịch bản cần mô tả rõ ràng, cụ thể.",
+      "B. Kịch bản thường có ba phần: mở đầu, diễn biến, kết thúc.",
+      "C. Có thể viết kịch bản khi chưa có ý tưởng về trò chơi.",
+      "D. Nên lấy ý kiến góp ý để hoàn thiện kịch bản."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 51,
+    "question": "Cấu trúc nào phù hợp: Di chuyển liên tục cho đến khi chạm con trỏ chuột thì dừng lại?",
+    "answers": [
+      "A. Rẽ nhánh dạng thiếu.",
+      "B. Lặp liên tục.",
+      "C. Cấu trúc lặp có điều kiện.",
+      "D. Rẽ nhánh dạng đủ."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 52,
+    "question": "Phát biểu nào sau đây là không hợp lí về quy trình lập trình?",
+    "answers": [
+      "A. Từ kịch bản dễ dàng tạo ra chương trình.",
+      "B. Nháy nút cờ xanh để chạy chương trình.",
+      "C. Kịch bản giúp xác định công việc cụ thể.",
+      "D. Sau khi tạo chương trình không cần chạy thử."
+    ],
+    "correct": 3
+  },
+  {
+    "id": 53,
+    "question": "Theo kịch bản (Câu 4 - phần Kịch bản), chuyện gì xảy ra khi mèo chạm cạnh sân khấu?",
+    "answers": [
+      "A. Không có chuyện gì xảy ra.",
+      "B. Mèo sẽ dừng lại.",
+      "C. Mèo di chuyển 10 bước.",
+      "D. Mèo chạm cạnh rồi bật lại."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "question": "Nút lệnh nào dùng để mở một kịch bản (Câu 5 - phần Kịch bản)?",
+    "answers": ["A. Nút lệnh 1.", "B. Nút lệnh 2.", "C. Nút lệnh 3.", "D. Đáp án khác."],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "question": "Kịch bản chương trình được viết KHÔNG nhằm mục đích trả lời câu hỏi nào?",
+    "answers": [
+      "A. Chương trình có những nhân vật nào?",
+      "B. Sân khấu là gì?",
+      "C. Hành động của các nhân vật là gì?",
+      "D. Làm thế nào để chạy chương trình?"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 56,
+    "question": "Kịch bản gồm mấy phần?",
+    "answers": ["A. 1.", "B. 2.", "C. 3.", "D. 4."],
+    "correct": 2
+  },
+  {
+    "id": 57,
+    "question": "Với kịch bản (Câu 8 - phần Kịch bản), chương trình sẽ vẽ ra hình gì?",
+    "answers": [
+      "A. Hình tròn.",
+      "B. Hình tam giác.",
+      "C. Hình vuông có cạnh 150 bước.",
+      "D. Hình vuông có độ dài cạnh tùy ý."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 58,
+    "question": "Sau vòng lặp (Câu 9 - phần Kịch bản), biến kết quả bằng bao nhiêu?",
+    "answers": ["A. 9.", "B. 10.", "C. 11.", "D. 12."],
+    "correct": 3
+  },
+  {
+    "id": 59,
+    "question": "Chương trình nào cho phép tính hiệu (phép trừ) của hai số A và B?",
+    "answers": ["A. Chương trình A", "B. Chương trình B", "C. Chương trình C", "D. Chương trình D (A - B)"],
+    "correct": 3
+  }
+]

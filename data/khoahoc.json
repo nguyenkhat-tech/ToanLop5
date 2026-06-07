@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "Vi khuẩn có hình dạng:",
+    "answers": ["A. Hình cầu, hình que, hình xoắn", "B. Hình vuông, hình tam giác, hình lục giác", "C. Hình thoi, hình bầu dục, hình chữ nhật", "D. Hình sao, hình trái tim, hình ngũ giác"],
+    "correct": 0
+  },
+  {
+    "id": 2,
+    "question": "Vi khuẩn có kích thước:",
+    "answers": ["A. Rất nhỏ, chỉ có thể quan sát bằng kính hiển vi", "B. Có thể nhìn thấy rõ bằng mắt thường", "C. Lớn hơn con kiến", "D. Dài khoảng 1 mét"],
+    "correct": 0
+  },
+  {
+    "id": 3,
+    "question": "Bệnh do vi khuẩn tả gây ra là:",
+    "answers": ["A. Bệnh lao phổi", "B. Bệnh tả", "C. Sốt rét", "D. Bệnh cúm"],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Bệnh lao phổi lây truyền chủ yếu qua cơ quan:",
+    "answers": ["A. Tiêu hóa", "B. Hô hấp", "C. Tiết niệu", "D. Da"],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Sức khỏe của người mẹ lại ảnh hưởng trực tiếp đến sự phát triển của thai nhi vì:",
+    "answers": ["A. Vì thai nhi chỉ phát triển trong 9 tháng", "B. Vì sức khỏe của mẹ không có ảnh hưởng gì đến thai nhi", "C. Vì thai nhi nhận oxy và dưỡng chất từ cơ thể mẹ", "D. Vì mẹ sẽ không thể sinh con nếu không khỏe mạnh"],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "Khi đi dã ngoại, để bảo vệ môi trường em nên:",
+    "answers": ["A. Vứt rác lại khu vực đã tham quan", "B. Mang theo túi đựng rác và thu gom rác trước khi rời đi", "C. Chôn rác xuống đất", "D. Đốt rác tại chỗ"],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "Vi khuẩn sinh sôi mạnh nhất khi:",
+    "answers": ["A. Khi có đủ độ ẩm, chất dinh dưỡng và nhiệt độ thích hợp", "B. Khi trời lạnh dưới 0°C", "C. Khi không có thức ăn", "D. Khi bị ánh sáng mặt trời chiếu trực tiếp"],
+    "correct": 0
+  },
+  {
+    "id": 8,
+    "question": "Để tiêu diệt vi khuẩn, chúng ta có thể:",
+    "answers": ["A. Để vi khuẩn tự chết", "B. Để thực phẩm ngoài trời", "C. Dùng nhiệt độ cao như đun sôi nước", "D. Bỏ thực phẩm vào tủ lạnh"],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Bệnh lao phổi có thể phòng tránh bằng cách:",
+    "answers": ["A. Dùng thuốc kháng sinh liên tục", "B. Tiêm phòng và duy trì vệ sinh môi trường", "C. Uống thuốc chống vi khuẩn", "D. Đeo khẩu trang khi ra ngoài"],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Triệu chứng của bệnh tả là:",
+    "answers": ["A. Ho kéo dài và đau ngực", "B. Nôn, tiêu chảy nhiều lần và mất nước", "C. Sốt cao và đau đầu", "D. Đau bụng và khó thở"],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Sức khỏe của người mẹ có thể ảnh hưởng đến thai nhi thế nào:",
+    "answers": ["A. Dinh dưỡng của mẹ giúp thai nhi phát triển khỏe mạnh", "B. Nếu mẹ bị ốm, thai nhi có thể bị ảnh hưởng", "C. Mẹ không ăn uống hợp lý có thể dẫn đến dị tật bẩm sinh", "D. Tất cả các đáp án trên"],
+    "correct": 3
+  },
+  {
+    "id": 12,
+    "question": "Khi lập kế hoạch tuyên truyền bảo vệ môi trường trong lớp, việc làm hiệu quả nhất là:",
+    "answers": ["A. Chỉ nói mà không thực hiện", "B. Tổ chức hoạt động dọn vệ sinh và treo khẩu hiệu tuyên truyền", "C. Để giáo viên làm hết", "D. Không cần lập kế hoạch"],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "question": "Vi khuẩn có mặt trong môi trường:",
+    "answers": ["A. Chỉ trong nước", "B. Chỉ trong đất", "C. Chỉ trong không khí", "D. Trong hầu hết mọi môi trường xung quanh"],
+    "correct": 3
+  },
+  {
+    "id": 14,
+    "question": "Vi khuẩn sinh sản bằng cách:",
+    "answers": ["A. Đẻ trứng", "B. Đẻ con", "C. Nảy chồi", "D. Phân đôi tế bào"],
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "question": "Vi khuẩn gây bệnh tả có thể lây qua:",
+    "answers": ["A. Nước không sạch và thực phẩm không an toàn", "B. Tiếp xúc trực tiếp với người bệnh", "C. Hệ hô hấp", "D. Dịch tiết từ cơ thể"],
+    "correct": 0
+  },
+  {
+    "id": 16,
+    "question": "Bệnh có triệu chứng ho kéo dài và đau ngực là:",
+    "answers": ["A. Bệnh sốt rét", "B. Bệnh lao phổi", "C. Bệnh tả", "D. Bệnh cúm"],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "Mẹ không nên sử dụng chất kích thích trong thai kỳ vì:",
+    "answers": ["A. Chất kích thích có thể gây ra dị tật bẩm sinh cho thai nhi", "B. Chất kích thích không ảnh hưởng đến thai nhi", "C. Chất kích thích giúp thai nhi phát triển nhanh", "D. Chất kích thích giúp người mẹ khỏe mạnh hơn"],
+    "correct": 0
+  },
+  {
+    "id": 18,
+    "question": "Việc trồng cây xanh trong khuôn viên trường học có tác dụng:",
+    "answers": ["A. Tạo bóng mát, làm đẹp cảnh quan và cải thiện chất lượng không khí", "B. Tăng lượng rác thải và làm ô nhiễm môi trường", "C. Giảm bớt diện tích đất trồng cây", "D. Không có tác dụng gì đối với môi trường"],
+    "correct": 0
+  },
+  {
+    "id": 19,
+    "question": "Quá trình lên men trong việc làm bia và rượu có sử dụng loại vi khuẩn:",
+    "answers": ["A. Vi khuẩn có hại", "B. Vi khuẩn gây hư hỏng", "C. Men và vi khuẩn có lợi", "D. Vi khuẩn tự nhiên trong không khí"],
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "question": "Vi khuẩn có thể gây ra bệnh:",
+    "answers": ["A. Tiêu chảy, viêm phổi, lao", "B. Cận thị, sâu răng, gãy xương", "C. Đau đầu, mất ngủ, béo phì", "D. Viêm khớp, cao huyết áp, tiểu đường"],
+    "correct": 0
+  },
+  {
+    "id": 21,
+    "question": "Quá trình làm sữa chua có cần bổ sung sữa chua có sẵn vào hỗn hợp sữa không:",
+    "answers": ["A. Có, để vi khuẩn có thể lên men", "B. Không, chỉ cần sữa và đường", "C. Có, để tạo độ béo", "D. Không, chỉ cần sữa đặc"],
+    "correct": 0
+  },
+  {
+    "id": 22,
+    "question": "Nhiệt độ lý tưởng để vi khuẩn lactic acid phát triển khi làm sữa chua là:",
+    "answers": ["A. 20°C", "B. 30°C", "C. 40°C đến 50°C", "D. 60°C"],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Việc chăm sóc sức khỏe sinh sản có thể giúp giảm thiểu:",
+    "answers": ["A. Các bệnh lý về sinh sản", "B. Các biến chứng khi mang thai", "C. Các nguy cơ ảnh hưởng đến sức khỏe thai nhi", "D. Tất cả các đáp án trên"],
+    "correct": 3
+  },
+  {
+    "id": 24,
+    "question": "Để góp phần giảm ô nhiễm không khí tại địa phương, em có thể:",
+    "answers": ["A. Đốt rác thường xuyên", "B. Đi bộ hoặc đi xe đạp khi có thể", "C. Sử dụng nhiều phương tiện cá nhân", "D. Không trồng cây xanh"],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "Vi khuẩn có ích giúp gì trong quá trình chế biến thực phẩm:",
+    "answers": ["A. Làm mất chất dinh dưỡng", "B. Giúp lên men và tạo ra hương vị đặc trưng", "C. Làm cho thực phẩm dễ hỏng", "D. Giúp bảo quản thực phẩm bằng cách làm chín"],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "Lợi ích của vi khuẩn đối với con người:",
+    "answers": ["A. Làm ô nhiễm môi trường", "B. Gây bệnh truyền nhiễm", "C. Giúp tiêu hóa thức ăn, lên men thực phẩm", "D. Phá hủy cây cối"],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "question": "Sau khi làm xong, sữa chua nếu không được bảo quản trong ngăn mát tủ lạnh sẽ gặp phải vấn đề:",
+    "answers": ["A. Mất hương vị", "B. Quá chua", "C. Có mùi lạ", "D. Không đông lại"],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Nước ấm được sử dụng trong quá trình muối dưa cải vì:",
+    "answers": ["A. Để làm cho dưa mềm hơn", "B. Để kích thích quá trình lên men", "C. Để giúp dưa chua hơn", "D. Để làm tan chảy đường"],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "question": "Tôn trọng sự khác biệt giữa nam và nữ trong học tập có tác dụng:",
+    "answers": ["A. Tạo ra một môi trường học tập công bằng và bình đẳng", "B. Giúp phân biệt đối xử giữa nam và nữ trong lớp học", "C. Không có tác dụng gì", "D. Để tạo sự khác biệt giữa nam và nữ trong học tập"],
+    "correct": 0
+  },
+  {
+    "id": 30,
+    "question": "Để tiết kiệm nước trong gia đình, việc làm phù hợp nhất là:",
+    "answers": ["A. Mở vòi nước liên tục khi không sử dụng", "B. Dùng nước thoải mái vì có sẵn", "C. Chỉ dùng nước khi cần thiết", "D. Tắt vòi nước khi không dùng và sử dụng nước hợp lý"],
+    "correct": 3
+  }
+]

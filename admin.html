@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bộ đề Toán lớp 5 - Quản trị (template riêng)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            padding: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 28px;
+        }
+        h1 { font-size: 28px; color: #2c3e50; margin-bottom: 8px; }
+        .sub { color: #5d6d7e; margin-bottom: 28px; border-left: 4px solid #3498db; padding-left: 16px; }
+        .form-group { margin-bottom: 24px; }
+        label { display: block; font-weight: 600; margin-bottom: 8px; color: #2c3e50; }
+        input, select, button {
+            padding: 10px 15px;
+            border-radius: 12px;
+            border: 1px solid #d1d9e6;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        input[type="number"] { width: 140px; }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        button:hover { background: #2980b9; transform: translateY(-1px); }
+        .topic-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .topic-check {
+            background: #eef2f7;
+            padding: 6px 14px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        pre {
+            background: #1e2a3a;
+            color: #e2e8f0;
+            padding: 18px;
+            border-radius: 16px;
+            overflow-x: auto;
+            font-size: 12px;
+            font-family: monospace;
+            max-height: 500px;
+        }
+        .action-bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin: 20px 0; }
+        hr { margin: 28px 0; border-color: #e2e8f0; }
+        .note {
+            background: #fff8e7;
+            border-left: 4px solid #f39c12;
+            padding: 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            color: #7e5109;
+        }
+        .btn-secondary { background: #95a5a6; }
+        .btn-secondary:hover { background: #7f8c8d; }
+    </style>
+    <!-- Load thư viện shapes và templates -->
+    <script src="data/shapes.js"></script>
+    <script src="data/templates.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>🧩 Tạo bộ đề Toán lớp 5 (template riêng)</h1>
+    <div class="sub">Sinh câu hỏi ngẫu nhiên từ các mẫu có sẵn trong data/templates.js</div>
+
+    <div class="form-group">
+        <label>📌 Chọn chủ đề muốn sinh (nếu không chọn sẽ dùng tất cả):</label>
+        <div id="topicSelector" class="topic-group"></div>
+    </div>
+
+    <div class="form-group">
+        <label>🔢 Số lượng câu hỏi cần tạo:</label>
+        <input type="number" id="questionCount" value="500" min="10" max="2000" step="10">
+    </div>
+
+    <div class="action-bar">
+        <button id="generateBtn">✨ Tạo và tải xuống questions.json</button>
+        <button id="previewBtn" class="btn-secondary">🔍 Xem trước JSON</button>
+    </div>
+
+    <div id="previewArea" style="display: none;">
+        <label>📄 Nội dung JSON (bạn có thể copy thủ công):</label>
+        <pre id="output">Chưa sinh. Bấm nút để tạo.</pre>
+    </div>
+
+    <hr>
+
+    <div class="note">
+        💡 <strong>Cách sử dụng:</strong><br>
+        1. Chọn chủ đề và số lượng câu hỏi.<br>
+        2. Nhấn "Tạo và tải xuống questions.json" → file sẽ được tải về.<br>
+        3. <strong>Copy file questions.json vào thư mục data/</strong> của dự án (ghi đè nếu có).<br>
+        4. Mở index.html – học sinh sẽ làm bài với bộ đề mới.<br>
+        5. Lịch sử và ôn câu sai vẫn hoạt động bình thường.<br>
+        ⚡ Nếu muốn đổi bộ đề khác, chỉ cần lặp lại các bước trên.
+    </div>
+</div>
+
+<script>
+    // Hàm sinh câu hỏi từ TEMPLATES (đã được load từ file)
+    function generateQuestions(count, selectedTopics = null) {
+        let questions = [];
+        let id = 1;
+        let templatesToUse = selectedTopics && selectedTopics.length
+            ? TEMPLATES.filter(t => selectedTopics.includes(t.topic))
+            : TEMPLATES;
+        if (templatesToUse.length === 0) templatesToUse = TEMPLATES;
+
+        for (let i = 0; i < count; i++) {
+            let tmpl = templatesToUse[i % templatesToUse.length];
+            let params = tmpl.params();
+            let q = {
+                id: id++,
+                topic: tmpl.topic,
+                topicName: tmpl.topicName,
+                type: tmpl.type,
+                q: tmpl.template(...params),
+                answer: tmpl.answer(...params).toString(),
+                hint: tmpl.hint(...params)
+            };
+            // Nếu là trắc nghiệm, sinh 4 đáp án
+            if (tmpl.type === 'mc') {
+                let correct = q.answer;
+                let answers = [correct];
+                while(answers.length < 4) {
+                    let fake;
+                    if (!isNaN(parseFloat(correct))) {
+                        let val = parseFloat(correct);
+                        fake = (val + (Math.floor(Math.random()*20)+1)).toString();
+                    } else if (correct === ">" || correct === "<" || correct === "=") {
+                        let opts = [">", "<", "="];
+                        fake = opts.filter(o => o !== correct)[Math.floor(Math.random()*2)];
+                    } else {
+                        fake = correct + "?";
+                    }
+                    if (!answers.includes(fake)) answers.push(fake);
+                }
+                for(let i=answers.length-1;i>0;i--) {
+                    const j = Math.floor(Math.random()*(i+1));
+                    [answers[i], answers[j]] = [answers[j], answers[i]];
+                }
+                q.answers = answers;
+                q.correct = answers.indexOf(correct);
+            }
+            questions.push(q);
+        }
+        return questions;
+    }
+
+    // Xây dựng bộ chọn topic dựa trên TEMPLATES
+    function buildTopicSelector() {
+        const container = document.getElementById('topicSelector');
+        const map = new Map();
+        TEMPLATES.forEach(t => map.set(t.topic, t.topicName));
+        const topics = Array.from(map.entries()).map(([id, name]) => ({ id, name }));
+        container.innerHTML = '';
+        topics.forEach(t => {
+            const label = document.createElement('label');
+            label.className = 'topic-check';
+            label.innerHTML = `<input type="checkbox" value="${t.id}" checked> ${t.name}`;
+            container.appendChild(label);
+        });
+    }
+
+    function getSelectedTopics() {
+        const checked = [];
+        document.querySelectorAll('#topicSelector input:checked').forEach(cb => checked.push(cb.value));
+        return checked;
+    }
+
+    function downloadQuestions() {
+        const count = parseInt(document.getElementById('questionCount').value) || 200;
+        const selected = getSelectedTopics();
+        const questions = generateQuestions(count, selected);
+        const jsonStr = JSON.stringify(questions, null, 2);
+        const blob = new Blob([jsonStr], {type: 'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'questions.json';
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById('output').textContent = jsonStr;
+        document.getElementById('previewArea').style.display = 'block';
+    }
+
+    function previewOnly() {
+        const count = parseInt(document.getElementById('questionCount').value) || 200;
+        const selected = getSelectedTopics();
+        const questions = generateQuestions(count, selected);
+        const jsonStr = JSON.stringify(questions, null, 2);
+        document.getElementById('output').textContent = jsonStr;
+        document.getElementById('previewArea').style.display = 'block';
+    }
+
+    window.onload = () => {
+        // Đảm bảo TEMPLATES đã được load
+        if (typeof TEMPLATES === 'undefined') {
+            alert('Lỗi: Không tìm thấy file data/templates.js. Hãy đảm bảo file tồn tại.');
+            return;
+        }
+        buildTopicSelector();
+        document.getElementById('generateBtn').onclick = downloadQuestions;
+        document.getElementById('previewBtn').onclick = previewOnly;
+    };
+</script>
+</body>
+</html>

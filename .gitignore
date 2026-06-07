@@ -1,0 +1,30 @@
+echo "# Thư mục hệ thống
+.DS_Store
+Thumbs.db
+
+# Thư mục của IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Thư mục node_modules (nếu có)
+node_modules/
+
+# File log
+*.log
+
+# File tạm thời
+*.tmp
+*.temp
+
+# File cấu hình cá nhân
+.env
+ 
+# Thư mục backup
+bk/
+
+# EHCM thư mục không liên quan đến code
+ehcm/
+
+ 
