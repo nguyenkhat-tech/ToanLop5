@@ -1080,7 +1080,6 @@ const QUESTIONS = [
     hint: "240 : 8 = 30, 30 × 5 = ?" },
     // data/lop4/questions.js - Bổ sung 100 câu Hình học lớp 4 (id 401-500)
 // (Thêm vào cuối mảng QUESTIONS)
-const QUESTIONS = [
   // ========== NHẬN BIẾT HÌNH & GÓC (10 câu) ==========
   { id: 401, topic: "hinh_hoc", topicName: "Hình học", type: "mc",
     q: "Hình nào có 4 cạnh bằng nhau và 4 góc vuông?",
