@@ -1,4 +1,4 @@
-// app.js - Hỗ trợ đa khối lớp (3,4,5) với file .js riêng
+// app.js - Phiên bản hoàn chỉnh, hỗ trợ đa khối, lọc tag, mức độ, lưu lịch sử
 let state = {
   selectedTopics: new Set(),
   selectedTags: new Set(),
@@ -86,7 +86,6 @@ function clearAllHistory() {
   }
 }
 
-// ==================== HIỂN THỊ LỊCH SỬ ====================
 function showHistory() { renderHistoryList(); showScreen('history'); }
 
 function renderHistoryList() {
@@ -112,7 +111,7 @@ function viewSessionDetail(sessionId) {
   const session = allSessions.find(s => s.id === sessionId);
   if (!session) return;
   let detailsHtml = `<div class="review-section"><div class="review-title">📌 Chi tiết bài làm ngày ${new Date(session.timestamp).toLocaleString('vi-VN')}</div>`;
-  detailsHtml += `<table class="detail-table"><tr><th>Câu hỏi</th><th>Đáp án HS</th><th>Đáp án đúng</th><th>KQ</th><th>Thời gian</th><th>Gợi ý</th><tr>`;
+  detailsHtml += `<table class="detail-table"><tr><th>Câu hỏi</th><th>Đáp án HS</th><th>Đáp án đúng</th><th>KQ</th><th>Thời gian</th><th>Gợi ý</th></tr>`;
   session.details.forEach(d => {
     const timeDisplay = d.timeSpent !== undefined ? `${d.timeSpent}s` : '--';
     const hintIcon = d.viewedHint ? '✅' : '❌';
@@ -137,43 +136,102 @@ function viewSessionDetail(sessionId) {
   showScreen('detail');
 }
 
-// ==================== TAG FILTER ====================
-function getAllTags() {
-  const tagsSet = new Set();
-  QUESTIONS.forEach(q => {
-    if (q.tags && q.tags.length) q.tags.forEach(t => tagsSet.add(t));
-  });
-  return Array.from(tagsSet).sort();
-}
-
+// ==================== TAG FILTER (có tìm kiếm, chọn tất cả, đếm số câu) ====================
 function buildTagFilter() {
   const container = document.getElementById('tag-filter');
+  const searchInput = document.getElementById('tagSearch');
   if (!container) return;
-  const allTags = getAllTags();
-  container.innerHTML = '';
-  if (allTags.length === 0) {
-    container.innerHTML = '<div style="color:var(--muted); font-size:13px;">Chưa có tag nào.</div>';
-    return;
-  }
-  allTags.forEach(tag => {
-    const label = document.createElement('label');
-    label.className = 'topic-btn';
-    label.style.display = 'inline-block';
-    label.style.marginRight = '8px';
-    label.style.marginBottom = '8px';
-    label.innerHTML = `<input type="checkbox" value="${tag}" style="margin-right:6px;"> ${tag}`;
-    label.querySelector('input').addEventListener('change', (e) => {
-      if (e.target.checked) state.selectedTags.add(tag);
-      else state.selectedTags.delete(tag);
+  
+  function renderTags(keyword = '') {
+    const tagCount = new Map();
+    QUESTIONS.forEach(q => {
+      if (q.tags && q.tags.length) {
+        q.tags.forEach(tag => {
+          tagCount.set(tag, (tagCount.get(tag) || 0) + 1);
+        });
+      }
     });
-    container.appendChild(label);
-  });
+    let allTags = Array.from(tagCount.keys()).sort();
+    if (keyword.trim()) {
+      allTags = allTags.filter(tag => tag.toLowerCase().includes(keyword.toLowerCase()));
+    }
+    if (allTags.length === 0) {
+      container.innerHTML = '<div style="color:var(--muted); font-size:13px;">Không có tag nào phù hợp.</div>';
+      return;
+    }
+    let html = `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                  <span style="font-size:12px; font-weight:600;">🏷️ ${allTags.length} tag</span>
+                  <div>
+                    <button id="selectAllTags" style="background:none; border:none; color:var(--primary); cursor:pointer; font-size:11px;">Chọn tất cả</button>
+                    <button id="deselectAllTags" style="background:none; border:none; color:var(--muted); cursor:pointer; font-size:11px;">Bỏ chọn</button>
+                  </div>
+                </div>
+                <div id="tagList" style="display:flex; flex-wrap:wrap; gap:8px;"></div>`;
+    container.innerHTML = html;
+    
+    const tagListDiv = document.getElementById('tagList');
+    allTags.forEach(tag => {
+      const label = document.createElement('label');
+      label.className = 'topic-btn';
+      label.style.background = state.selectedTags.has(tag) ? 'var(--primary-light)' : 'var(--card)';
+      label.style.border = '1px solid var(--border)';
+      label.style.borderRadius = '20px';
+      label.style.padding = '4px 12px';
+      label.style.cursor = 'pointer';
+      label.style.display = 'inline-flex';
+      label.style.alignItems = 'center';
+      label.style.gap = '6px';
+      label.style.fontSize = '13px';
+      label.innerHTML = `<input type="checkbox" value="${tag}" style="margin:0;" ${state.selectedTags.has(tag) ? 'checked' : ''}> ${tag} <span style="font-size:10px; color:var(--muted);">(${tagCount.get(tag)})</span>`;
+      label.querySelector('input').addEventListener('change', (e) => {
+        if (e.target.checked) state.selectedTags.add(tag);
+        else state.selectedTags.delete(tag);
+        updateTagStyle(label, tag);
+      });
+      tagListDiv.appendChild(label);
+    });
+    
+    function updateTagStyle(label, tag) {
+      if (state.selectedTags.has(tag)) {
+        label.style.background = 'var(--primary-light)';
+        label.style.border = '2px solid var(--primary)';
+      } else {
+        label.style.background = 'var(--card)';
+        label.style.border = '1px solid var(--border)';
+      }
+    }
+    
+    document.getElementById('selectAllTags')?.addEventListener('click', () => {
+      allTags.forEach(tag => state.selectedTags.add(tag));
+      tagListDiv.querySelectorAll('label').forEach(label => {
+        const cb = label.querySelector('input');
+        if (cb) { cb.checked = true; updateTagStyle(label, cb.value); }
+      });
+    });
+    document.getElementById('deselectAllTags')?.addEventListener('click', () => {
+      state.selectedTags.clear();
+      tagListDiv.querySelectorAll('label').forEach(label => {
+        const cb = label.querySelector('input');
+        if (cb) { cb.checked = false; updateTagStyle(label, cb.value); }
+      });
+    });
+  }
+  
+  renderTags();
+  if (searchInput) {
+    searchInput.removeEventListener('input', renderTags);
+    searchInput.addEventListener('input', (e) => renderTags(e.target.value));
+  }
 }
 
 // ==================== CHỦ ĐỀ ====================
 function buildTopicGrid() {
   const g = document.getElementById('topic-grid');
   if (!g) return;
+  if (!TOPICS || TOPICS.length === 0) {
+    g.innerHTML = '<div style="color:red; padding:12px;">Chưa có chủ đề nào. Hãy kiểm tra topics.json</div>';
+    return;
+  }
   g.innerHTML = '';
   TOPICS.forEach(t => {
     const cnt = QUESTIONS.filter(q => q.topic === t.id).length;
@@ -206,21 +264,27 @@ function toggleTopic(el, tid) {
   }
 }
 
-// ==================== TẢI DỮ LIỆU THEO KHỐI (DÙNG FILE .JS) ====================
+// ==================== TẢI DỮ LIỆU THEO KHỐI ====================
 async function loadGrade(grade) {
+  console.log(`Đang tải dữ liệu cho lớp ${grade}...`);
   currentGrade = grade;
   try {
-    // 1. Load topics.js
-    const topicsRes = await fetch(`data/lop${grade}/topics.js`);
-    const topicsText = await topicsRes.text();
-    eval(topicsText); // TOPICS được định nghĩa
-
-    // 2. Load questions.js
-    const questionsRes = await fetch(`data/lop${grade}/questions.js`);
+    const topicsUrl = `data/lop${grade}/topics.json`;
+    const topicsRes = await fetch(topicsUrl);
+    if (!topicsRes.ok) throw new Error(`HTTP ${topicsRes.status}: ${topicsUrl}`);
+    TOPICS = await topicsRes.json();
+    
+    const questionsUrl = `data/lop${grade}/questions.js`;
+    const questionsRes = await fetch(questionsUrl);
+    if (!questionsRes.ok) throw new Error(`HTTP ${questionsRes.status}: ${questionsUrl}`);
     const questionsText = await questionsRes.text();
-    // Dùng eval để lấy mảng QUESTIONS (vì trong file có const QUESTIONS = [...])
-    eval(questionsText); // QUESTIONS được định nghĩa
-
+    const match = questionsText.match(/(?:const|var|let)\s+QUESTIONS\s*=\s*(\[[\s\S]*?\]);/);
+    if (match) {
+      QUESTIONS = eval('(' + match[1] + ')');
+    } else {
+      throw new Error('Không tìm thấy mảng QUESTIONS');
+    }
+    
     // Reset state
     state.selectedTopics.clear();
     if (TOPICS.length > 0) state.selectedTopics.add(TOPICS[0].id);
@@ -234,27 +298,37 @@ async function loadGrade(grade) {
     loadSessions();
     buildTopicGrid();
     buildTagFilter();
-    // Cập nhật số lượng câu hiển thị trên mỗi topic
+    
     document.querySelectorAll('.topic-btn').forEach(btn => {
       const tid = btn.dataset.tid;
       const cnt = QUESTIONS.filter(q => q.topic === tid).length;
       const countSpan = btn.querySelector('.topic-count');
       if (countSpan) countSpan.textContent = `${cnt} câu`;
     });
+    
     if (document.getElementById('screen-quiz').classList.contains('active')) goHome();
     else showScreen('home');
   } catch(e) {
-    console.error(`Lỗi tải dữ liệu cho lớp ${grade}:`, e);
-    alert(`Không thể tải dữ liệu cho lớp ${grade}. Hãy đảm bảo thư mục data/lop${grade}/ có topics.js và questions.js.`);
+    console.error(e);
+    alert(`Lỗi tải dữ liệu lớp ${grade}: ${e.message}`);
   }
 }
 
 // ==================== CÁC HÀM XỬ LÝ CHÍNH ====================
 function startQuiz() {
+  if (!QUESTIONS || QUESTIONS.length === 0) {
+    alert("Chưa có câu hỏi nào.");
+    return;
+  }
   state.qcount = parseInt(document.getElementById('qcount').value);
   state.timeper = parseInt(document.getElementById('timeper').value);
   state.shuffleAnswers = document.getElementById('shuffle-answers').checked;
   let pool = QUESTIONS.filter(q => state.selectedTopics.has(q.topic));
+  
+  const difficulty = document.getElementById('difficulty').value;
+  if (difficulty !== 'all') {
+    pool = pool.filter(q => (q.level || 'medium') === difficulty);
+  }
   if (state.selectedTags.size > 0) {
     pool = pool.filter(q => q.tags && q.tags.some(t => state.selectedTags.has(t)));
   }
@@ -266,6 +340,10 @@ function startQuiz() {
     pool.sort(() => Math.random() - 0.5);
   }
   state.questions = pool.slice(0, state.qcount);
+  if (state.questions.length === 0) {
+    alert("Không có câu hỏi phù hợp với bộ lọc.");
+    return;
+  }
   state.current = 0;
   state.score = 0;
   state.streak = 0;
@@ -282,10 +360,13 @@ function renderQuestion() {
   clearInterval(state.timerInt);
   const q = state.questions[state.current];
   const total = state.questions.length;
-  document.getElementById('q-counter').textContent = `${state.current + 1}/${total}`;
-  document.getElementById('progress-fill').style.width = `${(state.current / total) * 100}%`;
+  document.getElementById('q-counter').textContent = `${state.current+1}/${total}`;
+  document.getElementById('progress-fill').style.width = `${(state.current/total)*100}%`;
   document.getElementById('streak-num').textContent = state.streak;
-  document.getElementById('q-category').textContent = q.topicName;
+  
+  const levelMap = { easy: '🟢 Dễ', medium: '🟡 Trung bình', hard: '🔴 Khó' };
+  const levelBadge = `<span style="background:#f0f0f0; border-radius:12px; padding:2px 8px; font-size:11px; margin-left:8px;">${levelMap[q.level || 'medium']}</span>`;
+  document.getElementById('q-category').innerHTML = q.topicName + levelBadge;
   document.getElementById('q-text').innerHTML = q.q;
   document.getElementById('score-mini').textContent = `Điểm: ${state.score}/${total}`;
   document.getElementById('feedback-box').style.display = 'none';
@@ -300,20 +381,19 @@ function renderQuestion() {
     let shuffledIndices = null;
     if (state.shuffleAnswers) {
       shuffledIndices = [...Array(answers.length).keys()];
-      for (let i = shuffledIndices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+      for (let i=shuffledIndices.length-1; i>0; i--) {
+        const j = Math.floor(Math.random()*(i+1));
         [shuffledIndices[i], shuffledIndices[j]] = [shuffledIndices[j], shuffledIndices[i]];
       }
-      const newAnswers = shuffledIndices.map(idx => answers[idx]);
-      answers = newAnswers;
+      answers = shuffledIndices.map(idx => q.answers[idx]);
       correctIndex = shuffledIndices.indexOf(q.correct);
     } else {
       shuffledIndices = [...Array(answers.length).keys()];
     }
     state.currentShuffledIndices = shuffledIndices;
-    const labels = ['A', 'B', 'C', 'D'];
+    const labels = ['A','B','C','D'];
     let html = `<div class="answers-grid">`;
-    answers.forEach((a, i) => {
+    answers.forEach((a,i) => {
       html += `<button class="ans-btn" id="ans-${i}" onclick="checkMC(${i})">
         <span class="ans-label">${labels[i]}</span>${a}
       </button>`;
@@ -342,10 +422,7 @@ function renderQuestion() {
 }
 
 function fillEnterHandler(e) {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    checkFill();
-  }
+  if (e.key === 'Enter') { e.preventDefault(); checkFill(); }
 }
 
 function toggleHint() {
@@ -383,10 +460,7 @@ function checkFill() {
   const inp = document.getElementById('fill-inp');
   if (!inp) return;
   const val = inp.value.trim().replace(/\s/g, '');
-  if (val === "") {
-    alert("Vui lòng nhập đáp án!");
-    return;
-  }
+  if (val === "") { alert("Vui lòng nhập đáp án!"); return; }
   clearInterval(state.timerInt);
   state.answered = true;
   const q = state.questions[state.current];
@@ -410,13 +484,7 @@ function handleResult(isCorrect, q, correctAnswer, userAnswer, answerIndex, time
     state.wrongIds.add(getQuestionKey(q));
   }
   state.currentSessionDetails.push({
-    q: q,
-    userAnswer: userAnswer,
-    userAnswerRaw: userAnswer,
-    correctAnswer: correctAnswer,
-    isCorrect: isCorrect,
-    timeSpent: timeSpent,
-    viewedHint: state.currentQuestionViewedHint,
+    q, userAnswer, userAnswerRaw: userAnswer, correctAnswer, isCorrect, timeSpent, viewedHint: state.currentQuestionViewedHint,
   });
   document.getElementById('streak-num').textContent = state.streak;
   document.getElementById('score-mini').textContent = `Điểm: ${state.score}/${state.questions.length}`;
@@ -429,8 +497,8 @@ function showFeedback(ok, correctAns) {
   fb.className = 'feedback-box ' + (ok ? 'correct' : 'wrong');
   fb.style.display = 'block';
   if (ok) {
-    const msgs = ["✅ Chính xác! Giỏi lắm!", "🌟 Xuất sắc! Tiếp tục nhé!", "🎉 Tuyệt vời! Đúng rồi!", "👏 Chuẩn! Bạn thật thông minh!", "🔥 Đúng rồi! Tiếp tục phát huy!"];
-    fb.textContent = msgs[Math.floor(Math.random() * msgs.length)];
+    const msgs = ["✅ Chính xác! Giỏi lắm!", "🌟 Xuất sắc!", "🎉 Tuyệt vời!", "👏 Chuẩn!", "🔥 Đúng rồi!"];
+    fb.textContent = msgs[Math.floor(Math.random()*msgs.length)];
   } else {
     fb.textContent = `❌ Chưa đúng! Đáp án đúng là: ${correctAns}`;
   }
@@ -438,10 +506,7 @@ function showFeedback(ok, correctAns) {
 
 function nextQuestion() {
   state.current++;
-  if (state.current >= state.questions.length) {
-    showResult();
-    return;
-  }
+  if (state.current >= state.questions.length) { showResult(); return; }
   renderQuestion();
 }
 
@@ -449,39 +514,39 @@ function showResult() {
   clearInterval(state.timerInt);
   saveCurrentSession();
   const total = state.questions.length;
-  const pct = Math.round((state.score / total) * 100);
-  const elapsed = Math.round((Date.now() - state.startTime) / 1000);
-  document.getElementById('rs-score').textContent = pct + '%';
+  const pct = Math.round((state.score/total)*100);
+  const elapsed = Math.round((Date.now()-state.startTime)/1000);
+  document.getElementById('rs-score').textContent = pct+'%';
   document.getElementById('rs-correct').textContent = `${state.score}/${total}`;
-  const m = Math.floor(elapsed / 60), s = elapsed % 60;
-  document.getElementById('rs-time').textContent = m > 0 ? `${m}p${s}s` : `${s}s`;
-  let emoji = '😊', title = 'Cố gắng hơn nhé!';
-  if (pct >= 90) { emoji = '🏆'; title = 'Xuất sắc! Tuyệt vời!'; }
-  else if (pct >= 70) { emoji = '🌟'; title = 'Giỏi lắm! Tiếp tục nhé!'; }
-  else if (pct >= 50) { emoji = '👍'; title = 'Ổn đấy! Cần ôn thêm!'; }
+  const m = Math.floor(elapsed/60), s = elapsed%60;
+  document.getElementById('rs-time').textContent = m>0?`${m}p${s}s`:`${s}s`;
+  let emoji='😊', title='Cố gắng hơn nhé!';
+  if (pct>=90) { emoji='🏆'; title='Xuất sắc!'; }
+  else if (pct>=70) { emoji='🌟'; title='Giỏi lắm!'; }
+  else if (pct>=50) { emoji='👍'; title='Ổn đấy!'; }
   document.getElementById('result-emoji').textContent = emoji;
   document.getElementById('result-title').textContent = title;
   document.getElementById('result-sub').textContent = `Đúng ${state.score}/${total} câu — Streak cao nhất: ${state.maxStreak} 🔥`;
   const rl = document.getElementById('review-list');
-  rl.innerHTML = state.questions.map((q, i) => {
+  rl.innerHTML = state.questions.map((q,i)=>{
     const detail = state.currentSessionDetails.find(d => d.q.id === q.id && d.q.topic === q.topic);
     const ok = detail ? detail.isCorrect : false;
-    const ans = q.type === 'fill' ? q.answer : q.answers[q.correct];
-    return `<div class="review-item"><div class="review-q">${i + 1}. ${q.q}</div><div class="review-a ${ok ? 'tag-correct' : 'tag-wrong'}">${ok ? '✓ Đúng' : '✗ Sai — Đáp án: ' + ans}</div></div>`;
+    const ans = q.type==='fill' ? q.answer : q.answers[q.correct];
+    return `<div class="review-item"><div class="review-q">${i+1}. ${q.q}</div><div class="review-a ${ok?'tag-correct':'tag-wrong'}">${ok?'✓ Đúng':'✗ Sai — Đáp án: '+ans}</div></div>`;
   }).join('');
   state.history.done += total;
   state.history.correct += state.score;
   if (state.maxStreak > state.history.streak) state.history.streak = state.maxStreak;
   saveHistory();
   showScreen('result');
-  if (pct >= 70) spawnParticles();
+  if (pct>=70) spawnParticles();
 }
 
 function saveCurrentSession() {
   const total = state.questions.length;
   const correctCount = state.score;
-  const percent = Math.round((correctCount / total) * 100);
-  const totalTimeSec = Math.round((Date.now() - state.startTime) / 1000);
+  const percent = Math.round((correctCount/total)*100);
+  const totalTimeSec = Math.round((Date.now()-state.startTime)/1000);
   const totalHintUsed = state.currentSessionDetails.filter(d => d.viewedHint === true).length;
   const session = {
     id: Date.now(),
@@ -509,9 +574,7 @@ function saveCurrentSession() {
 
 function retryWrong() {
   state.mode = 'retry';
-  document.querySelectorAll('.mode-btn').forEach(b => {
-    b.classList.toggle('selected', b.dataset.mode === 'retry');
-  });
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('selected', b.dataset.mode === 'retry'));
   startQuiz();
 }
 
@@ -523,7 +586,7 @@ function goHome() {
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById('screen-' + id).classList.add('active');
+  document.getElementById('screen-'+id).classList.add('active');
 }
 
 function selectMode(el) {
@@ -545,89 +608,70 @@ function startTimer(sec) {
     }
   }, 1000);
 }
-
 function updateTimerUI(left, total) {
   document.getElementById('timer-sec').textContent = left;
-  const pct = (left / total) * 100;
+  const pct = (left/total)*100;
   const fill = document.getElementById('timer-fill');
-  fill.style.width = pct + '%';
-  fill.style.background = pct > 60 ? '#16A34A' : (pct > 30 ? '#D97706' : '#DC2626');
+  fill.style.width = pct+'%';
+  fill.style.background = pct>60?'#16A34A':(pct>30?'#D97706':'#DC2626');
 }
-
 function timeUp() {
   if (state.answered) return;
   state.answered = true;
   const q = state.questions[state.current];
   const timeSpent = state.timeper - state.timeLeft;
   state.streak = 0;
-  state.sessionWrong.push({ q, correct: false });
+  state.sessionWrong.push({q, correct:false});
   state.wrongIds.add(getQuestionKey(q));
-  const correctAns = q.type === 'fill' ? q.answer : q.answers[q.correct];
+  const correctAns = q.type==='fill' ? q.answer : q.answers[q.correct];
   showFeedback(false, correctAns);
-  state.currentSessionDetails.push({
-    q: q,
-    userAnswer: "(Hết giờ)",
-    userAnswerRaw: "(Hết giờ)",
-    correctAnswer: correctAns,
-    isCorrect: false,
-    timeSpent: timeSpent,
-    viewedHint: state.currentQuestionViewedHint,
-  });
+  state.currentSessionDetails.push({ q, userAnswer: "(Hết giờ)", userAnswerRaw: "(Hết giờ)", correctAnswer: correctAns, isCorrect: false, timeSpent, viewedHint: state.currentQuestionViewedHint });
   if (q.type === 'mc') {
-    document.querySelectorAll('.ans-btn').forEach(b => b.disabled = true);
+    document.querySelectorAll('.ans-btn').forEach(b=>b.disabled=true);
     const cb = document.getElementById(`ans-${state.currentCorrectPos}`);
     if (cb) cb.classList.add('correct');
   } else {
     const inp = document.getElementById('fill-inp');
-    if (inp) { inp.disabled = true; inp.classList.add('wrong'); }
+    if (inp) { inp.disabled=true; inp.classList.add('wrong'); }
   }
   document.getElementById('streak-num').textContent = state.streak;
   document.getElementById('next-btn').style.display = 'block';
 }
 
 function spawnParticles() {
-  const emojis = ['⭐', '🌟', '✨', '🎉', '👏', '🔥', '💫', '🎊'];
-  for (let i = 0; i < 8; i++) {
-    setTimeout(() => {
+  const emojis = ['⭐','🌟','✨','🎉','👏','🔥','💫','🎊'];
+  for (let i=0;i<8;i++) {
+    setTimeout(()=>{
       const p = document.createElement('div');
       p.className = 'particle';
-      p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      p.style.left = Math.random() * 80 + 10 + '%';
-      p.style.top = Math.random() * 60 + 20 + '%';
+      p.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      p.style.left = Math.random()*80+10+'%';
+      p.style.top = Math.random()*60+20+'%';
       document.body.appendChild(p);
-      setTimeout(() => p.remove(), 1600);
-    }, i * 80);
+      setTimeout(()=>p.remove(),1600);
+    }, i*80);
   }
 }
 
-// Bàn phím
-document.addEventListener('keydown', e => {
-  const quizScreen = document.getElementById('screen-quiz');
-  if (!quizScreen || !quizScreen.classList.contains('active')) return;
+document.addEventListener('keydown', e=>{
+  if (!document.getElementById('screen-quiz').classList.contains('active')) return;
   if (!state.answered) {
     const q = state.questions[state.current];
     if (q && q.type === 'mc') {
-      const map = { '1': 0, '2': 1, '3': 2, '4': 3 };
-      if (map[e.key] !== undefined) {
-        e.preventDefault();
-        checkMC(map[e.key]);
-      }
+      const map = {'1':0,'2':1,'3':2,'4':3};
+      if (map[e.key] !== undefined) { e.preventDefault(); checkMC(map[e.key]); }
     }
   } else {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      nextQuestion();
-    }
+    if (e.key === 'Enter') { e.preventDefault(); nextQuestion(); }
   }
 });
 
-// Khởi tạo khi trang load
 document.addEventListener('DOMContentLoaded', () => {
   const gradeSelect = document.getElementById('gradeSelect');
   if (gradeSelect) {
     gradeSelect.addEventListener('change', (e) => loadGrade(e.target.value));
     loadGrade('5');
   } else {
-    loadGrade('5');
+    console.error("Không tìm thấy gradeSelect");
   }
 });

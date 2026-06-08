@@ -1,0 +1,11 @@
+ 
+[
+  { "id": "so_tu_nhien", "name": "Số tự nhiên phạm vi 10.000", "icon": "🔢" },
+  { "id": "bang_nhan_chia", "name": "Bảng nhân & chia (6-9)", "icon": "✖️" },
+  { "id": "phep_tinh", "name": "Cộng, Trừ, Nhân, Chia", "icon": "🧮" },
+  { "id": "toan_loi_van", "name": "Toán có lời văn", "icon": "📝" },
+  { "id": "hinh_hoc", "name": "Hình học (Chu vi, Diện tích)", "icon": "📐" },
+  { "id": "don_vi_do", "name": "Đo lường (Độ dài, Khối lượng)", "icon": "📏" },
+  { "id": "lam_quen_phan_so", "name": "Làm quen Phân số", "icon": "🍕" },
+  { "id": "tu_duy_logic", "name": "Tư duy & Quy luật", "icon": "🧠" }
+]

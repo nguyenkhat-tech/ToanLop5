@@ -38,8 +38,10 @@
   <div class="section-label">Chọn chủ đề</div>
   <div class="topic-grid" id="topic-grid"></div>
 
-  <div class="section-label">🏷️ Lọc theo tag (tùy chọn)</div>
-  <div id="tag-filter" class="topic-grid" style="margin-bottom:12px;"></div>
+  <!-- Phần lọc tag với input tìm kiếm -->
+  <div class="section-label">🏷️ Lọc theo tag</div>
+  <input type="text" id="tagSearch" placeholder="🔍 Tìm kiếm tag..." style="width:100%; padding:8px 12px; border-radius:24px; border:1px solid var(--border); background:var(--card); margin-bottom:8px;">
+  <div id="tag-filter"></div>
 
   <div class="section-label">Chế độ</div>
   <div class="mode-row">
@@ -51,6 +53,17 @@
   <div class="section-label">Tùy chỉnh</div>
   <div class="count-row"><label>Số câu hỏi</label><input type="range" id="qcount" min="5" max="30" step="5" value="10" oninput="document.getElementById('qcount-val').textContent=this.value"><span class="count-val" id="qcount-val">10</span></div>
   <div class="count-row"><label>Giây mỗi câu</label><input type="range" id="timeper" min="15" max="90" step="15" value="30" oninput="document.getElementById('timeper-val').textContent=this.value"><span class="count-val" id="timeper-val">30</span></div>
+  
+  <div class="count-row">
+    <label>⭐ Mức độ câu hỏi</label>
+    <select id="difficulty">
+      <option value="all">Tất cả</option>
+      <option value="easy">Dễ</option>
+      <option value="medium">Trung bình</option>
+      <option value="hard">Khó</option>
+    </select>
+  </div>
+
   <div class="checkbox-row">
     <label>🔄 Xáo trộn đáp án (trắc nghiệm)</label>
     <input type="checkbox" id="shuffle-answers">
@@ -59,6 +72,7 @@
     <label>🔘 Kết hợp nhiều chủ đề (bật để chọn nhiều)</label>
     <input type="checkbox" id="multiTopics">
   </div>
+
   <button class="start-btn" onclick="startQuiz()"><i class="ti ti-player-play"></i> Bắt đầu ôn tập</button>
   <button class="history-btn" onclick="showHistory()"><i class="ti ti-history"></i> 📜 Lịch sử bài làm</button>
 </div>

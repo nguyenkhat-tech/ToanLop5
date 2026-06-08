@@ -1,0 +1,10 @@
+  [
+  { "id": "so_tu_nhien", "name": "Số tự nhiên", "icon": "🔢" },
+  { "id": "phan_so", "name": "Phân số", "icon": "🍕" },
+  { "id": "so_thap_phan", "name": "Số thập phân", "icon": "🔡" },
+  { "id": "do_luong", "name": "Đo lường", "icon": "📏" },
+  { "id": "dai_so", "name": "Tìm X & Biểu thức", "icon": "🧮" },
+  { "id": "toan_co_loi_van", "name": "Toán có lời văn", "icon": "📝" },
+  { "id": "ti_so_phan_tram", "name": "Tỉ số phần trăm", "icon": "📊" },
+  { "id": "hinh_hoc", "name": "Hình học", "icon": "📐" }
+]

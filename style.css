@@ -837,3 +837,39 @@ kbd {
   margin-top: 8px;
   font-weight: 600;
 }
+
+/* Cải thiện hiển thị tag filter - tránh trải dài */
+#tag-filter {
+  max-height: 140px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+#tag-filter label {
+  background: var(--primary-light);
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+#tag-filter label:hover {
+  background: var(--primary-mid);
+  color: white;
+}
+#tag-filter input {
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
