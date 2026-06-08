@@ -1,0 +1,13 @@
+[
+  { "id": "so_lon_lop_trieu", "name": "Số lớn (Lớp triệu, Lớp tỉ)", "icon": "🔢" },
+  { "id": "phep_tinh_nang_cao", "name": "Cộng, Trừ, Nhân, Chia số lớn", "icon": "🧮" },
+  { "id": "dau_hieu_chia_het", "name": "Dấu hiệu chia hết (2, 3, 5, 9)", "icon": "➗" },
+  { "id": "do_luong", "name": "đổi đơn vị đo lường", "icon": "📏" },
+    { "id": "phan_so_co_ban", "name": "Phân số & Phép tính phân số", "icon": "🍕" },
+  { "id": "hinh_hoc_lop", "name": "Góc, Hình bình hành, Hình thoi", "icon": "📐" },
+  { "id": "dien_tich_chu_vi", "name": "Diện tích & Chu vi hình phức hợp", "icon": "📏" },
+  { "id": "toan_trung_binh_cong", "name": "Trung bình cộng & Tổng-Hiệu", "icon": "📝" },
+  { "id": "toan_ti_le", "name": "Toán Tổng-Tỉ & Hiệu-Tỉ", "icon": "⚖️" },
+  { "id": "don_vi_do_dien_tich", "name": "Đơn vị đo diện tích", "icon": "🏗️" },
+  { "id": "tu_duy_logic_lop_4", "name": "Tư duy & Quy luật nâng cao", "icon": "🧠" }
+]
