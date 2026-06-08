@@ -3,21 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ôn Tập Toán Lớp 5 - Học thông minh</title>
+<title>Ôn Tập Toán Tiểu Học</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <link rel="stylesheet" href="style.css">
-<script src="data/topics.js"></script>
+<!-- Shapes dùng chung -->
 <script src="data/shapes.js"></script>
-<script src="data/so_tu_nhien.js"></script>
-<script src="data/phan_so.js"></script>
-<script src="data/so_thap_phan.js"></script>
-<script src="data/hinh_hoc.js"></script>
-<script src="data/thong_ke.js"></script>
-<script src="data/do_luong.js"></script>
-<script src="data/toan_van.js"></script>
-<script src="data/index.js"></script>
 </head>
 <body>
 <div class="container">
@@ -25,8 +17,16 @@
 <!-- HOME -->
 <div id="screen-home" class="screen active">
   <div class="home-header">
-    <div class="home-logo">⭐ Toán Lớp 5</div>
-    <div class="home-sub">Ôn tập thông minh — Học vui mỗi ngày</div>
+    <div class="home-logo">⭐ Ôn tập Toán</div>
+    <div class="home-sub">Chọn khối lớp và bắt đầu ôn luyện</div>
+  </div>
+  <div class="grade-selector" style="margin: 16px 0; text-align: center;">
+    <label style="font-weight:700;">📚 Chọn khối lớp: </label>
+    <select id="gradeSelect" style="padding:8px 12px; border-radius:12px; border:1px solid #ccc;">
+      <option value="3">Lớp 3</option>
+      <option value="4">Lớp 4</option>
+      <option value="5" selected>Lớp 5</option>
+    </select>
   </div>
   <div class="stats-row">
     <div class="stat-card"><div class="stat-num" id="hs-done">0</div><div class="stat-label">Câu đã làm</div></div>
@@ -35,6 +35,10 @@
   </div>
   <div class="section-label">Chọn chủ đề</div>
   <div class="topic-grid" id="topic-grid"></div>
+  <!-- ========== THÊM PHẦN LỌC TAG ========== -->
+  <div class="section-label">🏷️ Lọc theo tag (tùy chọn)</div>
+  <div id="tag-filter" class="topic-grid" style="margin-bottom:12px;"></div>
+  <!-- ====================================== -->
   <div class="section-label">Chế độ</div>
   <div class="mode-row">
     <div class="mode-btn selected" data-mode="normal" onclick="selectMode(this)"><span class="mode-icon"><i class="ti ti-list-numbers"></i></span>Theo thứ tự</div>
@@ -43,30 +47,7 @@
   </div>
   <div class="section-label">Tùy chỉnh</div>
   <div class="count-row"><label>Số câu hỏi</label><input type="range" id="qcount" min="5" max="30" step="5" value="10" oninput="document.getElementById('qcount-val').textContent=this.value"><span class="count-val" id="qcount-val">10</span></div>
-  
-  <div class="count-row">
-    <label>⏱️ Hình thức thời gian</label>
-    <div style="display: flex; gap: 10px;">
-      <label><input type="radio" name="examMode" value="per_question" checked onchange="toggleExamMode()"> Từng câu</label>
-      <label><input type="radio" name="examMode" value="total" onchange="toggleExamMode()"> Tổng thời gian</label>
-    </div>
-  </div>
-  <div class="count-row" id="perQuestionTimeRow"><label>Giây mỗi câu</label><input type="range" id="timeper" min="15" max="90" step="15" value="30" oninput="document.getElementById('timeper-val').textContent=this.value"><span class="count-val" id="timeper-val">30</span></div>
-  <div class="count-row" id="totalTimeRow" style="display:none;"><label>Tổng thời gian (phút)</label><input type="range" id="totalTime" min="1" max="30" step="1" value="10" oninput="document.getElementById('totalTime-val').textContent=this.value"><span class="count-val" id="totalTime-val">10</span></div>
-  
-  <div class="checkbox-row">
-    <label>📢 Hiển thị đáp án đúng sau mỗi câu</label>
-    <input type="checkbox" id="showAnswer">
-  </div>
-  <div class="count-row">
-    <label>⭐ Mức độ câu hỏi</label>
-    <select id="difficulty">
-      <option value="all">Tất cả</option>
-      <option value="easy">Dễ</option>
-      <option value="medium">Trung bình</option>
-      <option value="hard">Khó</option>
-    </select>
-  </div>
+  <div class="count-row"><label>Giây mỗi câu</label><input type="range" id="timeper" min="15" max="90" step="15" value="30" oninput="document.getElementById('timeper-val').textContent=this.value"><span class="count-val" id="timeper-val">30</span></div>
   <div class="checkbox-row">
     <label>🔄 Xáo trộn đáp án (trắc nghiệm)</label>
     <input type="checkbox" id="shuffle-answers">
@@ -88,7 +69,7 @@
     <div class="streak-badge"><i class="ti ti-flame"></i><span id="streak-num">0</span></div>
   </div>
   <div class="timer-wrap">
-    <div class="timer-text" id="timer-text">⏱ Còn lại: <span id="timer-sec">30</span>s</div>
+    <div class="timer-text">⏱ Còn lại: <span id="timer-sec">30</span>s</div>
     <div class="timer-bar"><div class="timer-fill" id="timer-fill" style="width:100%;background:#16A34A"></div></div>
   </div>
   <div class="question-card"><div class="q-category" id="q-category"></div><div class="q-text" id="q-text"></div></div>

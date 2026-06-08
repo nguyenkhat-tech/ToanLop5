@@ -1,14 +1,37 @@
-// data/index.js
-// Gộp tất cả câu hỏi từ các chủ đề
-const QUESTIONS = [
-  ...SO_TU_NHIEN,
-  ...PHAN_SO,
-  ...SO_THAP_PHAN,
-  ...HINH_HOC,
-  ...THONG_KE,
-  ...DO_LUONG,
-  ...TOAN_VAN
-];
+// data/index.js - Gộp câu hỏi từ các chủ đề và gán tag mặc định
 
-// (Tuỳ chọn) Kiểm tra trùng ID – nếu muốn an toàn có thể gán lại id duy nhất
-// Nhưng hiện tại các id đã là duy nhất từ 1..58
+// Hàm gán ID duy nhất
+function assignUniqueIds(...questionArrays) {
+  let nextId = 1;
+  let all = [];
+  for (let arr of questionArrays) {
+    for (let q of arr) {
+      let newQ = { ...q, id: nextId++ };
+      all.push(newQ);
+    }
+  }
+  return all;
+}
+
+// Hàm gán tag mặc định (nếu câu hỏi chưa có tags)
+function assignDefaultTags(questions) {
+  return questions.map(q => {
+    if (!q.tags) {
+      q.tags = [q.topic];
+    }
+    return q;
+  });
+}
+
+// Gộp và gán tags
+const QUESTIONS = assignUniqueIds(
+  assignDefaultTags(SO_TU_NHIEU),
+  assignDefaultTags(PHAN_SO),
+  assignDefaultTags(SO_THAP_PHAN),
+  assignDefaultTags(HINH_HOC),
+  assignDefaultTags(THONG_KE),
+  assignDefaultTags(DO_LUONG),
+  assignDefaultTags(TOAN_VAN)
+);
+
+console.log(`Đã tạo bộ đề với ${QUESTIONS.length} câu hỏi, ID từ 1 đến ${QUESTIONS.length}.`);
