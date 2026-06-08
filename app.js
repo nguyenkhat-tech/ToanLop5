@@ -1,4 +1,4 @@
-// app.js - Ôn tập Toán đa khối lớp (3,4,5)
+// app.js - Hỗ trợ đa khối lớp (3,4,5) với file .js riêng
 let state = {
   selectedTopics: new Set(),
   selectedTags: new Set(),
@@ -112,7 +112,7 @@ function viewSessionDetail(sessionId) {
   const session = allSessions.find(s => s.id === sessionId);
   if (!session) return;
   let detailsHtml = `<div class="review-section"><div class="review-title">📌 Chi tiết bài làm ngày ${new Date(session.timestamp).toLocaleString('vi-VN')}</div>`;
-  detailsHtml += `<table class="detail-table"><tr><th>Câu hỏi</th><th>Đáp án HS</th><th>Đáp án đúng</th><th>KQ</th><th>Thời gian</th><th>Gợi ý</th></tr>`;
+  detailsHtml += `<table class="detail-table"><tr><th>Câu hỏi</th><th>Đáp án HS</th><th>Đáp án đúng</th><th>KQ</th><th>Thời gian</th><th>Gợi ý</th><tr>`;
   session.details.forEach(d => {
     const timeDisplay = d.timeSpent !== undefined ? `${d.timeSpent}s` : '--';
     const hintIcon = d.viewedHint ? '✅' : '❌';
@@ -206,15 +206,20 @@ function toggleTopic(el, tid) {
   }
 }
 
-// ==================== TẢI DỮ LIỆU THEO KHỐI ====================
+// ==================== TẢI DỮ LIỆU THEO KHỐI (DÙNG FILE .JS) ====================
 async function loadGrade(grade) {
   currentGrade = grade;
   try {
+    // 1. Load topics.js
     const topicsRes = await fetch(`data/lop${grade}/topics.js`);
     const topicsText = await topicsRes.text();
     eval(topicsText); // TOPICS được định nghĩa
-    const questionsRes = await fetch(`data/lop${grade}/questions.json`);
-    QUESTIONS = await questionsRes.json();
+
+    // 2. Load questions.js
+    const questionsRes = await fetch(`data/lop${grade}/questions.js`);
+    const questionsText = await questionsRes.text();
+    // Dùng eval để lấy mảng QUESTIONS (vì trong file có const QUESTIONS = [...])
+    eval(questionsText); // QUESTIONS được định nghĩa
 
     // Reset state
     state.selectedTopics.clear();
@@ -240,7 +245,7 @@ async function loadGrade(grade) {
     else showScreen('home');
   } catch(e) {
     console.error(`Lỗi tải dữ liệu cho lớp ${grade}:`, e);
-    alert(`Không thể tải dữ liệu cho lớp ${grade}. Hãy đảm bảo thư mục data/lop${grade}/ có topics.js và questions.json.`);
+    alert(`Không thể tải dữ liệu cho lớp ${grade}. Hãy đảm bảo thư mục data/lop${grade}/ có topics.js và questions.js.`);
   }
 }
 
@@ -621,6 +626,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const gradeSelect = document.getElementById('gradeSelect');
   if (gradeSelect) {
     gradeSelect.addEventListener('change', (e) => loadGrade(e.target.value));
+    loadGrade('5');
+  } else {
     loadGrade('5');
   }
 });
