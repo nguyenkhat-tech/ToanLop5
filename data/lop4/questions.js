@@ -319,9 +319,9 @@ const QUESTIONS = [
   { id: 297, topic: "dau_hieu_chia_het", topicName: "Tổng hợp", type: "fill", q: "Số 75 có chia hết cho 2 không? (Có/Không)", answer: "Không", level: "easy", hint: "Số lẻ." },
   { id: 298, topic: "dau_hieu_chia_het", topicName: "Tổng hợp", type: "fill", q: "Số 30 có chia hết cho 3 và 10 không? (Có/Không)", answer: "Có", level: "hard", hint: "3+0=3 (chia 3) và tận cùng 0 (chia 10)." },
   { id: 299, topic: "dau_hieu_chia_het", topicName: "Tổng hợp", type: "fill", q: "Số 12 có chia hết cho 9 không? (Có/Không)", answer: "Không", level: "medium", hint: "1+2=3 (không chia hết cho 9)." },
-  { id: 300, topic: "dau_hieu_chia_het", topicName: "Tổng hợp", type: "fill", q: "Số 1000 có chia hết cho 2, 5 và 10 không? (Có/Không)", answer: "Có", level: "hard", hint: "Tận cùng là 0 nên chia hết cho cả 3 số này." }
+  { id: 300, topic: "dau_hieu_chia_het", topicName: "Tổng hợp", type: "fill", q: "Số 1000 có chia hết cho 2, 5 và 10 không? (Có/Không)", answer: "Có", level: "hard", hint: "Tận cùng là 0 nên chia hết cho cả 3 số này." },
 // data/lop4/questions.js - Phân số cơ bản (100 câu, id 301-400)
-const QUESTIONS = [
+
   // === NHẬN BIẾT PHÂN SỐ (10 câu) ===
   { id: 301, topic: "phan_so_co_ban", topicName: "Phân số cơ bản", type: "fill",
     q: "Hình tròn được chia làm 4 phần bằng nhau, tô màu 1 phần. Viết phân số chỉ phần đã tô.",
@@ -698,9 +698,9 @@ const QUESTIONS = [
   { id: 390, topic: "phan_so_co_ban", topicName: "Phân số cơ bản", type: "mc",
     q: "Một bể nước có 240 lít, đã dùng 5/8 số nước. Hỏi đã dùng bao nhiêu lít?",
     answers: ["150 lít", "100 lít", "90 lít", "120 lít"], correct: 0,
-    hint: "240 : 8 × 5 = 150." }
+    hint: "240 : 8 × 5 = 150." },
  // data/lop4/questions.js - Phân số cơ bản (100 câu, id 301-400) - Hướng dẫn không đưa đáp án
-const QUESTIONS = [
+
   // === NHẬN BIẾT PHÂN SỐ (10 câu) ===
   { id: 301, topic: "phan_so_co_ban", topicName: "Phân số cơ bản", type: "fill",
     q: "Hình tròn được chia làm 4 phần bằng nhau, tô màu 1 phần. Viết phân số chỉ phần đã tô.",
