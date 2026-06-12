@@ -1,0 +1,42 @@
+[
+  {
+    "id": "on_tap",
+    "name": "Ôn tập & Bổ sung (1–100)",
+    "icon": "🔢"
+  },
+  {
+    "id": "so_lien_ke",
+    "name": "Số liền trước, số liền sau",
+    "icon": "➡️"
+  },
+  {
+    "id": "cong_tru_20",
+    "name": "Cộng trừ qua 10 (đến 20)",
+    "icon": "➕"
+  },
+  {
+    "id": "cong_tru_100",
+    "name": "Cộng trừ có nhớ (đến 100)",
+    "icon": "🧮"
+  },
+  {
+    "id": "nhan_chia",
+    "name": "Phép nhân & chia",
+    "icon": "✖️"
+  },
+  {
+    "id": "hinh_hoc",
+    "name": "Hình học",
+    "icon": "📐"
+  },
+  {
+    "id": "do_luong",
+    "name": "Đo lường & Thời gian",
+    "icon": "📏"
+  },
+  {
+    "id": "toan_loi_van",
+    "name": "Toán có lời văn",
+    "icon": "📝"
+  }
+]

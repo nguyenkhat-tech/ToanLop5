@@ -27,4 +27,7 @@ bk/
 # EHCM thư mục không liên quan đến code
 ehcm/
 
+# Python venv (OCR/PDF tools)
+.venv/
+
  
