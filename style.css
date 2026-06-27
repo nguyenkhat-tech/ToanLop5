@@ -127,7 +127,7 @@ body {
   transition: border-color .15s var(--ease), background .15s var(--ease), transform .1s;
   user-select: none;
 }
-.grade-pill-icon  { display: flex; align-items: center; flex-shrink: 0; margin-bottom: 4px; }
+.grade-pill-icon  { display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-bottom: 4px; }
 .grade-pill-label { font-size: 12px; font-weight: 700; color: var(--text); }
 
 .grade-pill:hover   { border-color: var(--primary-mid); background: var(--primary-light); }
@@ -1013,5 +1013,6 @@ kbd {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
