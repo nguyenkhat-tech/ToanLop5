@@ -25,7 +25,7 @@
   --bg:     #F5F3FF;
   --card:   #FFFFFF;
   --text:   #1E1B4B;
-  --muted:  #6B7280;
+  --muted:  #4B5563;
   --border: #E5E7EB;
 
   --r:    16px;
@@ -127,7 +127,7 @@ body {
   transition: border-color .15s var(--ease), background .15s var(--ease), transform .1s;
   user-select: none;
 }
-.grade-pill-icon  { font-size: 24px; display: block; margin-bottom: 4px; }
+.grade-pill-icon  { display: flex; align-items: center; flex-shrink: 0; margin-bottom: 4px; }
 .grade-pill-label { font-size: 12px; font-weight: 700; color: var(--text); }
 
 .grade-pill:hover   { border-color: var(--primary-mid); background: var(--primary-light); }
@@ -160,7 +160,7 @@ body {
   gap: 10px;
   transition: border-color .15s, background .15s, transform .1s;
 }
-.subject-card-icon  { font-size: 26px; flex-shrink: 0; }
+.subject-card-icon  { display: flex; align-items: center; flex-shrink: 0; color: var(--primary); }
 .subject-card-name  { font-size: 13px; font-weight: 700; color: var(--text); }
 
 .subject-card:hover  { border-color: var(--primary-mid); background: var(--primary-light); }
@@ -992,4 +992,26 @@ kbd {
   .grade-pills { grid-template-columns: repeat(2, 1fr); }
   .q-text { font-size: 16px; }
   .start-btn { font-size: 16px; }
+}
+
+/* Focus rings — accessibility */
+.grade-pill:focus-visible,
+.subject-card:focus-visible,
+.topic-btn:focus-visible,
+.mode-btn:focus-visible,
+.ans-btn:focus-visible,
+.submit-btn:focus-visible,
+.hint-btn:focus-visible,
+.start-btn:focus-visible,
+.history-btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
