@@ -466,11 +466,11 @@ select:focus { border-color: var(--primary); }
   gap: 8px;
   letter-spacing: .01em;
 }
-.start-btn:hover  {
+.start-btn:hover:not(:disabled)  {
   transform: translateY(-2px);
   box-shadow: 0 7px 0 var(--primary-dark), 0 12px 28px rgba(124,58,237,.4);
 }
-.start-btn:active {
+.start-btn:active:not(:disabled) {
   transform: translateY(3px);
   box-shadow: 0 2px 0 var(--primary-dark), 0 4px 12px rgba(124,58,237,.25);
 }
@@ -692,11 +692,13 @@ select:focus { border-color: var(--primary); }
   background: var(--success-light);
   border-color: var(--success);
   color: var(--success);
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
 }
 .ans-btn.wrong {
   background: var(--danger-light);
   border-color: var(--danger);
   color: var(--danger);
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
 }
 
 .ans-label {
