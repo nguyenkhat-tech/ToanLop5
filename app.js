@@ -336,6 +336,11 @@ function updateHomeSubtitle() {
 function updateSubjectSelectorVisibility(grade) {
   const wrap = document.getElementById('subjectSelectorWrap');
   if (wrap) wrap.style.display = grade === '5' ? '' : 'none';
+  // reset subject pills to toan when switching away from grade 5
+  if (grade !== '5') {
+    document.querySelectorAll('.subject-card').forEach(c =>
+      c.classList.toggle('active', c.dataset.subject === 'toan'));
+  }
 }
 
 // ==================== CÁC HÀM XỬ LÝ CHÍNH ====================
@@ -388,9 +393,12 @@ function renderQuestion() {
   document.getElementById('progress-fill').style.width = `${(state.current/total)*100}%`;
   document.getElementById('streak-num').textContent = state.streak;
   
-  const levelMap = { easy: '🟢 Dễ', medium: '🟡 Trung bình', hard: '🔴 Khó' };
-  const levelBadge = `<span style="background:#f0f0f0; border-radius:12px; padding:2px 8px; font-size:11px; margin-left:8px;">${levelMap[q.level || 'medium']}</span>`;
+  const levelMeta = { easy: { label: '🟢 Dễ', cls: 'easy' }, medium: { label: '🟡 Trung bình', cls: 'medium' }, hard: { label: '🔴 Khó', cls: 'hard' } };
+  const lv = levelMeta[q.level || 'medium'];
+  const levelBadge = `<span class="level-badge ${lv.cls}">${lv.label}</span>`;
   document.getElementById('q-category').innerHTML = q.topicName + levelBadge;
+  const qCard = document.getElementById('question-card');
+  if (qCard) qCard.dataset.level = q.level || 'medium';
   document.getElementById('q-text').innerHTML = q.q;
   document.getElementById('score-mini').textContent = `Điểm: ${state.score}/${total}`;
   document.getElementById('feedback-box').style.display = 'none';
@@ -511,6 +519,8 @@ function handleResult(isCorrect, q, correctAnswer, userAnswer, answerIndex, time
     q, userAnswer, userAnswerRaw: userAnswer, correctAnswer, isCorrect, timeSpent, viewedHint: state.currentQuestionViewedHint,
   });
   document.getElementById('streak-num').textContent = state.streak;
+  const sb = document.getElementById('streak-badge');
+  if (sb) sb.classList.toggle('on-fire', state.streak >= 3);
   document.getElementById('score-mini').textContent = `Điểm: ${state.score}/${state.questions.length}`;
   showFeedback(isCorrect, correctAnswer);
   document.getElementById('next-btn').style.display = 'block';
@@ -691,22 +701,53 @@ document.addEventListener('keydown', e=>{
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const gradeSelect = document.getElementById('gradeSelect');
+  const gradeSelect   = document.getElementById('gradeSelect');
   const subjectSelect = document.getElementById('subjectSelect');
+
+  // ── Grade pill buttons ──────────────────────
+  document.querySelectorAll('.grade-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const grade = pill.dataset.grade;
+      document.querySelectorAll('.grade-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      if (gradeSelect) { gradeSelect.value = grade; }
+      updateSubjectSelectorVisibility(grade);
+      const subject = grade === '5' && subjectSelect ? subjectSelect.value : 'toan';
+      loadGrade(grade, subject);
+    });
+  });
+
+  // ── Subject card buttons ────────────────────
+  document.querySelectorAll('.subject-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const subject = card.dataset.subject;
+      document.querySelectorAll('.subject-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+      if (subjectSelect) { subjectSelect.value = subject; }
+      if (gradeSelect) { loadGrade(gradeSelect.value, subject); }
+    });
+  });
+
+  // ── Fallback: keep native selects in sync ───
   if (gradeSelect) {
     gradeSelect.addEventListener('change', (e) => {
-      updateSubjectSelectorVisibility(e.target.value);
-      const subject = e.target.value === '5' && subjectSelect ? subjectSelect.value : 'toan';
-      loadGrade(e.target.value, subject);
+      const grade = e.target.value;
+      document.querySelectorAll('.grade-pill').forEach(p =>
+        p.classList.toggle('active', p.dataset.grade === grade));
+      updateSubjectSelectorVisibility(grade);
+      const subject = grade === '5' && subjectSelect ? subjectSelect.value : 'toan';
+      loadGrade(grade, subject);
     });
-    if (subjectSelect) {
-      subjectSelect.addEventListener('change', (e) => {
-        loadGrade(gradeSelect.value, e.target.value);
-      });
-    }
-    updateSubjectSelectorVisibility(gradeSelect.value);
-    loadGrade('5', subjectSelect ? subjectSelect.value : 'toan');
-  } else {
-    console.error("Không tìm thấy gradeSelect");
   }
+  if (subjectSelect) {
+    subjectSelect.addEventListener('change', (e) => {
+      const subject = e.target.value;
+      document.querySelectorAll('.subject-card').forEach(c =>
+        c.classList.toggle('active', c.dataset.subject === subject));
+      if (gradeSelect) { loadGrade(gradeSelect.value, subject); }
+    });
+  }
+
+  updateSubjectSelectorVisibility('5');
+  loadGrade('5', 'toan');
 });

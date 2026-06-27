@@ -15,120 +15,242 @@
 
 <!-- HOME -->
 <div id="screen-home" class="screen active">
+
+  <!-- Hero -->
   <div class="home-header">
     <div class="home-logo">⭐ Ôn Tập</div>
     <div class="home-sub" id="home-sub">Học vui mỗi ngày</div>
   </div>
 
-  <div class="grade-selector" style="margin-bottom:20px;">
-    <label>📚 Chọn khối lớp: </label>
-    <select id="gradeSelect">
-      <option value="2">Lớp 2</option>
-      <option value="3">Lớp 3</option>
-      <option value="4">Lớp 4</option>
-      <option value="5" selected>Lớp 5</option>
-    </select>
+  <!-- Grade selector (hidden native select kept for JS; pills drive UX) -->
+  <select id="gradeSelect" style="display:none">
+    <option value="2">Lớp 2</option>
+    <option value="3">Lớp 3</option>
+    <option value="4">Lớp 4</option>
+    <option value="5" selected>Lớp 5</option>
+  </select>
+
+  <div class="grade-section">
+    <div class="section-label">📚 Chọn khối lớp</div>
+    <div class="grade-pills">
+      <div class="grade-pill" data-grade="2">
+        <span class="grade-pill-icon">🐣</span>
+        <span class="grade-pill-label">Lớp 2</span>
+      </div>
+      <div class="grade-pill" data-grade="3">
+        <span class="grade-pill-icon">🐥</span>
+        <span class="grade-pill-label">Lớp 3</span>
+      </div>
+      <div class="grade-pill" data-grade="4">
+        <span class="grade-pill-icon">🐦</span>
+        <span class="grade-pill-label">Lớp 4</span>
+      </div>
+      <div class="grade-pill active" data-grade="5">
+        <span class="grade-pill-icon">🦅</span>
+        <span class="grade-pill-label">Lớp 5</span>
+      </div>
+    </div>
   </div>
 
-  <div class="grade-selector subject-selector" id="subjectSelectorWrap" style="margin-bottom:20px;">
-    <label>📖 Chọn môn: </label>
-    <select id="subjectSelect">
-      <option value="toan">Toán</option>
-      <option value="lich_su">Lịch sử</option>
-      <option value="dia_ly">Địa lý</option>
-      <option value="khoa_hoc">Khoa học</option>
-    </select>
+  <!-- Subject selector (lop5) -->
+  <select id="subjectSelect" style="display:none">
+    <option value="toan">Toán</option>
+    <option value="lich_su">Lịch sử</option>
+    <option value="dia_ly">Địa lý</option>
+    <option value="khoa_hoc">Khoa học</option>
+  </select>
+
+  <div class="subject-section" id="subjectSelectorWrap">
+    <div class="section-label">📖 Chọn môn học</div>
+    <div class="subject-cards">
+      <div class="subject-card active" data-subject="toan">
+        <span class="subject-card-icon">🔢</span>
+        <span class="subject-card-name">Toán</span>
+      </div>
+      <div class="subject-card" data-subject="lich_su">
+        <span class="subject-card-icon">📜</span>
+        <span class="subject-card-name">Lịch sử</span>
+      </div>
+      <div class="subject-card" data-subject="dia_ly">
+        <span class="subject-card-icon">🗺️</span>
+        <span class="subject-card-name">Địa lý</span>
+      </div>
+      <div class="subject-card" data-subject="khoa_hoc">
+        <span class="subject-card-icon">🔬</span>
+        <span class="subject-card-name">Khoa học</span>
+      </div>
+    </div>
   </div>
 
+  <!-- Stats -->
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-num" id="hs-done">0</div><div class="stat-label">Câu đã làm</div></div>
-    <div class="stat-card"><div class="stat-num" id="hs-correct">0</div><div class="stat-label">Câu đúng</div></div>
-    <div class="stat-card"><div class="stat-num" id="hs-streak">0</div><div class="stat-label">Streak cao nhất</div></div>
+    <div class="stat-card">
+      <div class="stat-num" id="hs-done">0</div>
+      <div class="stat-label">Câu đã làm</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="hs-correct">0</div>
+      <div class="stat-label">Câu đúng</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="hs-streak">0</div>
+      <div class="stat-label">Streak cao nhất</div>
+    </div>
   </div>
 
+  <!-- Topics -->
   <div class="section-label">Chọn chủ đề</div>
   <div class="topic-grid" id="topic-grid"></div>
 
-  <!-- Phần lọc tag với input tìm kiếm -->
-  <div class="section-label">🏷️ Lọc theo tag</div>
-  <input type="text" id="tagSearch" placeholder="🔍 Tìm kiếm tag..." style="width:100%; padding:8px 12px; border-radius:24px; border:1px solid var(--border); background:var(--card); margin-bottom:8px;">
-  <div id="tag-filter"></div>
+  <!-- Tag filter (collapsible) -->
+  <details class="tag-section">
+    <summary class="tag-summary">🏷️ Lọc theo tag</summary>
+    <div class="tag-inner">
+      <input type="text" id="tagSearch" placeholder="🔍 Tìm kiếm tag...">
+      <div id="tag-filter"></div>
+    </div>
+  </details>
 
-  <div class="section-label">Chế độ</div>
+  <!-- Mode -->
+  <div class="section-label">Chế độ luyện tập</div>
   <div class="mode-row">
-    <div class="mode-btn selected" data-mode="normal" onclick="selectMode(this)"><span class="mode-icon"><i class="ti ti-list-numbers"></i></span>Theo thứ tự</div>
-    <div class="mode-btn" data-mode="random" onclick="selectMode(this)"><span class="mode-icon"><i class="ti ti-shuffle"></i></span>Ngẫu nhiên</div>
-    <div class="mode-btn" data-mode="retry" onclick="selectMode(this)"><span class="mode-icon"><i class="ti ti-refresh"></i></span>Ôn câu sai</div>
+    <div class="mode-btn selected" data-mode="normal" onclick="selectMode(this)">
+      <span class="mode-icon"><i class="ti ti-list-numbers"></i></span>
+      Theo thứ tự
+    </div>
+    <div class="mode-btn" data-mode="random" onclick="selectMode(this)">
+      <span class="mode-icon"><i class="ti ti-shuffle"></i></span>
+      Ngẫu nhiên
+    </div>
+    <div class="mode-btn" data-mode="retry" onclick="selectMode(this)">
+      <span class="mode-icon"><i class="ti ti-refresh"></i></span>
+      Ôn câu sai
+    </div>
   </div>
 
+  <!-- Settings card -->
   <div class="section-label">Tùy chỉnh</div>
-  <div class="count-row"><label>Số câu hỏi</label><input type="range" id="qcount" min="5" max="30" step="5" value="10" oninput="document.getElementById('qcount-val').textContent=this.value"><span class="count-val" id="qcount-val">10</span></div>
-  <div class="count-row"><label>Giây mỗi câu</label><input type="range" id="timeper" min="15" max="90" step="15" value="30" oninput="document.getElementById('timeper-val').textContent=this.value"><span class="count-val" id="timeper-val">30</span></div>
-  
-  <div class="count-row">
-    <label>⭐ Mức độ câu hỏi</label>
-    <select id="difficulty">
-      <option value="all">Tất cả</option>
-      <option value="easy">Dễ</option>
-      <option value="medium">Trung bình</option>
-      <option value="hard">Khó</option>
-    </select>
+  <div class="settings-card">
+    <div class="count-row">
+      <label>Số câu hỏi</label>
+      <input type="range" id="qcount" min="5" max="30" step="5" value="10"
+             oninput="document.getElementById('qcount-val').textContent=this.value">
+      <span class="count-val" id="qcount-val">10</span>
+    </div>
+    <div class="count-row">
+      <label>Giây mỗi câu</label>
+      <input type="range" id="timeper" min="15" max="90" step="15" value="30"
+             oninput="document.getElementById('timeper-val').textContent=this.value">
+      <span class="count-val" id="timeper-val">30</span>
+    </div>
+    <div class="count-row">
+      <label>⭐ Mức độ</label>
+      <select id="difficulty">
+        <option value="all">Tất cả</option>
+        <option value="easy">Dễ</option>
+        <option value="medium">Trung bình</option>
+        <option value="hard">Khó</option>
+      </select>
+    </div>
+    <div class="checkbox-row">
+      <label>🔄 Xáo trộn đáp án (trắc nghiệm)</label>
+      <input type="checkbox" id="shuffle-answers">
+    </div>
+    <div class="checkbox-row">
+      <label>🔘 Kết hợp nhiều chủ đề</label>
+      <input type="checkbox" id="multiTopics">
+    </div>
   </div>
 
-  <div class="checkbox-row">
-    <label>🔄 Xáo trộn đáp án (trắc nghiệm)</label>
-    <input type="checkbox" id="shuffle-answers">
-  </div>
-  <div class="checkbox-row">
-    <label>🔘 Kết hợp nhiều chủ đề (bật để chọn nhiều)</label>
-    <input type="checkbox" id="multiTopics">
-  </div>
+  <button class="start-btn" onclick="startQuiz()">
+    <i class="ti ti-player-play-filled"></i> Bắt đầu ôn tập
+  </button>
+  <button class="history-btn" onclick="showHistory()">
+    <i class="ti ti-history"></i> Lịch sử bài làm
+  </button>
 
-  <button class="start-btn" onclick="startQuiz()"><i class="ti ti-player-play"></i> Bắt đầu ôn tập</button>
-  <button class="history-btn" onclick="showHistory()"><i class="ti ti-history"></i> 📜 Lịch sử bài làm</button>
-</div>
+</div><!-- /home -->
 
 <!-- QUIZ -->
 <div id="screen-quiz" class="screen">
-  <button class="back-btn" onclick="goHome()"><i class="ti ti-arrow-left"></i> Thoát</button>
+  <button class="back-btn" onclick="goHome()">
+    <i class="ti ti-arrow-left"></i> Thoát
+  </button>
   <div class="quiz-topbar">
     <span class="q-counter" id="q-counter">1/10</span>
-    <div class="progress-wrap"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-    <div class="streak-badge"><i class="ti ti-flame"></i><span id="streak-num">0</span></div>
+    <div class="progress-wrap">
+      <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="streak-badge" id="streak-badge">
+      <i class="ti ti-flame"></i><span id="streak-num">0</span>
+    </div>
   </div>
   <div class="timer-wrap">
     <div class="timer-text">⏱ Còn lại: <span id="timer-sec">30</span>s</div>
-    <div class="timer-bar"><div class="timer-fill" id="timer-fill" style="width:100%;background:#16A34A"></div></div>
+    <div class="timer-bar">
+      <div class="timer-fill" id="timer-fill" style="width:100%;background:#10B981"></div>
+    </div>
   </div>
-  <div class="question-card"><div class="q-category" id="q-category"></div><div class="q-text" id="q-text"></div></div>
+  <div class="question-card" id="question-card">
+    <div class="q-category" id="q-category"></div>
+    <div class="q-text" id="q-text"></div>
+  </div>
   <div id="q-body"></div>
   <div class="feedback-box" id="feedback-box"></div>
   <div class="score-mini" id="score-mini">Điểm: 0</div>
-  <button class="next-btn" id="next-btn" onclick="nextQuestion()">Câu tiếp <i class="ti ti-arrow-right"></i></button>
-  <div class="kbd-hint"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> chọn đáp án &nbsp;|&nbsp;<kbd>Enter</kbd> câu tiếp</div>
+  <button class="next-btn" id="next-btn" onclick="nextQuestion()">
+    Câu tiếp <i class="ti ti-arrow-right"></i>
+  </button>
+  <div class="kbd-hint">
+    <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> chọn đáp án &nbsp;|&nbsp; <kbd>Enter</kbd> câu tiếp
+  </div>
 </div>
 
 <!-- RESULT -->
 <div id="screen-result" class="screen">
-  <div class="result-hero"><div class="result-emoji" id="result-emoji">🎉</div><div class="result-title" id="result-title">Xuất sắc!</div><div class="result-sub" id="result-sub"></div></div>
-  <div class="result-stats"><div class="rs-card"><div class="rs-num" id="rs-score" style="color:var(--primary)">0%</div><div class="rs-label">Tỉ lệ đúng</div></div><div class="rs-card"><div class="rs-num" id="rs-correct" style="color:var(--success)">0</div><div class="rs-label">Câu đúng</div></div><div class="rs-card"><div class="rs-num" id="rs-time" style="color:var(--warning)">0s</div><div class="rs-label">Thời gian</div></div></div>
-  <div class="review-section"><div class="review-title"><i class="ti ti-clipboard-list"></i> Xem lại bài làm</div><div id="review-list"></div></div>
-  <div class="result-btns"><button class="btn-retry" onclick="retryWrong()"><i class="ti ti-refresh"></i> Ôn câu sai</button><button class="btn-home" onclick="goHome()"><i class="ti ti-home"></i> Trang chủ</button></div>
+  <div class="result-hero">
+    <div class="result-emoji" id="result-emoji">🎉</div>
+    <div class="result-title" id="result-title">Xuất sắc!</div>
+    <div class="result-sub" id="result-sub"></div>
+  </div>
+  <div class="result-stats">
+    <div class="rs-card">
+      <div class="rs-num" id="rs-score" style="color:var(--primary)">0%</div>
+      <div class="rs-label">Tỉ lệ đúng</div>
+    </div>
+    <div class="rs-card">
+      <div class="rs-num" id="rs-correct" style="color:var(--success)">0</div>
+      <div class="rs-label">Câu đúng</div>
+    </div>
+    <div class="rs-card">
+      <div class="rs-num" id="rs-time" style="color:var(--accent-dark)">0s</div>
+      <div class="rs-label">Thời gian</div>
+    </div>
+  </div>
+  <div class="review-section">
+    <div class="review-title"><i class="ti ti-clipboard-list"></i> Xem lại bài làm</div>
+    <div id="review-list"></div>
+  </div>
+  <div class="result-btns">
+    <button class="btn-retry" onclick="retryWrong()"><i class="ti ti-refresh"></i> Ôn câu sai</button>
+    <button class="btn-home"  onclick="goHome()"><i class="ti ti-home"></i> Trang chủ</button>
+  </div>
 </div>
 
-<!-- HISTORY SCREEN -->
+<!-- HISTORY -->
 <div id="screen-history" class="screen">
   <button class="back-btn" onclick="goHome()"><i class="ti ti-arrow-left"></i> Quay lại</button>
   <div class="section-label" style="margin-top:8px;">📋 Lịch sử làm bài</div>
   <div id="history-list-container" class="history-list"></div>
   <button class="delete-history" onclick="clearAllHistory()">🗑️ Xoá tất cả lịch sử</button>
 </div>
+
 <div id="screen-detail" class="screen">
   <button class="back-btn" onclick="showHistory()"><i class="ti ti-arrow-left"></i> Quay lại lịch sử</button>
   <div id="detail-content"></div>
 </div>
 
-</div>
+</div><!-- /container -->
 <script src="app.js"></script>
 </body>
 </html>
