@@ -18,5 +18,15 @@
     "id": "vung_mien",
     "name": "Vùng miền Việt Nam",
     "icon": "🗺️"
+  },
+  {
+    "id": "sap_nhap_2025",
+    "name": "Sáp nhập tỉnh 2025",
+    "icon": "🔄"
+  },
+  {
+    "id": "dia_ly_the_gioi",
+    "name": "Địa lý thế giới",
+    "icon": "🌍"
   }
 ]

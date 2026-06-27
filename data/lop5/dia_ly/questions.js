@@ -99,13 +99,13 @@ const QUESTIONS = [
     id: 13, topic: "ho_chi_minh", topicName: "TP. Hồ Chí Minh", type: "mc",
     q: "Cầu Phú Mỹ bắc qua sông nào?",
     answers: ["Sông Sài Gòn", "Sông Đồng Nai", "Sông Cửu Long", "Sông Hương"], correct: 0,
-    hint: "Cầu dây văng nối Quận 2 và Quận 7.",
+    hint: "Cầu bắc qua sông Sài Gòn, nối TP.HCM với các khu vực phía đông.",
     level: "medium"
     , tags: ["sgk"]
   },
   {
     id: 14, topic: "ho_chi_minh", topicName: "TP. Hồ Chí Minh", type: "fill",
-    q: "Từ 1/7/2025, TP.HCM mới hình thành từ sáp nhập Bình Dương, Bà Rịa-Vũng Tàu và thành phố Hồ Chí Minh cũ. Sáp nhập tạo thành phố có diện tích khoảng ? km² (làm tròn: 6773).",
+    q: "Diện tích TP.HCM sau sáp nhập 1/7/2025 khoảng ? km² (làm tròn).",
     answer: "6773",
     hint: "Hoặc Hồ Chí Minh — thành phố cũ.",
     level: "hard"
@@ -166,5 +166,181 @@ const QUESTIONS = [
     hint: "Bắc, Trung, Nam.",
     level: "easy"
     , tags: ["co_ban"]
+  },
+  {
+    id: 22, topic: "ho_chi_minh", topicName: "TP. Hồ Chí Minh", type: "fill",
+    q: "Sau sáp nhập 1/7/2025, TP.HCM có ? đơn vị hành chính cấp xã.",
+    answer: "168",
+    hint: "Gồm 113 phường, 54 xã và 1 đặc khu.",
+    level: "medium"
+    , tags: ["ocr", "cam_nang", "tp_hcm"]
+  },
+  {
+    id: 24, topic: "ho_chi_minh", topicName: "TP. Hồ Chí Minh", type: "mc",
+    q: "TP.HCM được hình thành từ sáp nhập những địa phương nào (1/7/2025)?",
+    answers: ["TP.HCM + Bình Dương + Bà Rịa - Vũng Tàu", "TP.HCM + Đồng Nai + Bình Phước", "TP.HCM + Long An + Tiền Giang", "Chỉ TP.HCM cũ"], correct: 0,
+    hint: "Theo phần 3 cẩm nang địa lý.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "tp_hcm"]
+  },
+  {
+    id: 25, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Ninh Bình thuộc vùng nào?",
+    answers: ["Bắc Bộ", "Đông bằng sông Hồng", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Hà Nam + Ninh Bình + Nam Định.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 27, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Thanh Hóa thuộc vùng nào?",
+    answers: ["Bắc Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Không thay đổi.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 28, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Nghệ An thuộc vùng nào?",
+    answers: ["Bắc Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Không thay đổi.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 29, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, TP. Đà Nẵng thuộc vùng nào?",
+    answers: ["Nam Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Quảng Nam + Đà Nẵng.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 30, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Gia Lai thuộc vùng nào?",
+    answers: ["Nam Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Gia Lai + Bình Định.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 31, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Đắk Lắk thuộc vùng nào?",
+    answers: ["Nam Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Phú Yên + Đắk Lắk.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 32, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Khánh Hòa thuộc vùng nào?",
+    answers: ["Nam Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Khánh Hòa + Ninh Thuận.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 33, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Lâm Đồng thuộc vùng nào?",
+    answers: ["Nam Trung Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Đắk Nông + Lâm Đồng + Bình Thuận.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 34, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Đông Nai thuộc vùng nào?",
+    answers: ["Đông Nam Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Bình Phước + Đông Nai.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 35, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, Tây Ninh thuộc vùng nào?",
+    answers: ["Đông Nam Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Long An + Tây Ninh.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 36, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, TP. Hồ Chí Minh thuộc vùng nào?",
+    answers: ["Đông Nam Bộ", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Bình Dương + TPHCM + Bà Rịa - Vũng Tàu.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 37, topic: "sap_nhap_2025", topicName: "Sáp nhập tỉnh 2025", type: "mc",
+    q: "Sau sáp nhập 2025, TP. Cần Thơ thuộc vùng nào?",
+    answers: ["Đồng bằng sông Cửu Long", "Bắc Bộ", "Tây Nguyên", "Miền Bắc"], correct: 0,
+    hint: "Hình thành từ: Sóc Trăng + Hậu Giang + Cần Thơ.",
+    level: "hard"
+    , tags: ["ocr", "cam_nang", "sap_nhap"]
+  },
+  {
+    id: 38, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Vạn Lý Trường Thành thuộc quốc gia (vùng) nào?",
+    answers: ["Ấn Độ", "Trung Quốc", "Ai Cập", "Pháp"], correct: 1,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 39, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Taj Mahal thuộc quốc gia (vùng) nào?",
+    answers: ["Ai Cập", "Ấn Độ", "Pháp", "Trung Quốc"], correct: 1,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 40, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Angkor Wat thuộc quốc gia (vùng) nào?",
+    answers: ["Campuchia", "Trung Quốc", "Ấn Độ", "Ai Cập"], correct: 0,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 41, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Tháp Eiffel thuộc quốc gia (vùng) nào?",
+    answers: ["Pháp", "Ai Cập", "Trung Quốc", "Ấn Độ"], correct: 0,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 42, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Buckingham Palace thuộc quốc gia (vùng) nào?",
+    answers: ["Trung Quốc", "Ai Cập", "Ấn Độ", "Anh"], correct: 3,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 43, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Kim tự tháp Giza thuộc quốc gia (vùng) nào?",
+    answers: ["Pháp", "Trung Quốc", "Ấn Độ", "Ai Cập"], correct: 3,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 44, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Núi Kilimanjaro thuộc quốc gia (vùng) nào?",
+    answers: ["Tanzania", "Ấn Độ", "Ai Cập", "Trung Quốc"], correct: 0,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
+  },
+  {
+    id: 45, topic: "dia_ly_the_gioi", topicName: "Địa lý thế giới", type: "mc",
+    q: "Thác Victoria thuộc quốc gia (vùng) nào?",
+    answers: ["Zambia/Zimbabwe", "Ai Cập", "Trung Quốc", "Ấn Độ"], correct: 0,
+    hint: "Theo phần địa lý thế giới cẩm nang.",
+    level: "easy"
+    , tags: ["ocr", "cam_nang", "the_gioi"]
   }
 ];

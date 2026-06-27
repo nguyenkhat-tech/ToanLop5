@@ -1,0 +1,982 @@
+{
+  "source": "/Users/nktam/Documents/Lop6/downloads/cam-nang-lich-su-dia-ly-lop-5",
+  "dpi": 300,
+  "test_pages": 7,
+  "engines_tested": [
+    "tesseract_vie_psm3",
+    "tesseract_vie_psm6",
+    "tesseract_eng_psm3",
+    "tesseract_eng_psm6",
+    "tesseract_vie_eng_psm3",
+    "tesseract_vie_eng_psm6",
+    "easyocr_vi_en",
+    "rapidocr_onnx_default",
+    "paddleocr_vi_ppocrv6",
+    "vncv_vi"
+  ],
+  "ranking": [
+    {
+      "engine": "tesseract_vie_psm3",
+      "total_score": 4457,
+      "avg_time_sec": 1.99,
+      "pages_ok": 7
+    },
+    {
+      "engine": "easyocr_vi_en",
+      "total_score": 4438,
+      "avg_time_sec": 27.03,
+      "pages_ok": 7
+    },
+    {
+      "engine": "vncv_vi",
+      "total_score": 4204,
+      "avg_time_sec": 10.25,
+      "pages_ok": 7
+    },
+    {
+      "engine": "tesseract_vie_psm6",
+      "total_score": 4059,
+      "avg_time_sec": 1.97,
+      "pages_ok": 7
+    },
+    {
+      "engine": "paddleocr_vi_ppocrv6",
+      "total_score": 2872,
+      "avg_time_sec": 47.65,
+      "pages_ok": 7
+    },
+    {
+      "engine": "tesseract_vie_eng_psm3",
+      "total_score": 2596,
+      "avg_time_sec": 2.1,
+      "pages_ok": 7
+    },
+    {
+      "engine": "tesseract_vie_eng_psm6",
+      "total_score": 2395,
+      "avg_time_sec": 2.06,
+      "pages_ok": 7
+    },
+    {
+      "engine": "tesseract_eng_psm3",
+      "total_score": 1763,
+      "avg_time_sec": 1.28,
+      "pages_ok": 7
+    },
+    {
+      "engine": "tesseract_eng_psm6",
+      "total_score": 1587,
+      "avg_time_sec": 1.15,
+      "pages_ok": 7
+    },
+    {
+      "engine": "rapidocr_onnx_default",
+      "total_score": 1389,
+      "avg_time_sec": 1.99,
+      "pages_ok": 7
+    }
+  ],
+  "pages": [
+    {
+      "pdf": "SECTION 1 - CONTENT.pdf",
+      "page": 2,
+      "label": "Niên biểu — Bắc thuộc",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_1_-_CONTENT.pdf_p2.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 1.87,
+          "metrics": {
+            "chars": 1335,
+            "words": 275,
+            "vietnamese_diacritics": 220,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 860
+          },
+          "text_preview": "Page|2\n\nTHỜI KỲ BẮC THUỘC\n\n179 TCN: Triệu Đà thôn tính Âu Lạc. Nước ta bị các triều đại phong kiến phương Bắc đô hộ.\n\n40: Khởi nghĩa Hai Bà Trưng ở Mê Linh (Hà Nội)\n\n248: Triệu Thị Trinh (Bà Triệu) khởi nghĩa cùng anh là Triệu Quốc Đạt tại vùng núi Nưa (Thanh Hóa)\n542: Khởi nghĩa Lý Bí. Năm 544, Lý Bí lên ngôi vua lấy hiệu là Lý Nam Đềé, lập nên nước Vạn Xuân.\n550: Triệu Quang Phục tiếp tục lãnh đạo kháng chiến chống quân Lương sau khi Lý Nam Đề mất.\n713 - 722: Khởi nghĩa Mai Thúc Loan\n\n776: Khởi nghĩa Phùng Hưng\n\n905: Khởi nghĩa Khúc Thừa Dụ ở Hồng Châu (Hải Dương)\n\n930 - 931: Khởi nghĩa Dương Đình Nghệ\n\n938: Ngô Quyền đánh bại quân Nam Hán trong trận Bạch Đăng, chấẩm đứt hơn 1000 năm đô hộ\n\ncủa phong kiến phương Bắc\nNHÀ NGÔ\n939: Ngô Quyền xưng vương, đóng đô tại Cổ Loa.\n\n944 - 968: Ngô Quyền mất, con là Ngô Xương Ngập và sau đó là Ngô Xương Văn kế vị, nhưng\n\ntriều đình suy yếu dẫn đến loạn 12 sứ quân.\n\nNGUYÊN KHOAN\n\n„ NGUYỄN THỦ TIỆP\n\nKIỀU THUẬN -.. N\n\nKIỀU CÔNG HÃN 1 n\n\nNGÔ NHẬT KHÁ"
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 2.71,
+          "metrics": {
+            "chars": 1531,
+            "words": 322,
+            "vietnamese_diacritics": 264,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 992
+          },
+          "text_preview": "Page|2\nTHỜI KỲ BẮC THUỘC\n179 TCN: Triệu Đà thôn tính Âu Lạc. Nước ta bị các triều đại phong kiến phương Bắc đô hộ.\n40: Khởi nghĩa Hai Bà Trưng ở Mê Linh (Hà Nội)\n248: Triệu Thị Trinh (Bà Triệu) khởi nghĩa cùng anh là Triệu Quốc Đạt tại vùng núi Nưa (Thanh Hóa)\n542: Khởi nghĩa Lý Bí. Năm 544, Lý Bí lên ngôi vua lấy hiệu là Lý Nam Đềé, lập nên nước Vạn Xuân.\n550: Triệu Quang Phục tiếp tục lãnh đạo kháng chiến chống quân Lương sau khi Lý Nam Đề mất.\n713 - 722: Khởi nghĩa Mai Thúc Loan\n776: Khởi nghĩa Phùng Hưng\n905: Khởi nghĩa Khúc Thừa Dụ ở Hồng Châu (Hải Dương)\n930 - 931: Khởi nghĩa Dương Đình Nghệ\n938: Ngô Quyền đánh bại quân Nam Hán trong trận Bạch Đăng, chấẩm đứt hơn 1000 năm đô hộ\ncủa phong kiến phương Bắc\nNHÀ NGÔ\n939: Ngô Quyền xưng vương, đóng đô tại Cổ Loa.\n944 - 968: Ngô Quyền mất, con là Ngô Xương Ngập và sau đó là Ngô Xương Văn kế vị, nhưng\ntriều đình suy yếu dẫn đến loạn 12 sứ quân.\n— : 7 ~ . NGUYÊN KHOAN\n_  _.-I_ị?ỉ’ỉ ˆ à ¬= t a_ -. ⁄ NGUYÊN THỦ TIỆP\nẽ_-c\"'fìv:ìfịĩ s ầsơ’>~ỵ"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.16,
+          "metrics": {
+            "chars": 1327,
+            "words": 272,
+            "vietnamese_diacritics": 34,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 302
+          },
+          "text_preview": "Page |2\n\nTHOI KY BAC THUOC\n\n179 TCN: Triéu Da thon tinh Au Lac. Nuéc ta bi cdc triéu dai phong kién phuong Bac dé hé.\n\n40: Khoi nghia Hai Ba Trung 6 Mé Linh (Ha N61)\n\n248: Triéu Thi Trinh (Ba Triéu) khoi nghia cing anh 1a Triéu Quéc Dat tai ving nui Nua (Thanh Hoa)\n542: Khoi nghia Ly Bi. Nam 544, Ly Bi lén ngdi vua lay hiéu 1a Ly Nam Dé, lap nén nude Van Xuan.\n550: Triéu Quang Phuc tiép tuc lanh dao khang chién chéng quan Luong sau khi Ly Nam Dé mat.\n713 - 722: Khoi nghia Mai Thic Loan\n\n776: Khoi nghia Phung Hung\n\n905: Khoi nghia Khuc Thita Du 6 Hong Chau (Hai Duong)\n\n930 - 931: Khoi nghia Duong Dinh Nghé\n\n938: Ngo Quyén danh bai quan Nam Han trong tran Bach Dang, cham dirt hon 1000 nam d6 h6é\n\ncua phong kién phuong Bac\nNHA NGO\n939: Ngo Quyén xung vuong, dong dé tai Cé Loa.\n\n944 — 968: Ngd Quyén mat, con la Ngo Xuong Ngap va sau do la Ng6 Xuong Van ké vi, nhung\n\ntriéu dinh suy yéu dan dén loan 12 str quan.\n\nNGUYEN KHOAN\n\n\" NGUYEN THU TIEP\n\nKIEU THUAN --.2\\\n\nKIEU CONG HAN J\n\nNGO NHAT KH"
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 1.19,
+          "metrics": {
+            "chars": 1454,
+            "words": 326,
+            "vietnamese_diacritics": 34,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 302
+          },
+          "text_preview": "Page |2\nTHOI KY BAC THUOC\n179 TCN: Triéu Da thon tinh Au Lac. Nuéc ta bi cdc triéu dai phong kién phuong Bac dé hé.\n40: Khoi nghia Hai Ba Trung 6 Mé Linh (Ha N6i)\n248: Triéu Thi Trinh (Ba Triéu) khoi nghia cing anh 14 Triéu Quéc Dat tai ving nui Nua (Thanh Hoa)\n542: Khoi nghia Ly Bi. Nam 544, Ly Bi lén ngdi vua lay hiéu 1a Ly Nam Dé, lap nén nude Van Xuan.\n550: Triéu Quang Phuc tiép tuc lanh dao khang chién chéng quan Luong sau khi Ly Nam Dé mat.\n713 - 722: Khoi nghia Mai Thic Loan\n776: Khoi nghia Phung Hung\n905: Khoi nghia Khuc Thita Du 6 Hong Chau (Hai Duong)\n930 - 931: Khoi nghia Duong Dinh Nghé\n938: Ngo Quyén danh bai quan Nam Han trong tran Bach Dang, cham dirt hon 1000 nam d6 h6é\ncua phong kién phuong Bac\nNHA NGO\n939: Ngo Quyén xung vuong, dong dé tai Cé Loa.\n944 — 968: Ngd Quyén mat, con la Ngo Xuong Ngap va sau do la Ng6 Xuong Van ké vi, nhung\ntriéu dinh suy yéu dan dén loan 12 str quan.\na : be’ ex : NGUYEN KHOAN\nie om “\\ a \"3 = ee) i ” NGUYEN THU TIEP\nwae By a4 Set : KIEU CONG"
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 2.1,
+          "metrics": {
+            "chars": 1328,
+            "words": 274,
+            "vietnamese_diacritics": 119,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 557
+          },
+          "text_preview": "Page|2\n\nTHỜI KỲ BẮC THUỘC\n\n179 TCN: Triệu Đà thôn tính Âu Lạc. Nước ta bị các triều đại phong kiến phương Bắc đô hộ.\n\n40: Khởi nghĩa Hai Bà Trưng ở Mê Linh (Hà Nội)\n\n248: Triệu Thị Trinh (Bà Triệu) khởi nghĩa cùng anh là Triệu Quốc Đạt tại vùng núi Nưa (Thanh Hóa)\n542: Khởi nghĩa Lý Bí. Năm 544, Lý Bí lên ngôi vua lấy hiệu là Lý Nam Đềé, lập nên nước Vạn Xuân.\n550: Triệu Quang Phuc tiếp tục lãnh dao khang chiến chống quan Luong sau khi Ly Nam Dé mat.\n713 - 722: Khoi nghia Mai Thúc Loan\n\n776: Khoi nghia Phung Hung\n\n905: Khoi nghĩa Khuc Thừa Du 6 Hong Chau (Hai Duong)\n\n930 - 931: Khoi nghia Duong Dinh Nghé\n\n938: Ngo Quyền danh bai quan Nam Han trong tran Bach Dang, cham dirt hon 1000 nam đô hộ\n\ncủa phong kién phương Bac\nNHA NGO\n939: Ngo Quyén xưng vuong, dong dé tai Cé Loa.\n\n944 - 968: Ngô Quyén mat, con la Ngô Xương Ngập va sau do la Ngô Xuong Van ké vi, nhung\n\ntriéu dinh suy yéu dan dén loan 12 str quan.\n\nNGUYEN KHOAN\n\n„ NGUYEN THU TIỆP\n\nKIEU THUAN -.. N\n\nKIỀU CONG HÃN J\n\nNGO NHAT KHAN"
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 2.53,
+          "metrics": {
+            "chars": 1434,
+            "words": 325,
+            "vietnamese_diacritics": 127,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 581
+          },
+          "text_preview": "Page|2\nTHỜI KỲ BẮC THUỘC\n179 TCN: Triệu Đà thôn tính Âu Lạc. Nước ta bị các triều đại phong kiến phương Bắc đô hộ.\n40: Khởi nghĩa Hai Bà Trưng ở Mê Linh (Hà Nội)\n248: Triệu Thị Trinh (Bà Triệu) khởi nghĩa cùng anh là Triệu Quốc Đạt tại vùng núi Nưa (Thanh Hóa)\n542: Khởi nghĩa Lý Bí. Năm 544, Lý Bí lên ngôi vua lấy hiệu là Lý Nam Đềé, lập nên nước Vạn Xuân.\n550: Triệu Quang Phuc tiếp tục lãnh dao khang chiến chống quan Luong sau khi Ly Nam Dé mat.\n713 - 722: Khoi nghia Mai Thúc Loan\n776: Khoi nghia Phung Hung\n905: Khoi nghĩa Khuc Thừa Du 6 Hong Chau (Hai Duong)\n930 - 931: Khoi nghia Duong Dinh Nghé\n938: Ngo Quyền danh bai quan Nam Han trong tran Bach Dang, cham dirt hon 1000 nam đô hộ\ncủa phong kién phương Bac\nNHA NGO\n939: Ngo Quyén xưng vuong, dong dé tai Cé Loa.\n944 - 968: Ngô Quyén mat, con la Ngô Xương Ngập va sau do la Ngô Xuong Van ké vi, nhung\ntriéu dinh suy yéu dan dén loan 12 str quan.\n— : be’ ex . NGUYEN KHOAN\n_ om ˆ à ¬= t = -. ⁄ NGUYEN THU TIỆP\nwae By a4 Set : KIỀU CÔNG HÃN "
+        },
+        "easyocr_vi_en": {
+          "time_sec": 30.84,
+          "metrics": {
+            "chars": 1366,
+            "words": 286,
+            "vietnamese_diacritics": 228,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 914
+          },
+          "text_preview": "Page 2\nTHỜI KỲ BẮC THUỘC 179 TCN: Triệu Đà thôn tính Âu Lạc. Nước ta bị các triều đại phong kiến phương Bắc đô hộ.\n40: Khởi nghĩa Hai Bà Trưng ở Mê Linh (Hà Nội)\n248: Triệu Thị Trinh (Bà Triệu) khởi nghĩa cùng anh là Triệu Quốc Đạt tại vùng núi Nưa (Thanh Hóa)\n542: Khởi nghĩa Lý Bí. Năm 544, Lý Bí lên ngôi vua lấy hiệu là Lý Nam Đế, lập nên nước Vạn Xuân:\n550: Triệu Quang Phục tiếp tục lãnh đạo kháng chiến chống quân Lương sau khi Lý Nam Đế mất.\n713 722: Khởi nghĩa Mai Thúc Loan\n776: Khởi nghĩa Phùng Hưng\n905: Khởi nghĩa Khúc Thừa Dụ Ở Hồng Châu (Hải Dương)\n930 931: Khởi nghĩa Dương Đình Nghệ\nise 938: Ngô Quyền đánh bại quân Nam Hán trong trận Bạch Đằng, chấm dứt hơn 1000 năm đô hộ của phong kiến phương Bắc NHÀ NGÔ a/ 939: Ngô Quyền xung vương, đóng đô tại Cổ Loa. 944 968: Ngô Quyền mất, con là Ngô Xương Ngập và sau đó là Ngô Xương Văn kế vị, nhưng triều đình suy yếu dẫn đến loạn 12 sứ quân.\nNGUYẺN KHOAN\nNGUYỄN THỦ TIÊP\nKIEU THUẬN\nLÝ KHUÊ\nKIEU CÔNG HẪN\nPhong Châu Cổ Loa Đai La\nLẢ ĐƯỜNG"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 2.79,
+          "metrics": {
+            "chars": 1256,
+            "words": 231,
+            "vietnamese_diacritics": 5,
+            "quiz_keywords": 4,
+            "mc_options": 0,
+            "score": 275
+          },
+          "text_preview": "Page |2\nTHOI KY BAC THUOC\n179 TCN: Trieu Da thon tinh Au Lac. Nuoc ta bi cac trieu dai phong kién phuong Bac do ho.\n40: Khoi nghia Hai Ba Trung  Me Linh (Ha Noi)\n( ) 1                 g\n542: Khoi nghia Ly Bi. Nam 544, Ly Bi len ngoi vua lay hieu la Ly Nam Dé, lap nen nuoc Van Xuan.\n550: Trieu Quang Phuc tiep tuc lanh dao khang chién chong quan Lurong sau khi Ly Nam De mat.\n713 - 722: Khoi nghia Mai Thuc Loan\n776: Khoi nghia Phung Hung\n905: Khoi nghia Khuc Thura Du  Hong Chau (Hai Duong)\nUS\n930 - 931: Khoi nghia Duong Dinh Nghé\n938: Ngo Quyen danh bai quan Nam Han trong tran Bach Dang, cham durt hon 1oo0 nam do ho\ncua phong kién phuong Bac\nNHA NGO\n939: Ngo Quyen xung vurong, dong do tai Co Loa.\n944 - 968: Ngo Quyen mat, con la Ngo Xurong Ngap va sau do la Ngo Xuong Van ke vi, nhung\ntrieu dinh suy yeu dan den loan 12 sur quan.\nNGUYENKHOAN\nNGUYENTHUTIEP\nKIEUTHUAN\nLYKHUE\nKIEU CONGHAN\nPhong Chau\nLA DUONG\nNGO NHATKHANH\nHoa Lur\nTRANLAM\nDCANHTHAC\nAi-Chau\nPHAMPHONGAT\nNGUYEN SIEU\nNGO XUONGXI\nMo "
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 52.8,
+          "metrics": {
+            "chars": 1271,
+            "words": 278,
+            "vietnamese_diacritics": 126,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 578
+          },
+          "text_preview": "Page |2\nTHÒI KY BÁC THUC\n179 TCN: Triu Đà thôn tính Âu Lc. Nưc ta b các triu đi phong kin phương Bc đô h.\n40: Khi nghĩa Hai Bà Trưng  Mê Linh (Hà Ni)\n248: Triu Th Trinh (Bà Triu) khi nghĩa cùng anh là Triu Quc Đt ti vùng núi Nưa (Thanh Hóa)\n542: Khi nghĩa Lý Bí. Năm 544, Lý Bí lên ngôi vua ly hiu là Lý Nam Đ, lp nên nưc Vn Xuân.\n550: Triu Quang Phc tip tc lnh đo kháng chin chng qun Lưng sau khi L Nam Đ mt.\n713 - 722: Khi nghĩa Mai Thúc Loan\n776: Khi nghia Phùng Hưng\n905: Khi nghĩa Khúc Tha D  Hng Châu (Hi Dưong)\n930 - 931: Khi nghĩa Dưong Đình Ngh\n938: Ngô Quyn đánh bi quân Nam Hán trong trn Bch Đng, chm dt hon 1000 năm đô h\nca phong kin phưong Bc\nNHÀNGÔ\n939: Ngô Quyn xưng vương, đóng đô ti C Loa.\n944 – 968: Ngô Quyn mt, con là Ngô Xưong Ngp và sau đó là Ngô Xương Văn k v, nhưng\ntriu đình suy yu dn đn lon 12 s quân.\nNGUYĚN KHOAN\nNGUYËN THÙ TIP\nKIÈU THUN\nLÝ KHUÊ\nKIÈU CÔNG HÃN\nPhong Châu\nC Loa\nĐi La\nLÃ DUÒNG\nNGÔ NHT KHÁNH\nHoa Lu\nTRÄN LÃM\nĐ CÀNH THC\nÁi-Châu\nPHM PHÒNG ÃT\nNGUYN SIÊU\nNGÔ XUO"
+        },
+        "vncv_vi": {
+          "time_sec": 28.49,
+          "metrics": {
+            "chars": 1332,
+            "words": 276,
+            "vietnamese_diacritics": 227,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 896
+          },
+          "text_preview": "Page 2\nVÀ THỜI KỲ BẮC THUỘC\n179 TCN: Triệu Đà thôn tính Âu Lạc. Nước ta bị các triều đại phong kiến phương Bắc đô hộ.\n40: Khởi nghĩa Hai Bà Trưng ở Mê Linh (Hà Nội)\n248: Triệu Thị Trình (Bà Triệu) khởi nghĩa cùng anh là Triệu Quốc Đạt tại vùng núi Nưa (Thanh Hóa)\n1986 thế 542: Khởi nghĩa Lý Bi. Năm 544, Lý Bỉ lên ngôi vua lây hiệu là Lý Nam Đê, lập nên nước Vạn Xuân\n550: Triệu Quang Phục tiếp tục lãnh đạo kháng chiến chống quân Lương sau khi Lý Nam Đế mất\n713 - 722: Khởi nghĩa Mai Thúc Loan\n776: Khởi nghĩa Phùng Hưng\n905: Khởi nghĩa Khúc Thừa Dụ ở Hồng Châu (Hải Dương)\nluse\n930 - 931: Khởi nghĩa Dương Đình Nghệ\n1938: Ngô Quyền đánh bại quân Nam Hán trong trận Bach Đảng, chấm dứt hơn 1000 năm đô hộ\ncủa phong kiến phương Bắc\nNHÀ NGÔ\n939 Ngô Quyền xưng vương, đóng đô tại cổ Loa.\n1944 ? 968: Ngô Quyền mất, con là Ngô Xương Ngập và sau đó là Ngô Xương Văn kế vị, nhưng\ntriều đình suy yếu dẫn đến loạn 12 sứ quân\nNGUYỄN THỦ TIỆP\nLÝ KHUẾ\nKIỀU CÔNG HÃN\nLÃ ĐƯỜNG\nNGÔ NHẬT KHÁNH\nTRẦN LÃM\nĐỖ CẢNH\nHẠ"
+        }
+      }
+    },
+    {
+      "pdf": "SECTION 1 - CONTENT.pdf",
+      "page": 12,
+      "label": "Nhà Nguyễn — vua",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_1_-_CONTENT.pdf_p12.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 2.51,
+          "metrics": {
+            "chars": 1291,
+            "words": 261,
+            "vietnamese_diacritics": 171,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 758
+          },
+          "text_preview": "Page|12\n\nThế phả các vua nhà Nguyễn\n\n31\n\n|\n\nGia Long\n\n1802 - 1820\n2\n\nMinh Mạng\n\n1820 - 1841\n3\n\nThiệu Trị\n1841- 1847\n4 6\nTự Đức Thoại Thái Vương Kiên Thái Vương Hiệp Hòa\n1847 - 1883 1883\n5 3 8 7\nDục Đức Đồng Khánh Hảm Nghi Kiến Phúc\n1863 1885 - 1889 1884 - 1885 1883 - 1884\n\n10 12\n\nThành Thái Khải Định\n\n1889 - 1907 1916-1525\n\" 13\n\nDuy Tần Bảo Đại\n1907 - 1916 1926 - 1945\n\nChú thích: Các năm trong bảng là các năm trị vi của vi vua đó\n\nCon dấu \"Hoàng đề tôn thân chỉ bảo\" bằng\nngà (1885) của triều Nguyễn, hiện đang\ntrưng bày trong Bảo tàng Lịch sử Thành\n\nphố Hồ Chí Minh\n\nThế phả các vua nhà Nguyễn\n\nKHÁNG CHIẾN CHÓNG'THỰC DẪN PHÁP (1858-1954)\n\n1858: Liên quân Pháp - Tây Ban Nha tắn công bán đảo Sơn Trà (Đà Nẵng), mở đầu cho cuộc chiến\n\ntranh xâm lược Việt Nam.\n\nTranh minh họa về thành Điện Hải (Đà Nẵng), mô tả tiền đồn phòng thủ của quân triều đình\n\nsau khi bị liên quân Pháp — Tây Ban Nha tắn công bằng đại bác và chiếm đóng lúc 10 giờ\n\nsáng ngày 2/9/1858. Bức tranh được vẽ bởi Lo-brơ-tông (Le"
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 2.31,
+          "metrics": {
+            "chars": 1365,
+            "words": 289,
+            "vietnamese_diacritics": 186,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 773
+          },
+          "text_preview": "Page|12\nThế phả các vua nhà Nguyễn\nLU ã qulsg\n1802 - 1520\n9129029 .. 1 1820 - 1841\n4 6\nTư Đức Thoại Thái Vương Kiên Thái Vương Hiệp Hòa\n1847 - 1863 1683\n5 Ịýe› gayợi: 7\nDục Đức Đồng Khánh Hảm Nghi Kiến Phúc\n1863 1885 - 1889 1884 - 1865 1883-1864\nThành Thái Khải Định\n1889-1907 1916 - 1925\nNaườời Iw\nDuy Tân Bảo Đại\n1907-1916 1926 - 1945\nChú thích: Các năm trong bảng là các năm trị vi của vi vua đó\nCon dầu “Hoàng đề tôn thân chỉ báo” băng\nngà (1885) của triểu Nguyễn, hiện đan ÊƑ \\ L\nsả( \\ ) I fg ở , s-=_ 8 Thê phả các vua nhà Nguyên\ntrưng bày trong Bảo tàng Lịch sử Thành\nphô Hồ Chí Minh\nKHÁNG CHIẾN CHÔNG -THỤC DẪN PHÁP (1858—1954)\n1858: Liên quân Pháp - Tây Ban Nha tân công bán đảo Sơn Trà (Đà Năng), mở đâu cho cuộc chiên\ntranh xâm lược Việt Nam.\n— : AửV IE X cN n\n. IIðILUNT- . ”\" =S\n- L Ỷ s 7 =| H đ ¬ V' x ^\\w `*ấ`nỷỹÌ\"r_`\nTranh minh họa về thành Điện Hỏi (Đà Năng), mô tả tiên đón phòng thủ của quân triểu đình\nsau khi bị liên quân Pháp — Tây Ban Nha tân công băng đại bác và chiêm đóng hú"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.43,
+          "metrics": {
+            "chars": 1294,
+            "words": 264,
+            "vietnamese_diacritics": 29,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 302
+          },
+          "text_preview": "Page |12\n\nThé pha cac vua nha Nguyén\n\n1\n\n|\n\nGia Long\n\n1802 - 1820\n2\n\nMinh Mang\n\n1820 - 1841\n3\n\nThiéu Tri\n1841 - 1847\n4 6\nTy Die Thoai Thai Vuong Kién Thai Vuong Hiép Hoa\n1847 - 1883 1883\n5 9 8 7\nDuc Bic Déng Khanh Ham Nghi Kién Phic\n1883 1885 - 1889 1884 - 1885 1883 - 1884\n\n10 12\n\nThanh Thai Khai Binh\n\n1889 - 1907 1916 - 1925\n\" 3\n\nDuy Tan Bao Dai\n1907 - 1916 1926 - 1945\n\nChd thich: Cac nam trong bang 1a cac nam tri vi cla vi vua dé\n\nCon dau \"Hoang dé ton than chi béo\" bang\nnga (1885) cua triéu Nguyén, hién dang\ntrung bay trong Bao tang Lich su Thanh\n\npho H6 Chi Minh\n\nThé pha cac vua nha Nguyén\n\nKHANG CHIEN CHONG*EHUC DAN PHAP (1858-1954)\n\n1858: Lién quan Phap - Tay Ban Nha tan cong ban dao Son Tra (Da Nang), mo dau cho cuéc chién\n\ntranh xam luoc Viét Nam.\n\nTranh minh hoa vé thanh Dién Hai (Pa Nang), mé ta tién don phong thi cua quan triéu dinh\n\nsau khi bi lién quan Phap — Téy Ban Nha tan cong bang dai bac va chiém dong hic 10 gio\n\nsang ngay 2/9/1858. Buc tranh dugc vé boi Lo-bro-tong ("
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 1.45,
+          "metrics": {
+            "chars": 1347,
+            "words": 294,
+            "vietnamese_diacritics": 25,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 320
+          },
+          "text_preview": "Page |12\nThé pha cac vua nha Nguyén\na aig\n1802 - 1820\nbr, eee ae ul 1820 - 1841\n4 6\nTy Svc Thoai Thai Vuong Kién Thai Vuong Hiép Hoa\n1847 - 1883 1883\n[S | ig [#8 7\nDuc Bic Déng Khanh Ham Nghi Kién Phic\n1883 1885 - 1889 1884 - 1885 1883 - 1884\nThanh Thai Khai Dinh\n1889 - 1907 1916 - 1925\n[at | -@%\nDuy Tan Bao Bai\n1907 - 1916 1926 - 1945\nChd thich: Cac nam trong bang 1a cac nam tri vi cla vi vua dé\nCon dau \"Hoang dé ton than chi bao\" bang\nnea (1885) cua triéu Neuyén, hién dan yoo, , ; x\nga ( . ) ; \"8 » ; ee & Thé pha cac vua nha Nguyén\ntrung bay trong Bao tang Lich sw Thanh\npho Ho Chi Minh\nKHANG CHIEN CHONG*THUC DAN PHAP (1858-1954)\n1858: Lién quan Phap - Tay Ban Nha tan cong ban dao Son Tra (Da Nang), mo dau cho cu6éc chién\ntranh xam luoc Viét Nam.\n= , A ee ee Om\nso ET Le, Heese,\nfe : \" J whe} HR om a <~ ee SR)\nTranh minh hoa vé thanh Dién Hai (Da Nang), mo ta tién don phong thu cua quan triéu dinh\nsau khi bi lién quan Phap — Tay Ban Nha tan cong bang dai bac va chiém dong luc 10 gio’\ns"
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 2.26,
+          "metrics": {
+            "chars": 1294,
+            "words": 263,
+            "vietnamese_diacritics": 61,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 413
+          },
+          "text_preview": "Page|12\n\nThé pha các vua nha Nguyén\n\n1\n\n|\n\nGia Long\n\n1802 - 1820\n2\n\nMinh Mang\n\n1820 - 1841\n3\n\nThiệu Trị\n1841 - 1847\n4 6\nTy Đức Thoai Thai Vuong Kiên Thai Vuong Hiệp Hoa\n1847 - 1883 1883\n5 9 8 7\nDuc Đức Đồng Khanh Ham Nghi Kién Phúc\n1883 1885 - 1889 1884 - 1885 1883 - 1884\n\n10 12\n\nThành Thái Khai Binh\n\n1889 - 1907 1916 - 1925\n\" 13\n\nDuy Tan Bao Dai\n1907 - 1916 1926 - 1945\n\nChú thích: Cac nam trong bang là các nam tri vi của vi vua đó\n\nCon dau \"Hoang dé ton than chi béo\" bang\nnga (1885) cua triều Nguyễn, hiện dang\ntrung bay trong Bao tang Lich sử Thanh\n\npho Hồ Chi Minh\n\nThé pha cac vua nha Nguyén\n\nKHANG CHIEN CHONG*EHUC DAN PHAP (1858-1954)\n\n1858: Lién quan Pháp - Tay Ban Nha tan cong ban dao Son Tra (Da Nang), mo dau cho cuộc chiến\n\ntranh xâm lược Viét Nam.\n\nTranh minh hoa về thành Dién Hai (Pa Nang), mô ta tiền don phòng thi cua quan triều đình\n\nsau khi bi lién quan Pháp — Tây Ban Nha tan cong bang dai bac va chiém dong hic 10 gio\n\nsang ngay 2/9/1858. Buc tranh được vé boi Lo-brơ-tông ("
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 2.62,
+          "metrics": {
+            "chars": 1332,
+            "words": 294,
+            "vietnamese_diacritics": 51,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 398
+          },
+          "text_preview": "Page|12\nThé pha các vua nha Nguyén\na aig\n1802 - 1820\nbr, eee ae ul 1820 - 1841\n4 6\nTy Đức Thoai Thai Vuong Kién Thai Vuong Hiép Hoa\n1847 - 1883 1883\n5 | ig [#8 7\nDuc Đức Đồng Khanh Ham Nghi Kién Phúc\n1883 1885 - 1889 1884 - 1885 1883 - 1884\nThanh Thai Khai Dinh\n1889 - 1907 1916 - 1925\n[at Iw\nDuy Tan Bao Bai\n1907 - 1916 1926 - 1945\nChú thich: Cac nam trong bang 1a các nam tri vi của vi vua đó\nCon dau \"Hoang dé ton than chi bao\" bang\nnea (1885) cua triéu Nguyễn, hién dan ÊƑ \\ L\nga ( \\ ) I \"8 ở , ee 8 Thê pha các vua nha Nguyên\ntrung bay trong Bao tang Lich sw Thanh\npho Ho Chi Minh\nKHANG CHIEN CHONG*THUC DAN PHAP (1858-1954)\n1858: Liên quan Pháp - Tay Ban Nha tan cong ban dao Son Tra (Da Nang), mo dau cho cuộc chiên\ntranh xâm lược Viét Nam.\n— : A IE X cN n\nso ET Le, Heese,\n- L Ỷ s 7 =| H đ ¬ a x ee SR)\nTranh minh hoa vé thanh Dién Hai (Da Nang), mo ta tién don phong thu cua quan triéu dinh\nsau khi bi lién quan Phap — Tay Ban Nha tan cong bang dai bac va chiém dong luc 10 gio’\nsang ngay 2/"
+        },
+        "easyocr_vi_en": {
+          "time_sec": 27.26,
+          "metrics": {
+            "chars": 1210,
+            "words": 245,
+            "vietnamese_diacritics": 155,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 710
+          },
+          "text_preview": "Page 12\nThé Phả các vua nhà Nguyễn\nGia Long 1802 1820\nMinh Mang 1820 1841\nThieu Tri 1841 1847\nTu Đửc\nThoai Thái Vuong\nKiên Thái Vuong\nHíệp Hòa 1883\n1847 1883\nDuc Đức 1883\nĐổng Khanh 1885 1889\nHảm Nghi 1884 1885\nKien Phúc 1883 1884\n10\nThành Thai 1889 1907\nKhải Định 1916 1925\n13\nDuy Tân 1907 1916\nBao Đai 1926 1945\nChú thích: Các năm trong bàng là các nằm trị vi cua vị vua đó\nCon dấu \"Hoàng đế tôn thân chi bảo 7 bằng ngà (1885) của triều Nguyễn, hiện đang Lịch sử Thành Thế phả các vua nhà Nguyễn trưng bày trong Bảo tàng phố Hồ Chí Minh ao KHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP (1858-1954) 1858: Liên quân Pháp Tây Ban Nha tấn công bán đảo Sơn Trà (Đà Nẵng) mở đầu cho cuộc chiến tranh xâm lược Việt Nam. 2\nTranh minh họa về thành Điện Hải (Đà Nẵng) , mô tả tiền đồn phòng thủ của quân triều đình sau khi bị liên quân Pháp - Tây Ban Nha tấn công bằng đại bác và chiếm đóng lúc 10 giờ sáng ngày 2/9/1858. Bức tranh được vẽ bởi Lơ-brơ-tông (Lebreton) và đăng trên tạp chí Họa báo (L'Illustration) tại Paris"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 2.26,
+          "metrics": {
+            "chars": 1176,
+            "words": 192,
+            "vietnamese_diacritics": 1,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 240
+          },
+          "text_preview": "Page|12\nThepha cacvua nha Nguyen\nGia Long\n1802-1820\nMinh Mang\n1820-1841\nThieu Tri\n1841-1847\nTy Dirc\nThoai ThaiVuong\nKien Thai Vuong\nHiepHoa\n1847-1883\n1883\nDucDurc\nDong Khanh\nHam Nghi\nKien Phuc\n1883\n1885-1889\n1884-1885\n1883-1884\n12\nThanh Thai\nKhai Dinh\n1889-1907\n1916-1925\n13\nDuy Tan\nBaoDai\n1907-1916\n1926-1945\nChu thich:Cacnam trong bang lacacnam tri vi cuavivua o\nBupq ,opq !yo upyi uoi ap SupoH, npp uo\nnga (1885) cua triéu Nguyen, hien dang\nThe pha cac vua nha Nguyen\ntrungbay trongBaotangLich sirThanh\npho Ho Chi Minh\nKHANG CHIEN CHONG THU'C DAN PHAP (1858-1954)\n1858: Lien quan Phap - Tay Ban Nha tan cong ban dao Son Tra (Da Nang), mo dau cho cuoc chien\ntranh xam luoc Viet Nam.\nTranh minh hoa ve thanh Dien Hai (Da Nang), mo ta tien don phong thu cia quan trieu dinh\nsau khi bi lien quan Phap - Tay Ban Nha tan cong bang dai bac va chiem dong luc 10 gio\nsang ngay 2/9/1858. Birc tranh duoc ve boi Lo-bro-tong (Lebreton) va dang tren tap chi Hoa\nbao (L'Illustration) tai Paris vao nam 1858.\nSte"
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 57.27,
+          "metrics": {
+            "chars": 1191,
+            "words": 248,
+            "vietnamese_diacritics": 99,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 512
+          },
+          "text_preview": "Page | 12\nThé phå các vua nhà Nguyn\n1\nGia Long\n1802-1820\n2\nMinh Mang\n1820 -1841\n3\nThiu Tr\n1841-1847\n6\n4\nHip Hòa\nTu Dc\nThoai Thái Vuong\nKiên Thái Vuong\n1883\n1847 - 1883\n5\n9\n8\n7\nĐong Khánh\nHàm Nghi\nKiên Phúc\nDuc Dúc\n1883\n1885 - 1889\n1884-1885\n1883-1884\n10\n12\nThành Thái\nKhài Đinh\n1889 - 1907\n1916 - 1925\n11\n13\nDuy Tân\nBào Đai\n1907-1916\n1926-1945\nChú thích: Các năm trong bàng là các năm tri vi cůa vi vua đó\nCon du \"Hoàng đ tôn thân chi bo\" bng\nngà (1885) ca triu Nguyn, hin đang\nTh phå các vua nhà Nguyn\ntrưng bày trong Bo tàng Lch s Thành\nph Hồ Chí Minh\nKHÁNG CHIÊN CHÓNG THC DÂN PHÁP (1858–1954)\n1858: Liên quân Pháp - Tây Ban Nha tn công bán đo Son Trà (Đà Nng), m đu cho cuc chin\ntranh xâm lưc Vit Nam.\nTranh minh ha v thành Đin Hi (Đà Nng), mô t tin đồn phòng th ca quân triu đình\nsau khi b liên quân Pháp – Tây Ban Nha tn công bng đi bác và chim đóng lúc 10 gi\nsáng ngày 2/9/1858. Bc tranh đưc v bi Lơ-brơ-tông (Lebreton) và đăng trên tp chí Ha\nbáo (L'Illustration) ti Paris vào năm 1858.\nStemho"
+        },
+        "vncv_vi": {
+          "time_sec": 7.9,
+          "metrics": {
+            "chars": 911,
+            "words": 177,
+            "vietnamese_diacritics": 115,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 537
+          },
+          "text_preview": "Page [12\n1883 - 1884\n1889 - 1907\n1907 - 1916\n1926 - 1945\nCon dấu \"Hoàng đế tôn thân chi bảo\" bằng\nngà (1885) của triều Nguyễn, hiện đang\nThế phả các vua nhà Nguyễn\ntrung bày trong Bảo tàng Lịch sử Thành\nphố Hồ Chí Minh\nKHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP (1858?1954)\n1858: Liên quân Pháp - Tây Ban Nha tân công bán đảo Sơn Trà (Đà Năng), mở đầu cho cuộc chiến\ntranh xâm lược việt nam\n1971\nTranh minh họa về thành Điện Hải (Đà Nắng), mô tả tiền đồn phòng thủ của quân triều đình\nThế sau khi bị liên quân Pháp ? Tây Ban Nha tấn công bằng đại bác và chiếm đóng lúc 10 giờ\nsáng ngày 2/9/1858. Bức tranh được vẽ bởi Lo-bro-tông (Lebreton) và đăng trên tạp chi Họa\nbáo (L'Illustration) tại Paris vào năm 1858\nstemhouse\nStemhouse Education JSC The\n0 stemhouse.edu.vn\n1990 0 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nA/stemhouse.edu.vn\n2 028 3517 1003/028 3517 0035\nthe mind unbound\nM hoalan.infoostemhouse.edu.vn"
+        }
+      }
+    },
+    {
+      "pdf": "SECTION 2 - CONTENT 1.pdf",
+      "page": 3,
+      "label": "Ngô Quyền / Bạch Đằng",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_2_-_CONTENT_1.pdf_p3.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 2.21,
+          "metrics": {
+            "chars": 587,
+            "words": 116,
+            "vietnamese_diacritics": 74,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 368
+          },
+          "text_preview": "Page|23\n\nNHÀ NGÔ\n\nTượng Đức Vương Ngô Quyên tại\n\nKhu di tích lịch sử quốc gia Bạch\n\nĐằng Giang (huyện Thủy Nguyên,\nthành phó Hải Phòng)\n\nÔng đánh bại quân Nam Hán trên sông Bạch Đăng\nnăm 938, bằng cách cắm cọc gỗ nhọn xuống lòng\n\nNgô Quyền (898 - i e _\nsô Q 9ỉ 4) ! sông. Đây là chiên thăng vang dội, kêt thúc hơn\n1000 năm Bắc thuộc, mở đầu thời kỳ độc lập lâu\ndài cho dân tộc.\n- Stemhouse Education JSC\nStemhause ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HOMC\n\nE1 /stemhouse.edu.vn 9 028 3517 1003/ 028 3517 0035\nŒ hoalan.info@stemhouse.edu.vn\n\n†ne mind ( l@i\n"
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 1.85,
+          "metrics": {
+            "chars": 621,
+            "words": 134,
+            "vietnamese_diacritics": 79,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 401
+          },
+          "text_preview": "Page|23\nNHÀ NGÔ\nTượng Đức Vương Ngô Quyên tại\nKhu di tích lịch sử quốc gia Bạch\nĐằng Giang (huyện Thủy Nguyên,\nthành phó Hải Phòng)\nOng đánh bại quân Nam Hán trên sông Bạch Đăng J \\\nÑ Ñ năm 938. bằng cách cắm cọc gỗ nhọn xuống lòn ( Ì\nNgô Quyền (898 - | c Ờ TU Ố C, Bọ I D U  Ế —\n944) sông. Đây là chiên thăng vang dội, kêt thúc hơn `\\_ s\n1000 năm Băắc thuộc, mở đâu thời kỳ độc lập lâu rW )\ndài cho dân tộc. Sug .Ề\nˆ Stemhouse Education JSC\nStemhause ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HOMC\nIN NH 5 NH Eì /stemhouse.edu.vn 9 028 3517 1003/ 028 3517 0035\n— Œ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.09,
+          "metrics": {
+            "chars": 591,
+            "words": 116,
+            "vietnamese_diacritics": 11,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 164
+          },
+          "text_preview": "Page | 23\n\nNHA NGO\n\nTuong Duc Vuong Ngo Quyen tai\n\nKhu di tich lich sie quoc gia Bach\n\nPang Giang (huyén Thuy Nguyén,\nthanh ph6é Hai Phong)\n\nOng danh bai quan Nam Han trén song Bach Dang\nnim 938, bang cach cam coc go nhon xu6ng long\n\nNgé Quyén (898 - ; rane re\n80Q 04 4) ( song. Day 1a chién thang vang d6i, két thuc hon\n1000 nam Bac thudc, mé dau thoi ky déc lap lau\ndai cho dan téc.\nn Stemhouse Education JSC\nstemhQuse @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\n\nffi /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n© hoalan.info@stemhouse.edu.vn\n\nthe mind d\n"
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 1.01,
+          "metrics": {
+            "chars": 643,
+            "words": 134,
+            "vietnamese_diacritics": 13,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 188
+          },
+          "text_preview": "Page | 23\nNHA NGO\nTuong Duc Vuong Ngo Quyen tai\nKhu di tich lich sie quoc gia Bach\nPang Giang (huyén Thuy Nguyén,\nthanh ph6é Hai Phong)\nOng danh bai quan Nam Han trén s6ng Bach Dang ppm S\n- x nam 938, bang cach c4m coc g6 nhon xuéng lon a \\_| 4\nNgé Quyén (898 = | eee ee ee ee a nL at\n944) song. Day la chién thang vang di, két thuc hon w\\\\ J\n1000 nam Bac thuéc, mé dau thoi ky déc lap lau aN }\ndai cho dan téc. Th:\nra Stemhouse Education JSC\nstemhQuse @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nLies eitiech a gee teerc ell fi /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\nwees © hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 2.24,
+          "metrics": {
+            "chars": 587,
+            "words": 118,
+            "vietnamese_diacritics": 23,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 202
+          },
+          "text_preview": "Page | 23\n\nNHA NGO\n\nTuong Duc Vuong Ngo Quyên tai\n\nKhu di tich lich sử quoc gia Bach\n\nPang Giang (huyén Thuy Nguyên,\nthành ph6é Hai Phong)\n\nOng danh bai quan Nam Han trén song Bach Dang\nnim 938, bang cach cam coc gỗ nhọn xuống long\n\nNgô Quyén (898 - i e _\nsô Q 04 4) ( song. Day 1a chién thang vang dội, kêt thúc hon\n1000 nam Bac thuộc, mở dau thoi ky độc lap lau\ndai cho dan tộc.\n- Stemhouse Education JSC\nửemhaUSG ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\n\nE1 /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n© hoalan.info@stemhouse.edu.vn\n\nthe mind ( d\n"
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 1.89,
+          "metrics": {
+            "chars": 615,
+            "words": 132,
+            "vietnamese_diacritics": 27,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 228
+          },
+          "text_preview": "Page | 23\nNHA NGO\nTuong Duc Vuong Ngo Quyên tai\nKhu di tich lich sử quoc gia Bach\nPang Giang (huyén Thuy Nguyên,\nthành ph6é Hai Phong)\nOng danh bai quan Nam Han trên sông Bach Dang ppm \\\nÑ Ñ nam 938, bang cach cắm coc g6 nhon xuống lon ( Ì\nNgô Quyền (898 - | c Ờ TU Ố a nL —\n944) song. Day la chién thang vang dội, kêt thúc hon w\\\\ J\n1000 nam Bac thuộc, mở dau thoi ky déc lap lau rW )\ndài cho dân tộc. Th:\nˆ Stemhouse Education JSC\nửemhaUSG @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nIN NH a gee NH Eì /stemhouse.edu.vn 9 028 3517 1003/ 028 3517 0035\n— Œ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "easyocr_vi_en": {
+          "time_sec": 26.18,
+          "metrics": {
+            "chars": 558,
+            "words": 108,
+            "vietnamese_diacritics": 72,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 354
+          },
+          "text_preview": "Page 23\nNHÀ NGÔ\nTượng Đức Vương Ngô Quyền tại Khu di tích lịch sử quốc gia Bạch Đằng Giang (huyện Thủy Nguyên; thành phố Hải Phòng)\nÔng đánh bại quân Nam Hán trên sông Bạch Đằng Ngô Quyền (898 năm 938, bằng cách cắm cọc gỗ nhọn xuống lòng 944) sông. Đây là chiến thắng vang dội, kết thúc hơn 1000 năm Bắc thuộc, mở đầu thời kỳ độc lập lâu dài cho dân tộc. slemho\nStemhouse Education JSC 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC 028 3517 1003/ 028 3517 0035 hoalan info@stemhouse edu.vn\nstemh use the mind unbound\nstemhouse edu.vn Istemhouse edu.vn"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 1.4,
+          "metrics": {
+            "chars": 544,
+            "words": 87,
+            "vietnamese_diacritics": 2,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 123
+          },
+          "text_preview": "Page|23\nNHA NGO\nTuong Dirc Vuong Ngo Quyen tai\nKhu di tich lich sir quoc gia Bach\nDang Giang (huyen Thiy Nguyen,\nthanh pho Hai Phong)\nOng danh bai quan Nam Han tren song Bach Dang\nnam 938, bang cach cam coc go nhon xuong long\nNgo Quyen (898 -\nsong. Day la chién thang vang doi, két thuc hon\n944)\n1000 nam Bac thuoc, mo dau thoi ky doc lap lau\ndai cho dan toc.\nstemho\nStemhouseEducationJSc\nstemhouse\nstemhouse.edu.vn\n2HoaanStreet,Ward2,PhuNhuanDistrict,HCMC\n/stemhouse.edu.vn\n02835171003/02835170035\nthe mind unbound\nhoalan.info@stemhouse.edu.vn"
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 39.89,
+          "metrics": {
+            "chars": 523,
+            "words": 104,
+            "vietnamese_diacritics": 35,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 224
+          },
+          "text_preview": "Page|23\nNHÀ NGÔ\nTưng Đc Vưong Ngô Quyên ti\nKhu di tích lch s quc gia Bch\nĐng Giang (huyn Thy Nguyên,\nthành ph Hi Phòng)\nÔng đánh bi quân Nam Hán trên sông Bch Đng\nnăm 938, bng cách cm cc g nhn xung lòng\nNgô Quyn (898 -\nsông. Đây là chin thng vang di, kt thúc hon\n944)\n1000 năm Bc thuc, m đu thi k đc lp lâu\ndài cho dân tc.\nStemhouse Education JSC\nstemhouse\nstemhouse.edu.vn\n02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nR/stemhouse.edu.vn\n3\n028 3517 1003/ 028 3517 0035\n_\nthe mind unbound\nhoalan.info@stemhouse.edu.vn"
+        },
+        "vncv_vi": {
+          "time_sec": 4.87,
+          "metrics": {
+            "chars": 572,
+            "words": 107,
+            "vietnamese_diacritics": 72,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 338
+          },
+          "text_preview": "Page 23\nNHÀNGÔ\nTượng Đức Vương Ngô Quyền tại\nKhu di tích lịch sử quốc gia Bạch\nĐăng Giang (huyện Thủy Nguyên,\nthành phố Hải Phòng)\nÔng đánh bại quân nam Hán trên sông Bạch Đằng\nnăm 938, bằng cách cắm cọc gỗ nhọn xuống lòng\nNgô Quyền (898\nsông. Đây là chiến thắng vang dội, kết thúc hơn\n944)\n1000 năm Bắc thuộc, mở đầu thời kỳ độc lập lâu\ndài cho dân tộc\nstemho\nStemhouse Education JSC\nstemhouse\nO stemhouse.edu.vn\n1990 0 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nE1/stemhouse.edu.vn\n3 028 3517 1003/ 028 3517 0035\nthe mind unbound\n21 hoalan.infoostemhouse.edu.vn"
+        }
+      }
+    },
+    {
+      "pdf": "SECTION 2 - CONTENT 1.pdf",
+      "page": 12,
+      "label": "Quang Trung",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_2_-_CONTENT_1.pdf_p12.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 1.54,
+          "metrics": {
+            "chars": 716,
+            "words": 137,
+            "vietnamese_diacritics": 83,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 431
+          },
+          "text_preview": "Page|32\n\nHải Thượng Lãn Ông - Lê Hữu\nTrác\n\nLê Hữu Trác (1724 | Tức Hải Thượng Lãn Ông, ông tổ của ngành y học\n-1791) cổ truyền Việt Nam\n\nTHỜI TÂY SƠN\n\nTượng Vua Quang Trung tại Bảo\ntàng Quang Trung, thành phố Quy\nNhơn\n\nLãnh tụ Tây Sơn, ông chỉ huy quân đội đánh thắng\nQuang Trung quân Xiêm ở Rạch Gầm — Xoài Mút (1785) và đánh\n\n(1753-1792)„tức | tan quân Thanh ở Thăng Long (1789) trong chiến\nNguyễn Huệ dịch thần tốc dịp Tết Kỷ Dậu. Ông là một trong\n\nnhững anh hùng kiệt xuất trong lịch sử dân tộc.\n\nStemhouse Education JSC\n\nSl'emhause ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HOMC\n, Ei /stemhouse.edu.vn 9 028 3517 1003/ 028 3517 0035\n\n†he mingd Unbound h\nŒ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 2.08,
+          "metrics": {
+            "chars": 810,
+            "words": 171,
+            "vietnamese_diacritics": 90,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 486
+          },
+          "text_preview": "Page|32\n\nHải Thượng Lãn Ông - Lê Hữu\n\nTrác\n\nÍ_ .\nLê Hữu Trác (1724 | Tức Hải Thượng Lãn Ông, ông tổ của ngành y học : ơ L\n-1791) cô truyền Việt Nam 'g' ! 5A\nA\nTHỜI TÂY SƠN\nTượng Vua Quang Trung tại Bảo\ntàng Quang Trung, thành phố Quy\nNhơn\nm i - „\nLãnh tụ Tây Sơn,ôngchihuyquân độiđánhthắng ! “=“=* A m<*y>= .. .\nQuang Trung quân Xiêm ở Rạch Gằm - Xoài Mút (1785) và đánh r x ỀỪ \" 0920\n(1753-1792)„tức | tan quân Thanh ở Thăng Long (1789) trong chiến ° S 7\n~ A m R ˆ 22 Ỹ\nNguyên Huệ dịch thân tôc dịp Têt Kỷ Dậu. Ông là một trong ủ`ĩj\nnhững anh hùng kiệt xuất trong lịch sử dân tộc. ; Ắ | ®. A\n& Stemhouse Education JSC\nSl'emhause ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HOMC\n#lu tririel uiAEmurul Ei /stemhouse.edu.vn % 028 3517 1003/ 028 3517 0035\n- = hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.39,
+          "metrics": {
+            "chars": 725,
+            "words": 143,
+            "vietnamese_diacritics": 13,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 227
+          },
+          "text_preview": "Page | 32\n\nHai Thuong Lan Ong - Lé Hitu\nTrac\n\nLé Hitu Trac (1724 | Tic Hai Thuong Lan Ong, ong t6 ctia nganh y hoc\n- 1791) cé truyén Viét Nam\n\nTHOI TAY SON\n\nTuong Vua Quang Trung tai Bao\ntang Quang Trung, thanh pho Quy\nNhon\n\nLanh tu Tay Son, 6ng chi huy quan d6i danh thang\nQuang Trung quan Xiém 6 Rach Gam — Xoai Mut (1785) va danh\n\n(1753 - 1792), tre | tan quan Thanh & Thang Long (1789) trong chién\nNeguyén Hué dich than téc dip Tét Ky Dau. Ong 1a m6t trong\n\nnhimg anh hing kiét xuat trong lich str dan téc.\n\nStemhouse Education JSC\n\nstemh@use @ stemhouse.edu.vn ® 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\ny fi /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n\nthe mind unbound 9\n© hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 1.22,
+          "metrics": {
+            "chars": 816,
+            "words": 177,
+            "vietnamese_diacritics": 12,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 258
+          },
+          "text_preview": "Page | 32\n\nHai Thuong Lan Ong - Lé Hitu\n\nTrac\n\n[ kage\nLé Hitu Trac (1724 | Tic Hai Thuong Lan Ong, ong t6 ctia nganh y hoc y\\ -” .~\n- 1791) cé truyén Viét Nam \\ oh\na\nTHOI TAY SON\nTuong Vua Quang Trung tai Bao\ntang Quang Trung, thanh pho Quy\nNhon\n(al as an\nLanh ty Tay Son, éng chi huy quan ddidanh thang | | ge\nQuang Trung quan Xiém @ Rach Gam — Xoai Mut (1785) va danh rw = =) ~ see\n(1753 - 1792), tre | tan quan Thanh & Thang Long (1789) trong chién \" ca |) ae\n~ X r x A Sy) ; fg\nNguyen Hué dich than toc dip Tet Ky Dau. Ong 1a mot trong t Wea\nnhimg anh hing kiét xuat trong lich str dan téc. | oe. la\nés Stemhouse Education JSC\nstemh@use @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nthe raineuntzoure i /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n— © hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 1.83,
+          "metrics": {
+            "chars": 721,
+            "words": 143,
+            "vietnamese_diacritics": 31,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 281
+          },
+          "text_preview": "Page | 32\n\nHai Thuong Lan Ong - Lê Hữu\nTrac\n\nLé Hữu Trac (1724 | Tức Hai Thuong Lan Ong, ông tổ của ngành y hoc\n- 1791) cổ truyền Viét Nam\n\nTHỜI TAY SON\n\nTuong Vua Quang Trung tai Bao\ntang Quang Trung, thanh pho Quy\nNhon\n\nLanh tu Tay Son, 6ng chi huy quan đội danh thang\nQuang Trung quan Xiém 6 Rach Gam — Xoài Mut (1785) va đánh\n\n(1753 - 1792), tre | tan quan Thanh ở Thang Long (1789) trong chiến\nNguyễn Huệ dich than tốc dip Tết Ky Dau. Ong là một trong\n\nnhững anh hing kiét xuất trong lich str dan téc.\n\nStemhouse Education JSC\n\nstemh@use ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\n, fi /stemhouse.edu.vn 9 028 3517 1003/ 028 3517 0035\n\nthe mind unbound 9\n© hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 2.08,
+          "metrics": {
+            "chars": 801,
+            "words": 175,
+            "vietnamese_diacritics": 48,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 364
+          },
+          "text_preview": "Page | 32\n\nHai Thuong Lan Ong - Lê Hữu\n\nTrac\n\n[ .\nLê Hữu Trác (1724 | Tức Hải Thượng Lãn Ông, ông tổ của ngành y học : ơ .~\n- 1791) cô truyền Việt Nam \\ ! oh\nA\nTHỜI TÂY SƠN\nTượng Vua Quang Trung tại Bảo\ntang Quang Trung, thanh phố Quy\nNhon\n(al - an\nLanh ty Tay Son, éng chi huy quan độiđánhthắng | | ge\nQuang Trung quan Xiém ở Rach Gam - Xoai Mut (1785) va đánh rw = =) ~ 0920\n(1753 - 1792), tre | tan quan Thanh ở Thang Long (1789) trong chiến \" ca 7 ae\n~ A m x ˆ 22 ;\nNguyên Huệ dich than toc dip Tet Ky Dau. Ong là mot trong Wea\nnhững anh hing kiét xuất trong lich str dan téc. | oe. la\n& Stemhouse Education JSC\nửemhaU8e ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nthe raineuntzoure Ei /stemhouse.edu.vn % 028 3517 1003/ 028 3517 0035\n- = hoalan.info@stemhouse.edu.vn\n"
+        },
+        "easyocr_vi_en": {
+          "time_sec": 27.88,
+          "metrics": {
+            "chars": 688,
+            "words": 136,
+            "vietnamese_diacritics": 83,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 430
+          },
+          "text_preview": "Page 32\nHải Thượng Lãn Ông- Lê Hữu Trác\nLê Hữu Trác (1724 Tức Hải Thượng Lãn Ông, ông tổ của ngành y học 1791) cổ truyền Việt Nam\nTHỜI TÂY SƠN\nTượng Vua Quang Trung tại Bảo tàng Quang Trung; thành phố Quy Nhơn\n~mne Lãnh tụ Tây Sơn; ông chỉ huy quân đội đánh thắng Quang Trung quân Xiêm ở Rạch Gầm - Xoài Mút (1785) và đánh (1753 1792), tức tan quân Thanh ở Thăng Long (1789) trong chiến Nguyễn Huệ dịch thần tốc dịp Tết Kỷ Dậu. Ông là một trong những anh hùng kiệt xuất trong lịch sử dân tộc.\nStemhouse Education JSC 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC 028 3517 1003/ 028 3517 0035 hoalan info@stemhouse edu.vn\nstemh use the mind unbound\nstemhouse edu.vn Istemhouse edu.vn"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 1.56,
+          "metrics": {
+            "chars": 671,
+            "words": 109,
+            "vietnamese_diacritics": 4,
+            "quiz_keywords": 4,
+            "mc_options": 0,
+            "score": 181
+          },
+          "text_preview": "Page|32\nHai Thuong Lan Ong -Lé Hiru\nTrac\nLé Huru Trac (1724\nTurc Hai Thuong Lan Ong, ong to cua nganh y hoc\n- 1791)\nco truyen Viet Nam\nTHOI TAY SON\nTuong Vua Quang Trung tai Bao\ntangQuang Trung,thanh phoQuy\nNhon\nLanh tu Tay Son, ong chi huy quan doi danh thang\nQuang Trung\nquan Xiem  Rach Gam - Xoai Mut (1785) va danh\n(1753 - 1792), turc\ntan quan Thanh  Thang Long (1789) trong chién\nNguyen Hue\ndich than toc dip Tét Ky Dau. Ong la mot trong\nnhtrng anh hung kiet xuat trong lich s'r dan toc.\nStemhouseEducationJSC\nstemhouse\nstemhouse.edu.vn\n02HoaLanStreet,Ward2,PhuNhuanDistrict,HCMC\n/stemhouse.edu.vn\n02835171003/02835170035\nthemind unbound\nhoalan.info@stemhouse.edu.vn"
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 41.9,
+          "metrics": {
+            "chars": 652,
+            "words": 133,
+            "vietnamese_diacritics": 37,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 289
+          },
+          "text_preview": "Page | 32\nHi Thưng Lãn Ông - Lê Hu\nTrác\nLê Hu Trác (1724\nTc Hi Thưng Lãn Ông, ông t ca ngành y hc\n- 1791)\nc truyn Vit Nam\nTHÒI TÂY SON\nTung Vua Quang Trung ti Bo\ntàng Quang Trung, thành ph Quy\nNhon\nLănh t Tây Son, ông chi huy quân đi đánh thng\nQuang Trung\nquân Xiêm  Rch Gm – Xoài Mút (1785) và đánh\n(1753 - 1792), túrc\ntan quân Thanh  Thăng Long (1789) trong chin\nNguyn Hu\ndch thn tc dp Tt K Du. Ông là mt trong\nnhng anh hùng kit xut trong lch s dân tc.\nstemhouse\nStemhouse Education JSC\nstemhouse.edu.vn\n02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\n_\n/stemhouse.edu.vn\nthe mind unbound\n028 3517 1003/ 028 3517 0035\nhoalan.info@stemhouse.edu.vn"
+        },
+        "vncv_vi": {
+          "time_sec": 5.09,
+          "metrics": {
+            "chars": 700,
+            "words": 136,
+            "vietnamese_diacritics": 83,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 430
+          },
+          "text_preview": "Page 32\nHải Thượng Lãn Ông - Lê Hữu\nTrác\nLê Hữu Trác (1724\nTức Hải Thượng Lãn Ông, ông tổ của ngành y học\n- 1791)\ncổ truyền Việt Nam\nTHỜI TÂY SƠN\nTượng Vua Quang Trung tại Bảo\ntàng Quang Trung, thành phố Quy\nNhơn\nLãnh tụ Tây Sơn, ông chỉ huy quân đội đánh thắng\nQuang Trung\nquân Xiêm ở Rạch Gầm ? Xoài Mút (1785) và đánh\n(1753 - 1792), tức\ntan quân Thanh ở Thăng Long (1789) trong chiến\ndịch thần tốc dịp Tết Kỷ Dậu. Ông là một trong\nNguyễn Huệ\nnhững anh hùng kiệt xuất trong lịch sử dân tộc\nStemhouse Education JSC\nstemhouse\n10 stemhouse.edu.vn\n1990 0 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nA/stemhouse.edu.vn\n028 3517 1003/028 3517 0035\nthe mind unbound\n21 hoalan.infoostemhouse.edu.vn"
+        }
+      }
+    },
+    {
+      "pdf": "SECTION 3 - CONTENT.pdf",
+      "page": 1,
+      "label": "Địa lý TP.HCM — giới thiệu",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_3_-_CONTENT.pdf_p1.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 2.07,
+          "metrics": {
+            "chars": 1360,
+            "words": 282,
+            "vietnamese_diacritics": 231,
+            "quiz_keywords": 5,
+            "mc_options": 0,
+            "score": 968
+          },
+          "text_preview": "Page |48\n\nPhần 3: Địa lý TP. Hồ Chí Minh | Section 3: Geography\nof Hồ Chí Minh City\n\nTừ ngày 1/7/2025, Thành phố Hồ Chí Minh mới được hình thành trên cơ sở sáp nhập Thành phố\nHồ Chí Minh, Bình Dương và Bà Rịa — Vũng Tàu. Thành phố có diện tích khoảng 6.772,6 km?,\ndân số khoáng 14.002.598 người và là thành phố đông dân nhất Việt Nam.\n\nSau sắp xếp, TP.HCM có 168 đơn vị hành chính cấp xã, gồm 113 phường, 54 xã và 1 đặc khu.\nThành phố là trung tâm kinh tế, văn hóa, giáo dục, khoa học — công nghệ và giao thông quan trọng\n\ncủa cả nước.\n\nTP.HCM là vùng đất có lịch sử hơn 300 năm phát triển, từng gắn với các tên gọi như Phiên An,\nGia Định, Sài Gòn và từ năm 1976 được đặt tên là Thành phố Hồ Chí Minh. Thành phố có khí hậu\n\nnhiệt đới gió mùa cận xích đạo, với hai mùa rÕ rệt: mùa mưa và mùa khô.\n\nTP.HCM là nơi sinh sống của nhiều cộng đồng dân tộc, trong đó người Kinh chiếm đa số, bên cạnh\ncộng đồng người Hoa, Khmer và nhiều dân tộc khác. Trước đây, Sài Gòn từng được gọi là “Hòn\nngọc Viễn Đông”. "
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 1.82,
+          "metrics": {
+            "chars": 1352,
+            "words": 285,
+            "vietnamese_diacritics": 230,
+            "quiz_keywords": 4,
+            "mc_options": 0,
+            "score": 950
+          },
+          "text_preview": "Page |48\nPhân 3: Địa lý TP. Hô Chí Minh | Section 3: Geoøraphy\nof Hồ Chí Minh City\nTừ ngày 1/7/2025, Thành phố Hồ Chí Minh mới được hình thành trên cơ sở sáp nhập Thành phố\nHồ Chí Minh, Bình Dương và Bà Rịa — Vũng Tàu. Thành phố có diện tích khoảng 6.772,6 km?,\ndân số khoáng 14.002.598 người và là thành phố đông dân nhất Việt Nam.\nSau sắp xếp, TP.HCM có 168 đơn vị hành chính cấp xã, gồm 113 phường, 54 xã và 1 đặc khu.\nThành phố là trung tâm kinh tế, văn hóa, giáo dục, khoa học — công nghệ và giao thông quan trọng\ncủa cả nước.\nTP.HCM là vùng đất có lịch sử hơn 300 năm phát triển, từng gắn với các tên gọi như Phiên An,\nGia Định, Sài Gòn và từ năm 1976 được đặt tên là Thành phố Hồ Chí Minh. Thành phố có khí hậu\nnhiệt đới gió mùa cận xích đạo, với hai mùa rÕ rệt: mùa mưa và mùa khô.\nTP.HCM là nơi sinh sống của nhiều cộng đồng dân tộc, trong đó người Kinh chiếm đa số, bên cạnh\ncộng đồng người Hoa, Khmer và nhiều dân tộc khác. Trước đây, Sài Gòn từng được gọi là “Hòn\nngọc Viễn Đông”. Ngày na"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.37,
+          "metrics": {
+            "chars": 1358,
+            "words": 283,
+            "vietnamese_diacritics": 39,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 317
+          },
+          "text_preview": "Page | 48\n\nPhan 3: Dia ly TP. Hé Chi Minh | Section 3: Geography\nof H6é Chi Minh City\n\nTi ngay 1/7/2025, Thanh phé H6 Chi Minh mdi dugc hinh thanh trén co sé sap nhap Thanh phé\nH6 Chi Minh, Binh Duong va Ba Ria — Ving Tau. Thanh phé co dién tich khoang 6.772,6 km?,\ndan s6 khoang 14.002.598 nguoi va 1a thanh phé dong dan nhat Viét Nam.\n\nSau sap xép, TP.HCM cé 168 don vi hanh chinh cap x4, gdm 113 phuong, 54 x4 va 1 dae khu.\nThanh phé 1a trung tam kinh té, van hoa, giao duc, khoa hoc — cng nghé va giao thong quan trong\n\ncua ca nuoc.\n\nTP.HCM 1a ving dat co lich str hon 300 nam phat trién, timg gan voi cdc tén goi nhu Phién An,\nGia Dinh, Sai Gon va tir nam 1976 dugc dat tén 1a Thanh phé H6 Chi Minh. Thanh phé co khi hau\n\nnhiét d6i gid mua can xich dao, voi hai mua ro rét: mua mua va mua kho.\n\nTP.HCM 1a noi sinh song cua nhiéu cong dong dan téc, trong dé nguoi Kinh chiém da sé, bén canh\ncong dong nguoi Hoa, Khmer va nhiéu dan téc khac. Truéc day, Sai Gon timg duoc goi la “Hon\nngoe Vién Dong"
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 1.27,
+          "metrics": {
+            "chars": 1366,
+            "words": 287,
+            "vietnamese_diacritics": 37,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 311
+          },
+          "text_preview": "Page | 48\nPhan 3: Dia ly TP. H6 Chi Minh | Section 3: Geography\nof Hé Chi Minh City\nTi ngay 1/7/2025, Thanh phé H6 Chi Minh mdi dugc hinh thanh trén co sé sap nhap Thanh phé\nH6 Chi Minh, Binh Duong va Ba Ria — Ving Tau. Thanh phé co dién tich khoang 6.772,6 km?,\ndan s6 khoang 14.002.598 nguoi va 1a thanh phé dong dan nhat Viét Nam.\nSau sap xép, TP.HCM co 168 don vi hanh chinh cap x4, gdm 113 phudng, 54 x4 va 1 dac khu.\nThanh phé 1a trung tam kinh té, van hoa, giao duc, khoa hoc — cng nghé va giao thong quan trong\ncua ca nuoc.\nTP.HCM 1a ving dat co lich str hon 300 nam phat trién, timg gan voi cdc tén goi nhu Phién An,\nGia Dinh, Sai Gon va tir nam 1976 dugc dat tén 1a Thanh phé H6 Chi Minh. Thanh phé co khi hau\nnhiét d6i gid mua can xich dao, voi hai mua ro rét: mua mua va mua kho.\nTP.HCM 1a noi sinh song cua nhiéu cong dong dan téc, trong dé nguoi Kinh chiém da sé, bén canh\ncong dong nguoi Hoa, Khmer va nhiéu dan téc khac. Truéc day, Sai Gon timg duoc goi la “Hon\nngoe Vién Dong”. Ngay "
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 2.48,
+          "metrics": {
+            "chars": 1356,
+            "words": 283,
+            "vietnamese_diacritics": 103,
+            "quiz_keywords": 4,
+            "mc_options": 0,
+            "score": 569
+          },
+          "text_preview": "Page | 48\n\nPhan 3: Dia ly TP. Hồ Chi Minh | Section 3: Geography\nof Hồ Chi Minh City\n\nTừ ngày 1/7/2025, Thanh phố Hồ Chi Minh mdi được hình thanh trên co sở sap nhập Thanh phé\nH6 Chi Minh, Binh Duong va Ba Ria — Vũng Tau. Thanh phé co diện tich khoảng 6.772,6 km?,\ndan số khoang 14.002.598 người va 1a thanh phé đông dan nhất Viét Nam.\n\nSau sap xếp, TP.HCM có 168 don vi hành chính cap x4, gồm 113 phường, 54 xã va 1 dae khu.\nThanh phé là trung tam kinh tế, van hoa, giáo duc, khoa hoc — cng nghệ va giao thong quan trong\n\ncua ca nước.\n\nTP.HCM 1a ving dat có lich str hon 300 nam phat trién, từng gan với các tên gọi như Phiên An,\nGia Dinh, Sai Gon va từ nam 1976 được dat tên là Thanh phé Hồ Chi Minh. Thanh phé co khi hau\n\nnhiét đới gid mua can xich dao, voi hai mua ro rét: mua mua va mua khô.\n\nTP.HCM 1a noi sinh song của nhiéu cong dong dan tộc, trong đó người Kinh chiếm đa số, bên cạnh\ncộng đồng người Hoa, Khmer và nhiều dân tộc khác. Trước day, Sai Gon từng duoc gọi la “Hon\nngọc Viễn Dong”."
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 2.39,
+          "metrics": {
+            "chars": 1349,
+            "words": 286,
+            "vietnamese_diacritics": 100,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 530
+          },
+          "text_preview": "Page | 48\nPhan 3: Dia ly TP. H6 Chi Minh | Section 3: Geography\nof Hé Chi Minh City\nTừ ngày 1/7/2025, Thanh phố Hồ Chi Minh mdi được hình thanh trên co sở sap nhập Thanh phé\nH6 Chi Minh, Binh Duong va Ba Ria — Vũng Tau. Thanh phé co diện tich khoảng 6.772,6 km?,\ndan số khoang 14.002.598 người va 1a thanh phé đông dan nhất Viét Nam.\nSau sap xếp, TP.HCM co 168 don vi hành chinh cap x4, gdm 113 phường, 54 x4 va 1 đặc khu.\nThanh phé 1a trung tam kinh tế, van hoa, giáo duc, khoa hoc — cng nghệ va giao thong quan trong\ncua ca nước.\nTP.HCM 1a ving dat có lich str hon 300 nam phat trién, từng gan với các tên gọi như Phiên An,\nGia Dinh, Sai Gon va từ nam 1976 được dat tên là Thanh phé Hồ Chi Minh. Thanh phé co khi hau\nnhiét đới gid mua can xich dao, voi hai mua ro rét: mua mua va mua khô.\nTP.HCM 1a noi sinh song của nhiéu cong dong dan tộc, trong đó người Kinh chiếm đa số, bên cạnh\ncộng đồng người Hoa, Khmer và nhiều dân tộc khác. Trước day, Sai Gon từng duoc gọi la “Hon\nngọc Viễn Dong”. Ngay n"
+        },
+        "easyocr_vi_en": {
+          "time_sec": 26.05,
+          "metrics": {
+            "chars": 1331,
+            "words": 280,
+            "vietnamese_diacritics": 227,
+            "quiz_keywords": 5,
+            "mc_options": 0,
+            "score": 956
+          },
+          "text_preview": "Page 48\nPhần 3: Địa lý TP. Hồ Chí Minh Section 3: Geography of Hồ Chí Minh City\nTừ ngày 1/7/2025, Thành phố Hồ Chí Minh mới được hình thành trên cơ sở sáp nhập Thành phố Hồ Chí Minh, Bình Dương và Bà Rịa ~ Vũng Tàu. Thành phố có diện tích khoảng 6.772,6 km? , dân số khoảng 14.002.598 người và là thành phố đông dân nhất Việt Nam.\nSau sắp xếp, TPHCM có 168 đơn vị hành chính cấp xã, gồm 113 phường; 54 xã và 1 đặc khu. Thành phố là trung tâm kinh tế, văn hóa, giáo dục, khoa học  công nghệ và giao thông quan trọng của cả nước. 5) TPHCM là vùng đất có lịch sử hơn 300 năm phát triển, từng gắn với các tên gọi như Phiên An, Gia Định, Sài Gòn và từ năm 1976 được đặt tên là Thành phố Hồ Chí Minh. Thành phố có khí hậu nhiệt đới gió mùa cận xích đạo, với hai mùa rõ rệt: mùa mưa và mùa khô.\nTPHCM là nơi sinh sống của nhiều cộng đồng dân tộc; trong đó người Kinh chiếm đa số, bên cạnh cộng đồng người Hoa, Khmer và nhiều dân tộc khác. Trước đây, Sài Gòn từng được gọi là <Hòn ngọc Viễn Đông\" Ngày nay; T"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 2.17,
+          "metrics": {
+            "chars": 1266,
+            "words": 254,
+            "vietnamese_diacritics": 3,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 239
+          },
+          "text_preview": "Page |48\nPhan 3: Dia ly TP. H6 Chi Minh | Section 3: Geography\nof H6 Chi Minh City\nTu ngay 1/7/2025, Thanh ph6 H0 Chi Minh moi duoc hinh thanh tren co s0 sap nhap Thanh ph6\nHo Chi Minh, Binh Durong va Ba Ria - Vung Tau. Thanh ph6 co dien tich khoang 6.772,6 km2,\ndan so khoang 14.002.598 nguoi va la thanh ph6 dong dan nhat Viet Nam.\nSau sap xép, TP.HCM co 168 don vi hanh chinh cap xa, gom 113 phuong, 54 xa va 1 dac khu.\nn u n o   uo -  o p o o u h qu   i gd qu\ncua ca nuoc.\nTP.HCM la vung dat co lich sir hon 300 nam phat trién, tirng gan voi cac ten goi nhu Phien An,\nGia Dinh, Sai Gon va tir nam 1976 duoc dat ten la Thanh ph6 Ho Chi Minh. Thanh ph6 c6 khi hau\nnhiet doi gi6 mua can xich dao, voi hai mua ro ret: mua mua va mua kho.\nTP.HCM la noi sinh song cua nhieu cong dong dan toc, trong do nguoi Kinh chiem da so, ben canh\ncong dong nguroi Hoa, Khmer va nhieu dan toc khac. Truoc day, Sai Gon tung duoc goi la “Hon\nngoc Vien Dong\". Ngay nay, TP.HCM n?i bat voi nhieu cong trinh kién truc, d"
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 50.18,
+          "metrics": {
+            "chars": 1197,
+            "words": 263,
+            "vietnamese_diacritics": 127,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 596
+          },
+          "text_preview": "Page|48\nof Hồ Chí Minh City\nT ngày 1/7/2025, Thành ph H Chí Minh mi đưc hình thành trên co s sáp nhp Thành ph\nH Chí Minh, Bình Dưong và Bà Ra – Vũng Tàu. Thành ph có din tích khong 6.772,6 km²,\ndân s khong 14.002.598 ngưi và là thành ph đông dân nht Vit Nam.\nSau sp xp, TP.HCM có 168 đon v hành chính cp xã, gồm 113 phưòng, 54 xã và 1 đc khu.\nThành ph là trung tâm kinh t, văn hóa, giáo dc, khoa hc – công ngh và giao thông quan trng\nca cå nưc.\nTP.HCM là vùng đt có lch s hon 300 năm phát trin, tùng gn vi các tên gi nhu Phiên An,\nGia Đnh, Sài Gòn và tù năm 1976 đưc đt tên là Thành ph H Chí Minh. Thành ph có khí hu\nnhit đi gió mùa cn xích đo, vi hai mùa rõ rt: mùa mưa và mùa khô.\nTP.HCM là nơi sinh sng ca nhiu cng đng dân tc, trong đó ngưi Kinh chim đa s, bên cnh\ncng đng ngưi Hoa, Khmer và nhiu dân tc khác. Trưc đây, Sài Gòn tùng đưc goi là “Hòn\nngc Vin Đông\". Ngày nay, TP.HCM ni bt vi nhiu công trình kin trúc, di tích lch s, đa\nđim du lch, trung tâm thưong mi và nn m thc phong phú, đa dng.\n"
+        },
+        "vncv_vi": {
+          "time_sec": 11.98,
+          "metrics": {
+            "chars": 1360,
+            "words": 282,
+            "vietnamese_diacritics": 227,
+            "quiz_keywords": 5,
+            "mc_options": 0,
+            "score": 956
+          },
+          "text_preview": "Page / 48\nPhần 3: Địa lý TP. Hồ Chí Minh Section 3: Geography 19\nof Hồ Chí Minh City\nTừ ngày 1/7/2025, Thành phố Hồ Chí Minh mới được hình thành trên cơ sở sáp nhập Thành phố\n\"Hồ Chí Minh, Bình Dương và Bà Rịa ? Vũng Tàu. Thành phố có diện tích khoảng 6.772,6 km\";\"\ndân số khoảng 14.002.598 người và là thành phố đông dân nhất Việt Nam\nSau sắp xếp, TP.HCM có 168 đơn vị hành chính cấp xã, gồm 113 phường, 54 xã và 1 đặc khu\nThành phố là trung tâm kinh tế, văn hóa, giáo dục, khoa học ? công nghệ và giao thông quan trọng\ncủa cả nước\nTP.HCM là vùng đất có lịch sử hơn 300 năm phát triển, từng gắn với các tên gọi như Phiên An,\nGia Định, Sài Gòn và từ năm 1976 được đặt tên là Thành phố Hồ Chí Minh, Thành phố có khí hậu\nnhiệt đới gió mùa cận xích đạo, với hai mùa rõ rệt: mùa mưa và mùa khô.\nTP.HCM là nơi sinh sông của nhiều công đồng dân tộc, trong đồ người Kinh chiếm đa số, bên cạnh\ncộng đồng người Hoa, Khmer và nhiều dân tộc khác. Trước đây, Sài Gòn từng được gọi là \"Hòn\nngọc Viễn Đông?. Ngày n"
+        }
+      }
+    },
+    {
+      "pdf": "SECTION 4 - CONTENT 1.pdf",
+      "page": 2,
+      "label": "Sáp nhập tỉnh 2025",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_4_-_CONTENT_1.pdf_p2.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 2.28,
+          "metrics": {
+            "chars": 1264,
+            "words": 283,
+            "vietnamese_diacritics": 167,
+            "quiz_keywords": 3,
+            "mc_options": 0,
+            "score": 746
+          },
+          "text_preview": "Page |66\n\n15 Ninh Bình Hà Nam + Ninh Bình + Nam Định Bắc Bộ | Đông băng sông Hông\n16 Thanh Hóa Không thay đôi Bắc Trung Bộ\n17 Nghệ An Không thay đồi Bắc Trung Bộ\n18 Hà Tĩnh Không thay đôi Bắc Trung Bộ\n19 Quảng Trị Quảng Bình + Quảng Trị Bắc Trung Bộ\n20 TP. Huế Không thay đôi Bắc Trung Bộ\n21 TP. Đà Nẵng Quảng Nam + Đà Nẵng Nam Trung Bộ\n22 Quảng Ngãi Quảng Ngãi + Kon Tum Nam Trung Bộ\n23 Gia Lai Gia Lai + Bình Định Nam Trung Bộ\n24 Đắk Lắk Phú Yên + Đắk Lắk Nam Trung Bộ\n25 Khánh Hòa Khánh Hòa + Ninh Thuận Nam Trung Bộ\n26 Lâm Đông Đắk Nông + Lâm Đông + Bình Thuận Nam Trung Bộ\n27 Đông Nai Bình Phước + Đông Nai Đông Nam Bộ\n28 Tây Ninh Long An + Tây Ninh Đông Nam Bộ\nTP. Bình Dương + TPHCM\n\n29 ì Đông Nam Bộ\n\nHô Chí Minh + Bà Rịa - Vũng Tàu\n30 Đông Tháp Tiền Giang + Đồng Tháp Nam Bộ | Đồng bằng sông Cửu Long\n3 An Giang Kiên Giang + An Giang Đông băng sông Cửu Long\n32 Vĩnh Long Bến Tre + Vĩnh Long + Trà Vinh Đồng băng sông Cửu Long\n33 TP. Cần Thơ Sóc Trăng + Hậu Giang + Cần Thơ Đông băng sông Cửu"
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 1.47,
+          "metrics": {
+            "chars": 147,
+            "words": 29,
+            "vietnamese_diacritics": 22,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 95
+          },
+          "text_preview": "Page |66\n.U mmm\n29 ì Đông Nam Bộ\nHô Chí Minh + Bà Rịa - Vũng Tàu\nI s†ethuse ỵ ® stemhouse.edu.vn g ỆTohaorẵrỉẵẵẵẳỬaỂẵẳ,cphu Nhuan District, HCMC `\n"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.48,
+          "metrics": {
+            "chars": 1273,
+            "words": 284,
+            "vietnamese_diacritics": 25,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 305
+          },
+          "text_preview": "Page | 66\n\n15 Ninh Binh Ha Nam + Ninh Binh + Nam Dinh Bac B6 | Déng bang séng Hong\n16 Thanh Hoa Khong thay déi Bac Trung BO\n17 Nghé An Khong thay déi Bac Trung BO\n18 Ha Tinh Khong thay déi Bac Trung BO\n19 Quang Tri Quang Binh + Quang Tri Bac Trung B6\n20 TP. Hué Khong thay déi Bac Trung BO\n21 TP. Da Nang Quang Nam + Da Nang Nam Trung Bé\n22 Quang Ngai Quang Ngai + Kon Tum Nam Trung Bé\n23 Gia Lai Gia Lai + Binh Dinh Nam Trung B6\n24 Dak Lak Pha Yén + Dak Lak Nam Trung BO\n25 Khanh Hoa Khanh Hoa + Ninh Thuan Nam Trung B6é\n26 Lam Dong Dak Nong + Lam Déng + Binh Thuan Nam Trung Bo\n27 Dong Nai Binh Phuéc + Dong Nai Déng Nam Bo\n28 Tay Ninh Long An + Tay Ninh Dong Nam B6é\nTP. Binh Duong + TPHCM\n\n29 . Dong Nam Bo\n\nH6 Chi Minh + Ba Ria - Ving Tau\n30 Dong Thap Tién Giang + Dong Thap Nam B6 | Dong bang séng Ctru Long\n31 An Giang Kién Giang + An Giang Dong bang séng Ctru Long\n32 Vinh Long Bén Tre + Vinh Long + Tra Vinh Dong bang séng Ctru Long\n33 TP. Can Tho Sdc Trang + Hau Giang + Can Tho Dong bang s"
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 0.87,
+          "metrics": {
+            "chars": 155,
+            "words": 37,
+            "vietnamese_diacritics": 0,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 37
+          },
+          "text_preview": "Page | 66\n2 oa | ine |\n29 . Dong Nam Bo\nH6 Chi Minh + Ba Ria - Ving Tau\n| stemh®use | ® stemhouse.eduyn ® naHial aaktecs Weal 8 Phe Nhuan District, HOMC |\n"
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 2.24,
+          "metrics": {
+            "chars": 1266,
+            "words": 284,
+            "vietnamese_diacritics": 56,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 398
+          },
+          "text_preview": "Page | 66\n\n15 Ninh Binh Ha Nam + Ninh Binh + Nam Dinh Bac Bộ | Đông bang sông Hong\n16 Thanh Hoa Khong thay déi Bac Trung Bộ\n17 Nghé An Khong thay déi Bac Trung Bộ\n18 Ha Tinh Khong thay đôi Bac Trung BO\n19 Quang Tri Quang Binh + Quang Tri Bac Trung Bộ\n20 TP. Hué Khong thay đôi Bac Trung Bộ\n21 TP. Da Nang Quang Nam + Da Nang Nam Trung Bộ\n22 Quang Ngai Quang Ngai + Kon Tum Nam Trung Bộ\n23 Gia Lai Gia Lai + Binh Dinh Nam Trung Bộ\n24 Dak Lak Pha Yén + Dak Lak Nam Trung Bộ\n25 Khanh Hoa Khanh Hoa + Ninh Thuan Nam Trung Bộ\n26 Lam Dong Dak Nong + Lam Déng + Binh Thuan Nam Trung Bo\n27 Dong Nai Binh Phước + Dong Nai Đông Nam Bo\n28 Tay Ninh Long An + Tay Ninh Dong Nam Bộ\nTP. Binh Duong + TPHCM\n\n29 ì Đông Nam Bộ\n\nHô Chí Minh + Bà Rịa - Vũng Tàu\n30 Dong Thap Tién Giang + Đồng Thap Nam Bộ | Dong bang sông Cửu Long\n31 An Giang Kién Giang + An Giang Dong bang sông Cửu Long\n32 Vinh Long Bén Tre + Vinh Long + Tra Vinh Dong bang sông Cửu Long\n33 TP. Can Tho Sóc Trang + Hau Giang + Can Tho Dong bang sông C"
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 1.24,
+          "metrics": {
+            "chars": 155,
+            "words": 37,
+            "vietnamese_diacritics": 10,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 67
+          },
+          "text_preview": "Page | 66\n2 oa | ine |\n29 ì Đông Nam Bộ\nHô Chí Minh + Bà Rịa - Vũng Tàu\nI s†ethuse | ® stemhouse.edu.vn ® naHial aaktecs Weal 8 Phe Nhuan District, HOMC |\n"
+        },
+        "easyocr_vi_en": {
+          "time_sec": 26.96,
+          "metrics": {
+            "chars": 1244,
+            "words": 282,
+            "vietnamese_diacritics": 165,
+            "quiz_keywords": 4,
+            "mc_options": 0,
+            "score": 755
+          },
+          "text_preview": "Page 66\n15\nNinh Bình\nHà Nam + Ninh Bình + Nam Định\nBẳc Bộ | Đồng bằng sông Hồng\n16\nThanh Hóa\nKhông thay đổi\nBẳc Trung Bộ\n17\nNghệ An\nKhông thay đổi\nBắc Trung Bộ\n18\nHà Tĩnh\nKhông thay đổi\nBắc Trung Bộ\n19\nQuảng Trị\nQuảng Bình + Quảng Trị\nBắc Trung Bộ\n20\nTP. Huế\nKhông thay đổi\nBắc Trung Bộ\n21\nTP. Đà Nẵng\nQuảng Nam + Đà Nẵng\nNam Trung Bộ\n22\nQuảng Ngãi\nQuảng Ngãi + Kon Tum\nNam Trung Bộ\n23\nGia Lai\nGia Lai + Bình Định\nNam Trung Bộ\n24\nĐắk Lắk\nPhú Yên + Đẳk Lẳk\nNam Trung Bộ\n25\nKhánh Hòa\nKhánh Hòa + Ninh Thuận\nNam Trung Bộ\n26\nLâm Đỗng\nĐẳk Nông + Lâm Đông 4 Bình Thuận\nNam Trung Bộ\n27\nĐông Nai\nBình Phước + Đồng Nai\nĐông Nam Bộ\n28\nTây Ninh\nLong An + Tây Ninh\nĐông Nam Bộ\nTP\nBình Dương + TPHCM\n29\nĐông Nam Bộ\nHồ Chí Minh\nBà Rịa Vũng Tàu\n30\nTiền Giang + Đông Tháp\nNam Bộ | Đông bằng sông Cửu Long\n31\nAn Giang\nKiên Giang + An Giang\nĐỗng bằng sông Cửu Long Đồng bằng sông Cửu Long\n32\nVĩnh Long\nBến Tre + Vĩnh Long + Trà Vinh\n33\nTP . Cân Thơ\nSóc Trẳng + Hậu Giang + Cần Thơ\nĐỗng bằng sông Cửu Long\n34\nCà Mau\nBạc"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 2.0,
+          "metrics": {
+            "chars": 1236,
+            "words": 261,
+            "vietnamese_diacritics": 2,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 236
+          },
+          "text_preview": "Page | 66\n15\nNinh Binh\nHa Nam + Ninh Binh + Nam Dinh\nBac Bo | Dong bang song Hong\n16\nThanh Hoa\nKhong thay di\nBac Trung Bo\n17\nNghe An\nKhong thay doi\nBac Trung Bo\n18\nHa Tinh\nKhong thay doi\nBac Trung Bo\n19\nQuang Tri\nQuang Binh + Quang Tri\nBac Trung Bo\n20\nTP. Hué\nKhong thay doi\nBac Trung Bo\n21\nTP. Da Nang\nQuang Nam + Da Nang\nNam Trung Bo\n22\nQuang Ngai\nQuang Ngai + Kon Tum\nNam Trung Bo\n23\nGia Lai\nGia Lai + Binh Dinh\nNam Trung Bo\n24\nDak Lak\nPhu Yen + Dak Lak\nNam Trung Bo\n25\nKhanh Hoa\nKhanh Hoa + Ninh Thuan\nNam Trung Bo\n26\nLam Dong\nDak Nong + Lam Dong + Binh Thuan\nNam Trung Bo\n27\nDong Nai\nBinh Phuoc + Dong Nai\nDong Nam Bo\n28\nTay Ninh\nLong An + Tay Ninh\nDong Nam Bo\nTP.\nBinh Duong + TPHCM\n29\nDong Nam Bo\nH6 Chi Minh\n+ Ba Ria - Vung Tau\n30\nDong Thap\nTien Giang + Dong Thap\nNam Bo | Dong bang song Curu Long\n31\nAn Giang\nKien Giang + An Giang\nDong bang song Curu Long\n32\nVinh Long\nBén Tre + Vinh Long + Tra Vinh\nDong bang song Curu Long\n33\nTP. Can Tho\nSoc Trang + Hau Giang + Can Tho\nDong bang song Ciru"
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 52.06,
+          "metrics": {
+            "chars": 1188,
+            "words": 280,
+            "vietnamese_diacritics": 89,
+            "quiz_keywords": 1,
+            "mc_options": 0,
+            "score": 482
+          },
+          "text_preview": "hoalan.info@stemhouse.edu.vn\n_\nthe mind unbound\n028 3517 1003/ 028 3517 0035\n/stemhouse.edu.vn\nstemhouse\n02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nstemhouse.edu.vn\nStemhouse Education JSC\nCà Mau\n34\nĐồng bng sông Cu Long\nBc Liêu + Cà Mau\nTP. Cn Tho\n33\nSóc Trăng + Hu Giang + Cn Tho\nĐồng bng sông Cu Long\nVinh Long\n32\nBn Tre + Vinh Long + Trà Vinh\nĐồng bng sông Cu Long\nKiên Giang + An Giang\nAn Giang\n31\nĐồng bng sông Cu Long\nTin Giang + Đng Tháp\nĐồng Tháp\n30\nNam B | Đồng bng sông Cu Long\n+ Bà Ra - Vũng Tàu\nHồ Chí Minh\n29\nĐông Nam B\nBinh Duong + TPHCM\nTP.\nTây Ninh\nLong An + Tây Ninh\n28\nĐông Nam B\nĐồng Nai\nBình Phưóc + Đồng Nai\n27\nĐông Nam B\nĐk Nông + Lâm Đồng + Bình Thun\nLâm Đồng\n26\nNam Trung B\nKhánh Hòa\n25\nNam Trung B\nKhánh Hòa + Ninh Thun\nĐk Lk\n24\nNam Trung B\nPhú Yên + Đk Lk\nGia Lai\n23\nNam Trung B\nGia Lai + Binh Đnh\nQung Ngãi\nQung Ngãi + Kon Tum\n22\nNam Trung B\nQung Nam + Đà Nng\nTP. Dà Năng\n21\nNam Trung B\nKhông thay đi\nTP. Hu\n20\nBc Trung B\nQung Bình + Qung Tr\nQung Tr\nBăc Trung B\n1"
+        },
+        "vncv_vi": {
+          "time_sec": 8.56,
+          "metrics": {
+            "chars": 1264,
+            "words": 282,
+            "vietnamese_diacritics": 164,
+            "quiz_keywords": 2,
+            "mc_options": 0,
+            "score": 722
+          },
+          "text_preview": "Page [66\n15\nNinh Bình\nHà Nam % Ninh Bình + Nam Định\nBắc Bộ Đồng bằng sông hồng\nThanh Hóa\nBắc Trung Bộ\n16\nKhông thay đổi\n17\nNghệ An\nKhông thay đổi\nBắc Trung Bộ\n18\nHà Tĩnh\nKhông thay đổi\nBắc Trung Bộ\n19\nQuảng Trị\nQuảng Bình + Quảng Trị\nBắc Trung Bộ\nTP. Huế\nBắc Trung Bộ\n20\nKhông thay đổi\nTP. Đà Nẳng\nQuảng Nam % Đà Nẳng\nNam Trung Bộ\n21\n22\nQuảng Ngãi\nQuảng Ngãi ? Kon Tum\nNam Trung Bộ\n23\nGia Lai\nGia Lai + Bình Định\nNam Trung Bộ\n24\nĐắk Lắk\nPhú Yên % Đắk Lắk\nNam Trung Bộ\n25\nKhánh Hòa\nKhánh Hòa ? Ninh Thuận\nNam Trung Bộ\nLâm Đồng\n26\nĐắk Nông - Lâm Đồng % Bình Thuận\nNam Trung Bộ\nĐồng Nai\n27\nBình Phước 4 Đồng Nai\nĐông Nam Bộ\n28\nTây Ninh\nLong An % Tây Ninh\nĐông Nam Bộ\nBình Dương + TPHCM\nTP\n29\nĐông Nam Bộ\nHồ Chí Minh\n% Bà Rịa - Vũng Tàu\nĐồng Tháp\nTiền Giang % Đồng Tháp\nNam Bộ / Đồng bằng sông Cửu Long\n30\nAn Giang\n31\nKiên Giang % An Giang\nĐồng băng sông cửu Long\n32\nVĩnh Long\nBến Tre % Vĩnh Long % Trà Vinh\nĐồng băng sông Cửu Long\n33\nTP. Cần Thơ\nSóc Trăng % Hậu Giang % Cân Tho\nĐồng băng sông cửu Long\nC"
+        }
+      }
+    },
+    {
+      "pdf": "SECTION 5 - CONTENT.pdf",
+      "page": 1,
+      "label": "Địa lý thế giới — Châu Á",
+      "image": "/Users/nktam/Projects/ToanLop5/scripts/ocr_benchmark_output/SECTION_5_-_CONTENT.pdf_p1.png",
+      "engines": {
+        "tesseract_vie_psm3": {
+          "time_sec": 1.44,
+          "metrics": {
+            "chars": 593,
+            "words": 113,
+            "vietnamese_diacritics": 71,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 326
+          },
+          "text_preview": "Page |91\n\nPhần 5: Địa lý Thế giới\n\nSection 5: World Geography\n\nLá\n\nChâu Á\n\n1. Vạn Lý Trường Thành (Trung Quốc)\n\nĐây là hệ thống phòng thủ cô dài hơn 20.000 km, được xây dựng qua nhiều thời kỳ ở phía Bắc\n\nTrung Quốc.\n\n2. Taj Mahal (Ấn Độ)\n\nTaj Mahal là lăng mộ băng đá cầm thạch trắng ở Agra, được xây dựng từ năm 1631 đến 1648 theo\n\nlệnh Hoàng đề Shah Jahan đề tưởng nhớ vợ mình.\n\nStemhouse Education JSC\n\nỂliemhause ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HOMC\nEi /stemhouse.edu.vn 9 028 3517 1003/ 028 3517 0035\n\n†ne ming Unbound i\nŒ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_psm6": {
+          "time_sec": 1.54,
+          "metrics": {
+            "chars": 631,
+            "words": 140,
+            "vietnamese_diacritics": 74,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 362
+          },
+          "text_preview": "Page |91\nẦ ° 7 Ấ 9 7 e °\nPhân 5: Địa lý Thê giới | Section 5: World Geoøraphy\nChâu Á\n1. Vạn Lý Trường Thành (Trung Quốc)\nĐây là hệ thống phòng thủ cô dài hơn 20.000 km, được xây dựng qua nhiều thời kỳ ở phía Bắc\nTrung Quốc.\n_ . ’ -\n¡ h - ễhyo—r` - 9G\n# ˆ : = ầ L\n2. Taj Mahal (Án Ðộ)\nTaj Mahal là lăng mộ băng đá cầm thạch trắng ở Agra, được xây dựng từ năm 1631 đến 1648 theo\nlệnh Hoàng đề Shah Jahan đề tưởng nhớ vợ mình.\nA Stemhouse Education JSC\nỂliemhause ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HOMC\nN HO . NH Eì /stemhouse.edu.vn % 028 3517 1003/ 028 3517 0035\ns i Œ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_eng_psm3": {
+          "time_sec": 1.05,
+          "metrics": {
+            "chars": 592,
+            "words": 113,
+            "vietnamese_diacritics": 11,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 146
+          },
+          "text_preview": "Page |91\n\nPhan 5: Dia ly Thé gidi\n\nSection 5: World Geography\n\nvy\n\nChau A\n\n1. Van Ly Truong Thanh (Trung Quéc)\n\nDay la hé théng phong thu cé dai hon 20.000 km, duoc xay dung qua nhiéu thoi ky 6 phia Bac\n\nTrung Quoc.\n\n2. Taj Mahal (An D6)\n\nTaj Mahal la lang m6 bang da cam thach trang 6 Agra, duoc xdy dung tir nim 1631 dén 1648 theo\n\n1énh Hoang dé Shah Jahan dé tuong nhé vo minh.\n\nStemhouse Education JSC\n\nstemhuse @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nfi /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n\nthe mind unbound :\n© hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_eng_psm6": {
+          "time_sec": 1.0,
+          "metrics": {
+            "chars": 648,
+            "words": 138,
+            "vietnamese_diacritics": 11,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 171
+          },
+          "text_preview": "Page |91\nA e iA v4 eve e\nPhan 5: Dia ly Thé gidi | Section 5: World Geography\nChau A\n1. Van Ly Truong Thanh (Trung Quéc)\nDay la hé théng phong thu cé dai hon 20.000 km, duoc xay dung qua nhiéu thoi ky 6 phia Bac\nTrung Quoc.\n— -¥ , -\ni j - a AZ Same\nzt ge ; — Se ‘si\n2. Taj Mahal (An D6)\nTaj Mahal la lang m6 bang da cam thach trang 6 Agra, duoc xdy dung tir nim 1631 dén 1648 theo\n1énh Hoang dé Shah Jahan dé tuong nhé vo minh.\nn Stemhouse Education JSC\nstemhuse @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nWs eediediu se tecnarel fi /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n: oe © hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_eng_psm3": {
+          "time_sec": 1.54,
+          "metrics": {
+            "chars": 592,
+            "words": 113,
+            "vietnamese_diacritics": 21,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 176
+          },
+          "text_preview": "Page |91\n\nPhan 5: Dia ly Thế giới\n\nSection 5: World Geography\n\nvy\n\nChau A\n\n1. Van Ly Truong Thanh (Trung Quốc)\n\nDay la hé thống phong thu cé dai hon 20.000 km, duoc xây dung qua nhiéu thời ky ở phia Bac\n\nTrung Quốc.\n\n2. Taj Mahal (An D6)\n\nTaj Mahal la lang m6 bang da cầm thach trang 6 Agra, duoc xây dung tir nim 1631 đến 1648 theo\n\nlệnh Hoang dé Shah Jahan dé tưởng nhớ vo minh.\n\nStemhouse Education JSC\n\nstemhuse ® stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nfi /stemhouse.edu.vn © 028 3517 1003/ 028 3517 0035\n\nthe mind unbound i\nŒ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "tesseract_vie_eng_psm6": {
+          "time_sec": 1.65,
+          "metrics": {
+            "chars": 635,
+            "words": 140,
+            "vietnamese_diacritics": 29,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 227
+          },
+          "text_preview": "Page |91\nA ° 7 Ấ 9 7 e °\nPhân 5: Địa lý Thê giới | Section 5: World Geoøraphy\nChau A\n1. Van Ly Truong Thanh (Trung Quốc)\nDay la hé thống phong thu cé dai hon 20.000 km, duoc xây dung qua nhiéu thời ky ở phia Bac\nTrung Quốc.\n_ . , -\n¡ h - ễhyo—r` - 9G\n# ˆ : = Se ‘si\n2. Taj Mahal (An D6)\nTaj Mahal la lang m6 bang da cầm thach trang 6 Agra, duoc xây dung tir nim 1631 đến 1648 theo\nlệnh Hoang dé Shah Jahan dé tưởng nhớ vo minh.\nA Stemhouse Education JSC\nỂtemhaU5e @ stemhouse.edu.vn © 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nN HO se NH Eì /stemhouse.edu.vn % 028 3517 1003/ 028 3517 0035\ns i Œ hoalan.info@stemhouse.edu.vn\n"
+        },
+        "easyocr_vi_en": {
+          "time_sec": 24.04,
+          "metrics": {
+            "chars": 564,
+            "words": 112,
+            "vietnamese_diacritics": 69,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 319
+          },
+          "text_preview": "Page 91\nPhần 5: Địa lý Thế giói Section 5: World Geography Châu Á\n1. Vạn Lý Trường Thành (Trung Quốc) Đây là hệ thống phòng thủ cổ dài hơn 20.000 km; được xây dựng qua nhiều thời kỳ ở phía Bắc Trung Quốc.\nse\n2. Taj Mahal (Ấn Độ)\nTaj Mahal là lăng mộ bằng đá cẩm thạch trắng ở Agra; được xây dựng từ năm 1631 đến 1648 theo lệnh Hoàng đế Shah Jahan để tưởng nhớ vợ mình.\nStemhouse Education JSC 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC 028 3517 1003/ 028 3517 0035 hoalan info@stemhouse edu.vn\nstemh use the mind unbound\nstemhouse edu.vn Istemhouse edu.vn"
+        },
+        "rapidocr_onnx_default": {
+          "time_sec": 1.72,
+          "metrics": {
+            "chars": 548,
+            "words": 89,
+            "vietnamese_diacritics": 2,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 95
+          },
+          "text_preview": "Page|91\nPhan 5: Dia ly Thé gioi | Section 5: World Geography\nChau A\n1. Van Ly Truong Thanh (Trung Quoc)\nDay la he thong phong thu c? dai hon 20.000 km, duoc xay dung qua nhieu thoi ky o phia Bac\nTrung Quoc.\n2. Taj Mahal (An D?)\nTaj Mahal la lang mo bang da cam thach trang ? Agra, duoc xay dung tir nam 1631 den 1648 theo\nlenh Hoang dé Shah Jahan de turong nho vo minh.\nStemhouseEducationJSc\nstemhouse\nstemhouse.edu.vn\n02HoaLanStreet,Ward2,PhuNhuanDistrict,HCMC\n/stemhouse.edu.vn\n02835171003/02835170035\nthemind unbound\nhoalan.info@stemhouse.edu.vn"
+        },
+        "paddleocr_vi_ppocrv6": {
+          "time_sec": 39.43,
+          "metrics": {
+            "chars": 486,
+            "words": 95,
+            "vietnamese_diacritics": 32,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 191
+          },
+          "text_preview": "Page |91\nChâu Á\n1. Van Lý Trưòng Thành (Trung Quc)\nĐây là h thng phòng th c dài hơn 20.000 km, đưc xây dng qua nhiu thi k  phía Bc\nTrung Quc.\n2. Taj Mahal (Ân Đ)\nTaj Mahal là lăng m bng đá cm thch trng  Agra, đưc xây dng t năm 1631 đn 1648 theo\nlnh Hoàng đ Shah Jahan đ tưng nh v mình.\n福\n28S\nStemhouse Education JSC\nstemhouse\nstemhouse.edu.vn\n02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\n/stemhouse.edu.vn\nthe mind unbound\n028 3517 1003/028 3517 0035\nhoalan.info@stemhouse.edu.vn"
+        },
+        "vncv_vi": {
+          "time_sec": 4.88,
+          "metrics": {
+            "chars": 588,
+            "words": 112,
+            "vietnamese_diacritics": 71,
+            "quiz_keywords": 0,
+            "mc_options": 0,
+            "score": 325
+          },
+          "text_preview": "Page [91\nPhần 5: Địa lý Thế giới Section 5: World Geography 1999\nChâu Á\n1. Vạn Lý Trường Thành (Trung Quốc)\nĐây là hệ thống phòng thủ cổ dài hơn 20.000 km, được xây dựng qua nhiều thời kỳ ở phía Bắc\nTrung Quốc\n2. Taj Mahal (Ân Độ)\nTaị Mahal là lăng mộ bằng đá cẩm thạch trắng ở Agra, được xây dựng từ năm 1631 đến 1648 theo tháng 1996\nlệnh hoàng đề shah Jahan để tưởng nhớ vợ mình\nStemhouse Education JSC\nstemhouse\nO stemhouse.edu.vn\n1990 0 02 Hoa Lan Street, Ward 2, Phu Nhuan District, HCMC\nA/stemhouse.edu.vn\n028 3517 1003/028 3517 0035\nthe mind unbound\n21 hoalan.infoostemhouse.edu.vn"
+        }
+      }
+    }
+  ],
+  "notes": {
+    "pdf_type": "image-only scan (no text layer)",
+    "paddle_version": "PP-OCRv6 via PaddleOCR 3.x predict()",
+    "score_formula": "vi_diacritics*3 + quiz_kw*15 + mc_options*8 + min(words,200)"
+  }
+}

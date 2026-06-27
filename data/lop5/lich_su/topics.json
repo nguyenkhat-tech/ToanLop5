@@ -13,5 +13,20 @@
     "id": "lich_su_viet_nam",
     "name": "Dòng lịch sử Việt Nam",
     "icon": "📜"
+  },
+  {
+    "id": "nien_bieu",
+    "name": "Niên biểu lịch sử",
+    "icon": "📅"
+  },
+  {
+    "id": "nhan_vat",
+    "name": "Nhân vật lịch sử",
+    "icon": "👤"
+  },
+  {
+    "id": "khang_chien",
+    "name": "Kháng chiến bảo vệ Tổ quốc",
+    "icon": "🕊️"
   }
 ]

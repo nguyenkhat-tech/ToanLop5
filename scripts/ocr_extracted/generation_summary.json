@@ -1,0 +1,18 @@
+{
+  "lich_su_count": 28,
+  "dia_ly_count": 26,
+  "lich_su_by_topic": {
+    "bach_dang": 2,
+    "quang_trung": 1,
+    "khang_chien": 14,
+    "nien_bieu": 2,
+    "nhan_vat": 9
+  },
+  "dia_ly_by_topic": {
+    "tp_hcm": 1,
+    "sap_nhap_2025": 16,
+    "dia_ly_the_gioi": 9
+  },
+  "source": "/Users/nktam/Documents/Lop6/downloads/cam-nang-lich-su-dia-ly-lop-5",
+  "ocr_engine": "tesseract vie psm3 dpi300"
+}
