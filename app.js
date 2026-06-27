@@ -348,6 +348,7 @@ function updateSubjectSelectorVisibility(grade) {
 
 // ==================== CÁC HÀM XỬ LÝ CHÍNH ====================
 function startQuiz() {
+  if (typeof SoundFX !== 'undefined') SoundFX.unlock();
   if (!QUESTIONS || QUESTIONS.length === 0) {
     alert("Chưa có câu hỏi nào.");
     return;
@@ -556,6 +557,7 @@ function handleResult(isCorrect, q, correctAnswer, userAnswer, answerIndex, time
   if (sb) sb.classList.toggle('on-fire', state.streak >= 3);
   document.getElementById('score-mini').textContent = `Điểm: ${state.score}/${state.questions.length}`;
   showFeedback(isCorrect, correctAnswer);
+  if (typeof SoundFX !== 'undefined') SoundFX.playAnswer(isCorrect);
   document.getElementById('next-btn').style.display = 'block';
 }
 
@@ -617,6 +619,7 @@ function showResult() {
   if (state.maxStreak > state.history.streak) state.history.streak = state.maxStreak;
   saveHistory();
   showScreen('result');
+  if (typeof SoundFX !== 'undefined') SoundFX.playResult(pct);
   if (pct>=80) spawnParticles();
 }
 
@@ -704,6 +707,7 @@ function timeUp() {
   state.wrongIds.add(getQuestionKey(q));
   const correctAns = q.type==='fill' ? q.answer : q.answers[q.correct];
   showFeedback(false, correctAns);
+  if (typeof SoundFX !== 'undefined') SoundFX.playAnswer(false);
   state.currentSessionDetails.push({ q, userAnswer: "(Hết giờ)", userAnswerRaw: "(Hết giờ)", correctAnswer: correctAns, isCorrect: false, timeSpent, viewedHint: state.currentQuestionViewedHint });
   if (q.type === 'mc') {
     document.querySelectorAll('.ans-btn').forEach(b=>b.disabled=true);
@@ -810,6 +814,15 @@ document.addEventListener('DOMContentLoaded', () => {
         c.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
       if (gradeSelect) { loadGrade(gradeSelect.value, subject); }
+    });
+  }
+
+  const soundChk = document.getElementById('sound-enabled');
+  if (soundChk && typeof SoundFX !== 'undefined') {
+    soundChk.checked = SoundFX.isEnabled();
+    soundChk.addEventListener('change', () => {
+      SoundFX.setEnabled(soundChk.checked);
+      if (soundChk.checked) SoundFX.unlock();
     });
   }
 
