@@ -661,6 +661,8 @@ select:focus { border-color: var(--primary); }
 }
 
 .ans-btn {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   min-height: 52px;
   padding: 12px 14px;
@@ -678,6 +680,19 @@ select:focus { border-color: var(--primary); }
   gap: 12px;
   transition: transform 200ms ease-out, box-shadow 200ms ease-out, background 200ms ease-out, border-color 200ms ease-out;
   box-shadow: 0 3px 0 rgba(0,0,0,.1), 0 4px 12px rgba(0,0,0,.06);
+}
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.35);
+  transform: scale(0);
+  animation: rippleOut 450ms ease-out forwards;
+  pointer-events: none;
+}
+@keyframes rippleOut {
+  to { transform: scale(5); opacity: 0; }
 }
 .ans-btn:hover:not(:disabled) {
   border-color: var(--primary-mid);
@@ -1048,6 +1063,29 @@ kbd {
 .history-btn:focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 3px;
+}
+
+/* Skeleton loader */
+.skeleton-card {
+  background: var(--card);
+  border-radius: var(--r);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.skeleton-line {
+  height: 14px;
+  background: linear-gradient(90deg, var(--border) 25%, #e8e8e8 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.skeleton-line.wide   { width: 80%; }
+.skeleton-line.medium { width: 60%; }
+.skeleton-line.short  { width: 40%; }
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

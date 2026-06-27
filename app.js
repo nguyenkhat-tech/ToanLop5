@@ -382,7 +382,17 @@ function startQuiz() {
   state.startTime = Date.now();
   state.currentSessionDetails = [];
   showScreen('quiz');
-  renderQuestion();
+  const _qCard = document.getElementById('question-card');
+  if (_qCard) {
+    _qCard.innerHTML = `<div class="skeleton-card">
+      <div class="skeleton-line wide"></div>
+      <div class="skeleton-line medium"></div>
+      <div class="skeleton-line short"></div>
+      <div class="skeleton-line wide" style="margin-top:20px;height:42px;border-radius:12px;"></div>
+      <div class="skeleton-line wide" style="height:42px;border-radius:12px;"></div>
+    </div>`;
+  }
+  setTimeout(() => renderQuestion(), 250);
 }
 
 function renderQuestion() {
@@ -426,7 +436,7 @@ function renderQuestion() {
     const labels = ['A','B','C','D'];
     let html = `<div class="answers-grid">`;
     answers.forEach((a,i) => {
-      html += `<button class="ans-btn" id="ans-${i}" onclick="checkMC(${i})">
+      html += `<button class="ans-btn" id="ans-${i}" onclick="addRipple(this, event); checkMC(${i})">
         <span class="ans-label">${labels[i]}</span>${a}
       </button>`;
     });
@@ -463,6 +473,16 @@ function toggleHint() {
     h.style.display = h.style.display === 'block' ? 'none' : 'block';
     state.currentQuestionViewedHint = true;
   }
+}
+
+function addRipple(btn, e) {
+  const r = document.createElement('span');
+  r.className = 'ripple';
+  const rect = btn.getBoundingClientRect();
+  r.style.left = (e.clientX - rect.left - 40) + 'px';
+  r.style.top  = (e.clientY - rect.top  - 40) + 'px';
+  btn.appendChild(r);
+  r.addEventListener('animationend', () => r.remove());
 }
 
 function checkMC(idx) {
@@ -550,7 +570,16 @@ function showResult() {
   const total = state.questions.length;
   const pct = Math.round((state.score/total)*100);
   const elapsed = Math.round((Date.now()-state.startTime)/1000);
-  document.getElementById('rs-score').textContent = pct+'%';
+  const scoreEl = document.getElementById('rs-score');
+  scoreEl.textContent = '0%';
+  const _scoreDuration = 800;
+  const _scoreStart = performance.now();
+  function _animateScore(now) {
+    const progress = Math.min((now - _scoreStart) / _scoreDuration, 1);
+    scoreEl.textContent = Math.round(progress * pct) + '%';
+    if (progress < 1) requestAnimationFrame(_animateScore);
+  }
+  requestAnimationFrame(_animateScore);
   document.getElementById('rs-correct').textContent = `${state.score}/${total}`;
   const m = Math.floor(elapsed/60), s = elapsed%60;
   document.getElementById('rs-time').textContent = m>0?`${m}p${s}s`:`${s}s`;
@@ -573,7 +602,7 @@ function showResult() {
   if (state.maxStreak > state.history.streak) state.history.streak = state.maxStreak;
   saveHistory();
   showScreen('result');
-  if (pct>=70) spawnParticles();
+  if (pct>=80) spawnParticles();
 }
 
 function saveCurrentSession() {
