@@ -1069,8 +1069,8 @@ kbd {
 .skeleton-card {
   background: var(--card);
   border-radius: var(--r);
-  padding: 24px;
-  margin-bottom: 16px;
+  padding: 0;
+  margin-bottom: 0;
 }
 .skeleton-line {
   height: 14px;

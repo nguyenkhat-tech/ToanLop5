@@ -384,6 +384,7 @@ function startQuiz() {
   showScreen('quiz');
   const _qCard = document.getElementById('question-card');
   if (_qCard) {
+    _qCard.dataset.level = 'medium';
     _qCard.innerHTML = `<div class="skeleton-card">
       <div class="skeleton-line wide"></div>
       <div class="skeleton-line medium"></div>
@@ -392,7 +393,18 @@ function startQuiz() {
       <div class="skeleton-line wide" style="height:42px;border-radius:12px;"></div>
     </div>`;
   }
-  setTimeout(() => renderQuestion(), 250);
+  if (state._skeletonTimer) clearTimeout(state._skeletonTimer);
+  state._skeletonTimer = setTimeout(() => renderQuestion(), 250);
+}
+
+function addRipple(btn, e) {
+  const r = document.createElement('span');
+  r.className = 'ripple';
+  const rect = btn.getBoundingClientRect();
+  r.style.left = (e.clientX - rect.left - 40) + 'px';
+  r.style.top  = (e.clientY - rect.top  - 40) + 'px';
+  btn.appendChild(r);
+  r.addEventListener('animationend', () => r.remove());
 }
 
 function renderQuestion() {
@@ -475,15 +487,6 @@ function toggleHint() {
   }
 }
 
-function addRipple(btn, e) {
-  const r = document.createElement('span');
-  r.className = 'ripple';
-  const rect = btn.getBoundingClientRect();
-  r.style.left = (e.clientX - rect.left - 40) + 'px';
-  r.style.top  = (e.clientY - rect.top  - 40) + 'px';
-  btn.appendChild(r);
-  r.addEventListener('animationend', () => r.remove());
-}
 
 function checkMC(idx) {
   if (state.answered) return;
@@ -565,6 +568,7 @@ function nextQuestion() {
 }
 
 function showResult() {
+  if (state._scoreRaf) { cancelAnimationFrame(state._scoreRaf); state._scoreRaf = null; }
   clearInterval(state.timerInt);
   saveCurrentSession();
   const total = state.questions.length;
@@ -577,9 +581,10 @@ function showResult() {
   function _animateScore(now) {
     const progress = Math.min((now - _scoreStart) / _scoreDuration, 1);
     scoreEl.textContent = Math.round(progress * pct) + '%';
-    if (progress < 1) requestAnimationFrame(_animateScore);
+    if (progress < 1) state._scoreRaf = requestAnimationFrame(_animateScore);
+    else state._scoreRaf = null;
   }
-  requestAnimationFrame(_animateScore);
+  state._scoreRaf = requestAnimationFrame(_animateScore);
   document.getElementById('rs-correct').textContent = `${state.score}/${total}`;
   const m = Math.floor(elapsed/60), s = elapsed%60;
   document.getElementById('rs-time').textContent = m>0?`${m}p${s}s`:`${s}s`;
@@ -642,6 +647,7 @@ function retryWrong() {
 }
 
 function goHome() {
+  if (state._skeletonTimer) { clearTimeout(state._skeletonTimer); state._skeletonTimer = null; }
   clearInterval(state.timerInt);
   loadHistory();
   showScreen('home');
