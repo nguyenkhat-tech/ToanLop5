@@ -32,21 +32,21 @@
   </select>
 
   <div class="grade-section">
-    <div class="section-label">Chọn khối lớp</div>
-    <div class="grade-pills">
-      <div class="grade-pill" data-grade="2" tabindex="0" role="button">
+    <div class="section-label" id="grade-label">Chọn khối lớp</div>
+    <div class="grade-pills" role="group" aria-labelledby="grade-label">
+      <div class="grade-pill" data-grade="2" tabindex="0" role="button" aria-pressed="false">
         <span class="grade-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
         <span class="grade-pill-label">Lớp 2</span>
       </div>
-      <div class="grade-pill" data-grade="3" tabindex="0" role="button">
+      <div class="grade-pill" data-grade="3" tabindex="0" role="button" aria-pressed="false">
         <span class="grade-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
         <span class="grade-pill-label">Lớp 3</span>
       </div>
-      <div class="grade-pill" data-grade="4" tabindex="0" role="button">
+      <div class="grade-pill" data-grade="4" tabindex="0" role="button" aria-pressed="false">
         <span class="grade-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
         <span class="grade-pill-label">Lớp 4</span>
       </div>
-      <div class="grade-pill active" data-grade="5" tabindex="0" role="button">
+      <div class="grade-pill active" data-grade="5" tabindex="0" role="button" aria-pressed="true">
         <span class="grade-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span>
         <span class="grade-pill-label">Lớp 5</span>
       </div>
@@ -62,21 +62,21 @@
   </select>
 
   <div class="subject-section" id="subjectSelectorWrap">
-    <div class="section-label">Chọn môn học</div>
-    <div class="subject-cards">
-      <div class="subject-card active" data-subject="toan" tabindex="0" role="button">
+    <div class="section-label" id="subject-label">Chọn môn học</div>
+    <div class="subject-cards" role="group" aria-labelledby="subject-label">
+      <div class="subject-card active" data-subject="toan" tabindex="0" role="button" aria-pressed="true">
         <svg class="subject-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
         <span class="subject-card-name">Toán</span>
       </div>
-      <div class="subject-card" data-subject="lich_su" tabindex="0" role="button">
+      <div class="subject-card" data-subject="lich_su" tabindex="0" role="button" aria-pressed="false">
         <svg class="subject-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         <span class="subject-card-name">Lịch sử</span>
       </div>
-      <div class="subject-card" data-subject="dia_ly" tabindex="0" role="button">
+      <div class="subject-card" data-subject="dia_ly" tabindex="0" role="button" aria-pressed="false">
         <svg class="subject-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span class="subject-card-name">Địa lý</span>
       </div>
-      <div class="subject-card" data-subject="khoa_hoc" tabindex="0" role="button">
+      <div class="subject-card" data-subject="khoa_hoc" tabindex="0" role="button" aria-pressed="false">
         <svg class="subject-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v11l3.5 5.5a1 1 0 0 1-.86 1.5H6.36a1 1 0 0 1-.86-1.5L9 14V3z"/><line x1="6.4" y1="16" x2="17.6" y2="16"/></svg>
         <span class="subject-card-name">Khoa học</span>
       </div>
@@ -187,7 +187,7 @@
     </div>
   </div>
   <div class="timer-wrap">
-    <div class="timer-text">⏱ Còn lại: <span id="timer-sec">30</span>s</div>
+    <div class="timer-text">Còn lại: <span id="timer-sec" aria-live="polite" aria-atomic="true">30</span>s</div>
     <div class="timer-bar">
       <div class="timer-fill" id="timer-fill" style="width:100%;background:#10B981"></div>
     </div>

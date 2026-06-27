@@ -743,12 +743,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.grade-pill').forEach(pill => {
     pill.addEventListener('click', () => {
       const grade = pill.dataset.grade;
-      document.querySelectorAll('.grade-pill').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.grade-pill').forEach(p => { p.classList.remove('active'); p.setAttribute('aria-pressed', 'false'); });
       pill.classList.add('active');
+      pill.setAttribute('aria-pressed', 'true');
       if (gradeSelect) { gradeSelect.value = grade; }
       updateSubjectSelectorVisibility(grade);
       const subject = grade === '5' && subjectSelect ? subjectSelect.value : 'toan';
       loadGrade(grade, subject);
+    });
+    pill.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        pill.click();
+      }
     });
   });
 
@@ -756,10 +763,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.subject-card').forEach(card => {
     card.addEventListener('click', () => {
       const subject = card.dataset.subject;
-      document.querySelectorAll('.subject-card').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.subject-card').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
       card.classList.add('active');
+      card.setAttribute('aria-pressed', 'true');
       if (subjectSelect) { subjectSelect.value = subject; }
       if (gradeSelect) { loadGrade(gradeSelect.value, subject); }
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        card.click();
+      }
     });
   });
 
@@ -767,8 +781,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (gradeSelect) {
     gradeSelect.addEventListener('change', (e) => {
       const grade = e.target.value;
-      document.querySelectorAll('.grade-pill').forEach(p =>
-        p.classList.toggle('active', p.dataset.grade === grade));
+      document.querySelectorAll('.grade-pill').forEach(p => {
+        const active = p.dataset.grade === grade;
+        p.classList.toggle('active', active);
+        p.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
       updateSubjectSelectorVisibility(grade);
       const subject = grade === '5' && subjectSelect ? subjectSelect.value : 'toan';
       loadGrade(grade, subject);
@@ -777,8 +794,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (subjectSelect) {
     subjectSelect.addEventListener('change', (e) => {
       const subject = e.target.value;
-      document.querySelectorAll('.subject-card').forEach(c =>
-        c.classList.toggle('active', c.dataset.subject === subject));
+      document.querySelectorAll('.subject-card').forEach(c => {
+        const active = c.dataset.subject === subject;
+        c.classList.toggle('active', active);
+        c.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
       if (gradeSelect) { loadGrade(gradeSelect.value, subject); }
     });
   }
