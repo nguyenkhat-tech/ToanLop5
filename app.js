@@ -338,8 +338,11 @@ function updateSubjectSelectorVisibility(grade) {
   if (wrap) wrap.style.display = grade === '5' ? '' : 'none';
   // reset subject pills to toan when switching away from grade 5
   if (grade !== '5') {
-    document.querySelectorAll('.subject-card').forEach(c =>
-      c.classList.toggle('active', c.dataset.subject === 'toan'));
+    document.querySelectorAll('.subject-card').forEach(c => {
+      const active = c.dataset.subject === 'toan';
+      c.classList.toggle('active', active);
+      c.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
   }
 }
 
@@ -385,14 +388,21 @@ function startQuiz() {
   const _qCard = document.getElementById('question-card');
   if (_qCard) {
     _qCard.dataset.level = 'medium';
-    _qCard.innerHTML = `<div class="skeleton-card">
+    // Inject skeleton into q-text so #q-category and #q-text stay in DOM
+    const _qText = document.getElementById('q-text');
+    const _qCat = document.getElementById('q-category');
+    if (_qText) _qText.innerHTML = `<div class="skeleton-card">
       <div class="skeleton-line wide"></div>
       <div class="skeleton-line medium"></div>
       <div class="skeleton-line short"></div>
-      <div class="skeleton-line wide" style="margin-top:20px;height:42px;border-radius:12px;"></div>
-      <div class="skeleton-line wide" style="height:42px;border-radius:12px;"></div>
     </div>`;
+    if (_qCat) _qCat.innerHTML = '';
   }
+  const _qBody = document.getElementById('q-body');
+  if (_qBody) _qBody.innerHTML = `<div class="skeleton-card" style="padding:0">
+    <div class="skeleton-line wide" style="height:42px;border-radius:12px;"></div>
+    <div class="skeleton-line wide" style="height:42px;border-radius:12px;"></div>
+  </div>`;
   if (state._skeletonTimer) clearTimeout(state._skeletonTimer);
   state._skeletonTimer = setTimeout(() => renderQuestion(), 250);
 }
