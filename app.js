@@ -27,16 +27,35 @@ let state = {
 
 let allSessions = [];
 let currentGrade = "5";
+let currentSubject = "toan";
 let TOPICS = [];
 let QUESTIONS = [];
 
-// ==================== LƯU TRỮ THEO KHỐI ====================
-function getStoragePrefix() { return `toan_${currentGrade}`; }
+const SUBJECT_NAMES = {
+  toan: "Toán",
+  lich_su: "Lịch sử",
+  dia_ly: "Địa lý",
+  khoa_hoc: "Khoa học"
+};
+
+// ==================== LƯU TRỮ THEO KHỐI / MÔN ====================
+function getDataBasePath(grade, subject) {
+  if (grade === "5" && subject) return `data/lop5/${subject}`;
+  return `data/lop${grade}`;
+}
+
+function getStoragePrefix() {
+  if (currentGrade === "5") return `${currentSubject}_5`;
+  return `toan_${currentGrade}`;
+}
 function getHistoryKey() { return `${getStoragePrefix()}_v2`; }
 function getWrongKey() { return `${getStoragePrefix()}_wrong`; }
 function getSessionsKey() { return `${getStoragePrefix()}_sessions`; }
 
-function getQuestionKey(q) { return `${q.topic}_${q.id}`; }
+function getQuestionKey(q) {
+  const prefix = currentGrade === "5" ? `${currentSubject}_` : "";
+  return `${prefix}${q.topic}_${q.id}`;
+}
 
 function loadHistory() {
   try {
@@ -264,17 +283,19 @@ function toggleTopic(el, tid) {
   }
 }
 
-// ==================== TẢI DỮ LIỆU THEO KHỐI ====================
-async function loadGrade(grade) {
-  console.log(`Đang tải dữ liệu cho lớp ${grade}...`);
+// ==================== TẢI DỮ LIỆU THEO KHỐI / MÔN ====================
+async function loadGrade(grade, subject = "toan") {
+  console.log(`Đang tải dữ liệu lớp ${grade}, môn ${subject}...`);
   currentGrade = grade;
+  currentSubject = grade === "5" ? subject : "toan";
   try {
-    const topicsUrl = `data/lop${grade}/topics.json`;
+    const base = getDataBasePath(grade, currentSubject);
+    const topicsUrl = `${base}/topics.json`;
     const topicsRes = await fetch(topicsUrl);
     if (!topicsRes.ok) throw new Error(`HTTP ${topicsRes.status}: ${topicsUrl}`);
     TOPICS = await topicsRes.json();
-    
-    const questionsUrl = `data/lop${grade}/questions.js`;
+
+    const questionsUrl = `${base}/questions.js`;
     const questionsRes = await fetch(questionsUrl);
     if (!questionsRes.ok) throw new Error(`HTTP ${questionsRes.status}: ${questionsUrl}`);
     const questionsText = await questionsRes.text();
@@ -284,34 +305,37 @@ async function loadGrade(grade) {
     } else {
       throw new Error('Không tìm thấy mảng QUESTIONS');
     }
-    
-    // Reset state
+
     state.selectedTopics.clear();
     if (TOPICS.length > 0) state.selectedTopics.add(TOPICS[0].id);
     state.selectedTags.clear();
-    state.wrongIds.clear();
-    state.history = { done: 0, correct: 0, streak: 0 };
-    allSessions = [];
-    saveHistory();
-    saveSessions();
     loadHistory();
     loadSessions();
     buildTopicGrid();
     buildTagFilter();
-    
-    document.querySelectorAll('.topic-btn').forEach(btn => {
-      const tid = btn.dataset.tid;
-      const cnt = QUESTIONS.filter(q => q.topic === tid).length;
-      const countSpan = btn.querySelector('.topic-count');
-      if (countSpan) countSpan.textContent = `${cnt} câu`;
-    });
-    
+    updateHomeSubtitle();
+
     if (document.getElementById('screen-quiz').classList.contains('active')) goHome();
     else showScreen('home');
   } catch(e) {
     console.error(e);
-    alert(`Lỗi tải dữ liệu lớp ${grade}: ${e.message}`);
+    alert(`Lỗi tải dữ liệu lớp ${grade} (${SUBJECT_NAMES[currentSubject] || subject}): ${e.message}`);
   }
+}
+
+function updateHomeSubtitle() {
+  const sub = document.getElementById('home-sub');
+  if (!sub) return;
+  if (currentGrade === "5") {
+    sub.textContent = `Lớp ${currentGrade} — ${SUBJECT_NAMES[currentSubject] || currentSubject}`;
+  } else {
+    sub.textContent = `Lớp ${currentGrade} — Toán`;
+  }
+}
+
+function updateSubjectSelectorVisibility(grade) {
+  const wrap = document.getElementById('subjectSelectorWrap');
+  if (wrap) wrap.style.display = grade === '5' ? '' : 'none';
 }
 
 // ==================== CÁC HÀM XỬ LÝ CHÍNH ====================
@@ -668,9 +692,20 @@ document.addEventListener('keydown', e=>{
 
 document.addEventListener('DOMContentLoaded', () => {
   const gradeSelect = document.getElementById('gradeSelect');
+  const subjectSelect = document.getElementById('subjectSelect');
   if (gradeSelect) {
-    gradeSelect.addEventListener('change', (e) => loadGrade(e.target.value));
-    loadGrade('5');
+    gradeSelect.addEventListener('change', (e) => {
+      updateSubjectSelectorVisibility(e.target.value);
+      const subject = e.target.value === '5' && subjectSelect ? subjectSelect.value : 'toan';
+      loadGrade(e.target.value, subject);
+    });
+    if (subjectSelect) {
+      subjectSelect.addEventListener('change', (e) => {
+        loadGrade(gradeSelect.value, e.target.value);
+      });
+    }
+    updateSubjectSelectorVisibility(gradeSelect.value);
+    loadGrade('5', subjectSelect ? subjectSelect.value : 'toan');
   } else {
     console.error("Không tìm thấy gradeSelect");
   }

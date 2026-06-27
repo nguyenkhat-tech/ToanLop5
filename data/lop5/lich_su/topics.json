@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bach_dang",
+    "name": "Chiến thắng Bạch Đằng",
+    "icon": "⚔️"
+  },
+  {
+    "id": "quang_trung",
+    "name": "Quang Trung đại phá quân Thanh",
+    "icon": "🏛️"
+  },
+  {
+    "id": "lich_su_viet_nam",
+    "name": "Dòng lịch sử Việt Nam",
+    "icon": "📜"
+  }
+]

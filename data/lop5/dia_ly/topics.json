@@ -1,0 +1,22 @@
+[
+  {
+    "id": "da_nang",
+    "name": "Thành phố Đà Nẵng",
+    "icon": "🌉"
+  },
+  {
+    "id": "hue",
+    "name": "Thành phố Huế",
+    "icon": "🏯"
+  },
+  {
+    "id": "ho_chi_minh",
+    "name": "TP. Hồ Chí Minh",
+    "icon": "🏙️"
+  },
+  {
+    "id": "vung_mien",
+    "name": "Vùng miền Việt Nam",
+    "icon": "🗺️"
+  }
+]

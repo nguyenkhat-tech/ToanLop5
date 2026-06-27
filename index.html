@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ôn Tập Toán - Đa khối lớp</title>
+<title>Ôn Tập - Đa khối lớp</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
@@ -16,8 +16,8 @@
 <!-- HOME -->
 <div id="screen-home" class="screen active">
   <div class="home-header">
-    <div class="home-logo">⭐ Ôn Tập Toán</div>
-    <div class="home-sub">Học vui mỗi ngày</div>
+    <div class="home-logo">⭐ Ôn Tập</div>
+    <div class="home-sub" id="home-sub">Học vui mỗi ngày</div>
   </div>
 
   <div class="grade-selector" style="margin-bottom:20px;">
@@ -27,6 +27,16 @@
       <option value="3">Lớp 3</option>
       <option value="4">Lớp 4</option>
       <option value="5" selected>Lớp 5</option>
+    </select>
+  </div>
+
+  <div class="grade-selector subject-selector" id="subjectSelectorWrap" style="margin-bottom:20px;">
+    <label>📖 Chọn môn: </label>
+    <select id="subjectSelect">
+      <option value="toan">Toán</option>
+      <option value="lich_su">Lịch sử</option>
+      <option value="dia_ly">Địa lý</option>
+      <option value="khoa_hoc">Khoa học</option>
     </select>
   </div>
 

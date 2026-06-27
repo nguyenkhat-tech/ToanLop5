@@ -1,0 +1,6 @@
+[
+  { "id": "toan", "name": "Toán", "icon": "🔢" },
+  { "id": "lich_su", "name": "Lịch sử", "icon": "📜" },
+  { "id": "dia_ly", "name": "Địa lý", "icon": "🌍" },
+  { "id": "khoa_hoc", "name": "Khoa học", "icon": "🔬" }
+]

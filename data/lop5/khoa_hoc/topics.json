@@ -1,0 +1,22 @@
+[
+  {
+    "id": "con_nguoi",
+    "name": "Con người và sức khỏe",
+    "icon": "🧬"
+  },
+  {
+    "id": "vat_chat",
+    "name": "Vật chất và năng lượng",
+    "icon": "⚡"
+  },
+  {
+    "id": "sinh_vat",
+    "name": "Thực vật và động vật",
+    "icon": "🌿"
+  },
+  {
+    "id": "moi_truong",
+    "name": "Môi trường và tài nguyên",
+    "icon": "♻️"
+  }
+]
